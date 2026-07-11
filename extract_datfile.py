@@ -1,0 +1,54 @@
+import io
+from dataclasses import dataclass
+
+
+def main():
+    path = "game/datfile.dat"
+    output_dir = "data"
+
+    with open(path, "rb") as f:
+        header = read_header(f)
+
+        for (i, segment) in enumerate(header.data_segments):
+            target_file = f"{output_dir}/{i:03d}.dat"
+            print("Extracting", target_file)
+            extract_segment_to_file(f, segment, target_file)
+
+
+@dataclass
+class DataSegmentInfo:
+    offset: int
+    length: int
+
+
+@dataclass
+class Header:
+    data_segments: list[DataSegmentInfo]
+    segment_count: int
+
+
+def read_header(datfile: io.BufferedReader) -> Header:
+    datfile.seek(0, 0)
+    first_offset = int.from_bytes(datfile.read(4), byteorder='little')
+    segment_count = first_offset // 8
+
+    data_segments = []
+    datfile.seek(0, 0)
+    for i in range(segment_count):
+        offset = int.from_bytes(datfile.read(4), byteorder='little')
+        length = int.from_bytes(datfile.read(4), byteorder='little')
+        segment = DataSegmentInfo(offset, length)
+        data_segments.append(segment)
+
+    return Header(data_segments, segment_count)
+
+
+def extract_segment_to_file(datfile: io.BufferedReader, segment: DataSegmentInfo, file: str):
+    datfile.seek(segment.offset, 0)
+    data = datfile.read(segment.length)
+
+    with open(file, "wb") as target:
+        target.write(data)
+
+
+main()
