@@ -1,3 +1,6 @@
+import io
+
+
 class FuncCall:
     name: str
     args: list[int]
@@ -24,7 +27,7 @@ def parse_line(line: str) -> FuncCall:
 
 
 class FileSegment:
-    buf_id: int
+    buf_ptr: int
     offset: int
     length: int
 
@@ -35,10 +38,10 @@ def get_file_segments_from_func_calls(func_calls: list[FuncCall]):
 
     for call in func_calls:
         if (call.name == "ReadFile"):
-            buf_id = call.args[1]
+            buf_ptr = call.args[1]
             bytes_to_read = call.args[2]
             segment = FileSegment()
-            segment.buf_id = buf_id
+            segment.buf_ptr = buf_ptr
             segment.offset = offset
             segment.length = bytes_to_read
             file_segments.append(segment)
@@ -63,11 +66,35 @@ def get_file_segments_from_func_calls(func_calls: list[FuncCall]):
         else:
             print("Skipping", call.name)
 
+    file_segments = consolidate_file_segments(file_segments)
     return file_segments
+
+
+def consolidate_file_segments(file_segments: list[FileSegment]):
+    consolidated_segs: list[FileSegment] = []
+
+    prev_unfinished = False
+    for segment in file_segments:
+        if prev_unfinished:
+            consolidated_segs[-1].length += segment.length
+        else:
+            consolidated_segs.append(segment)
+
+        prev_unfinished = (segment.length == 100000)
+
+    return consolidated_segs
+
+
+def read_file_segment(datfile: io.BufferedReader, segment: FileSegment):
+    datfile.seek(segment.offset, 0)
+    data = datfile.read(segment.length)
+
+    return data
 
 
 def main():
     logpath = "fileactions_race.log"
+    datfile_path = "game/datfile.dat"
     lines = []
     with open(logpath, "r") as f:
         lines = f.readlines()
@@ -77,8 +104,56 @@ def main():
         func_calls.append(parse_line(line))
 
     file_segments = get_file_segments_from_func_calls(func_calls)
-    for segment in file_segments:
-        print("Buf_id:", segment.buf_id, "Offset:", segment.offset, "Length:", segment.length)
+
+    offsets = []
+    lengths = []
+    int_index = 0
+
+    with open(datfile_path, "rb") as datfile:
+        for segment in file_segments:
+            data = read_file_segment(datfile, segment)
+            if len(data) == 4:
+                print(segment.offset)
+                int_le = int.from_bytes(data, byteorder="little")
+                if int_index % 2 == 0:
+                    offsets.append(int_le)
+                else:
+                    lengths.append(int_le)
+                int_index += 1
+
+    matches = 0
+    for i, offset in enumerate(offsets):
+        length = lengths[i]
+        print(i, offset, length)
+        seg_matches = [seg for seg in file_segments
+                       if seg.offset == offset and seg.length == length]
+        if len(seg_matches) > 0:
+            matches += 1
+
+    print(f"Matches: {matches} out of {len(offsets)}")
+    # 208 matches out of 594!
+    # The missing ones are probably because the logs only covered 1 race.
+
+    # So, based on the above, the format of the datfile is as follows:
+
+    #               0          4         8
+    #  Header     |-[offset   ][length  ]
+    #             | [offset   ][length  ]
+    #             | [offset   ][length  ]
+    #             |     ...
+    #  Data 0     ->[                   ]
+    #                   ...
+    #  Data 1     ->[                   ]
+    #
+    #  The header consists of (offset,length) pairs,
+    #  which are each 4 byte LE integers.
+    #  The first offset tells you the start of the first data segment,
+    #  so everything before that is part of the header.
+    #  In the datfile, it first offset is 4752.
+    #  So the no. of data segments is 4752 / 8 = 594
+
+    #  I think what I'll do is write a new script
+    #  that loads the whole file and extracts individual data segments.
 
 
 main()
