@@ -1,0 +1,110 @@
+The aave file for Mini Car Racing is saved at:
+
+C:\Windows\MiniCarRacing.ini
+
+Despite being a .ini file, which you'd expect would be a text config file, this is a binary file format. It appears to have a fixed file length of 27764 bytes.
+
+One of the most interesting things to figure out would be how to unlock the moon levels without going through a whole championship career.
+
+
+From the in-game menus, we can see that there 8 possible user accounts, and each of them has 5 championship save slots. So there must be space for 40 championship saves, along with a time trial record for every track per user. Which works out to ~52 * 8 ~= 400 time trial slots?
+
+Exploring tracks a bit more, there are 5 per league and 11 fun tracks. For the standard leagues A-G thats 7 x 5 + 11 = 46. That leaves 6 tracks.  Some of those are for League Moon, but I can't remember how many, so maybe there's some unseen tracks?!
+
+Known details:
+
+The last 4 bytes of the file must be the 4 byte int = 2 (little endian). So 0x02 0x00 0x00 0x00. It seems to be a way of checking that it has been initialised.
+So, I wonder, if I set the last 4 bytes to something else, would it reset the file? Answer: yes. I changed the 02 byte to 01 and the game prompted for the name of the first driver at next startup.
+
+Users:
+There are up to 8 users.
+I created 8 brand new users, and the slots for each seem to spread over the whole file, so each users save data must be together. The overall format then is something like this:
+
+0000 [Header      ]
+0330 [Player 1    ]
+1058 [Player 2    ]
+1d80 [Player 3    ]
+2aa8 [Player 4    ]
+37d0 [Player 5    ]
+44f8 [Player 6    ]
+5220 [Player 7    ]
+5f48 [Player 8    ]
+6c70 [Footer (0x2)]
+Total length: 6c74
+
+Every player section is the same size: 3368 bytes (0xd28 in hex).
+The header is comparatively short at 816 bytes.
+
+Header:
+The first byte seems to represent the car graphics settings:
+0x00 is 'Normal'
+0x01 is 'Good'
+0x02 is 'Excellent'
+(Though is probably saved as a 4 byte int).
+
+I can't figure out what bytes 5-8 mean. They default to the 4 byte int value of 2, but changing it doesnt seem to do anything (that I can tell).
+
+The 10th byte seems to represent the sound volume:
+0x64 is full volume
+0x2b is around half
+0x00 is no volume
+
+Bytes 11-14 seem to be the most recent selections in the multiplayer menu.
+They start out all as 0xff, which must mean 'none selected', then after I picked players 1 and 4, the values were 0x00 0x03 0xff 0xff, for Player1, Player4, None, None.
+Interestingly, if you enter a single player game, then the first of these seems to be updated to match the last single player player.
+
+I tried starting a multiplayer championship, but then realised you can't save multiplayer games! So that didnt have any impact on the save file. 
+
+
+Player data:
+
+When messing with multiplayer, after starting a splitscreen championship (though not saving), it edited some data for the players, 1 byte each at offset 130 (0x82) for each player. I'm presuming that this byte represents the car color preference for that player. There are 12 available patterns, 0x00 to 0x0b.  I tried chaning the pattern to 0x0c and weirdly the game was a lot more flickery and the resolhtion messed up (at least on linux eith wine).
+
+If a player is deleted, all the other players 'move up' such that the empty spot is at the bottom of the file.
+
+Player section format:
+
+Offset Length  Name           Description
+0      16      Player name    Max name length is 16 chars.
+16     108?    Controls       The keymap for controls. Each ome seems to be 4 bytes each.
+125    5       Save slots used One byte per save slot. Seems like a flag for whether the slot is used.
+130    1       Color pref     The players car skin/color preference.
+
+
+
+Controls (offset in bytes*4 for each available control):
+1:  Right
+4:  Throttle
+7:  Left
+10: Brake
+13: Front Weapon 1
+16: Front Weapon 2
+19: Front Weapon 3
+22: Extra
+25: Rear Weapon
+Strangely the byte format for each control looks something like this:
+0004 0000 00cd 0000 0001 0000  (here the 0xcd represents 'D' for Right)
+The 04, 01 and null bytes are all the same for each control. So every control takes up 12 bytes.
+
+Championship saves:
+Each player has 5 save slots. Interestingly, they are not saved like:
+[Save 1][Save 2]...[Save 5]
+Theybare saved more like:
+[Save 1,Section 1][Save 2,Section 1]...[Save 5,Section 1]
+[Save 1,Section 2][Save 2,Section 2]...[Save 5,Section 2]
+...
+
+So each save has multiple sections, and all slots have their individual sections together.
+From looking at the hexdump, there seems to be 6 sections, with maybe a couple of 1 byte sections at the start.
+
+The sizes of the sections are:
+Section 1: 1 bytes        Counts which league you are in? 0x0 = A, 0x1 = B etc.
+Section 2: 1 byte         I think just counts what race you are on?
+Section 3: 4 bytes (?)    unsure. starts with just 1 byte, 0x07. 1 save slot changed to 0xb.
+Section 4: 32 bytes       appears to contain the players cash, possibly cpu players cash as well?
+Section 5: 32 bytes       Seems to have 8 numbers from -1 to 6. Possibly player ids? Seems likely, as they switched up once in league B.
+Section 6: 512 bytes      biggest section. seems to contain current car + upgrades
+Section 7: 32 bytes       unsure. could be position in the previous race?
+Section 8: 32 bytes       looks a bit like each players current championship points
+
+So, if I know which bytes control the league and race, can I get a save game to jump to league moon (or beyond?!)
