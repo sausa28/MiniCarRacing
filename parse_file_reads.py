@@ -1,6 +1,8 @@
+from dataclasses import dataclass
 import io
 
 
+@dataclass
 class FuncCall:
     name: str
     args: list[int]
@@ -12,20 +14,19 @@ def parse_line(line: str) -> FuncCall:
     name_kernel = func_call_str.split('(')[0]
     name = name_kernel.split('.')[1]
 
-    func_call = FuncCall()
-    func_call.name = name
-
+    args = []
     args_str1 = func_call_str.split('(')[1][:-1]
     if (len(args_str1) > 0):
         args_str2 = args_str1.split(',')
         arg_values = [int(arg, 16) for arg in args_str2]
-        func_call.args = arg_values
+        args = arg_values
     else:
-        func_call.args = []
+        args = []
 
-    return func_call
+    return FuncCall(name, args)
 
 
+@dataclass
 class FileSegment:
     buf_ptr: int
     offset: int
@@ -34,16 +35,13 @@ class FileSegment:
 
 def get_file_segments_from_func_calls(func_calls: list[FuncCall]):
     offset = 0
-    file_segments = []
+    file_segments: list[FileSegment] = []
 
     for call in func_calls:
         if (call.name == "ReadFile"):
             buf_ptr = call.args[1]
             bytes_to_read = call.args[2]
-            segment = FileSegment()
-            segment.buf_ptr = buf_ptr
-            segment.offset = offset
-            segment.length = bytes_to_read
+            segment = FileSegment(buf_ptr, offset, bytes_to_read)
             file_segments.append(segment)
             offset += bytes_to_read
         elif (call.name == "SetFilePointer"):
@@ -61,6 +59,8 @@ def get_file_segments_from_func_calls(func_calls: list[FuncCall]):
                     offset += distance_to_move
                 case 2:  # FILE_END
                     raise Exception("We don't know the file end position")
+                case _:
+                    raise Exception("Invalid move_method")
 
             assert offset >= 0
         else:
@@ -86,7 +86,7 @@ def consolidate_file_segments(file_segments: list[FileSegment]):
 
 
 def read_file_segment(datfile: io.BufferedReader, segment: FileSegment):
-    datfile.seek(segment.offset, 0)
+    _ = datfile.seek(segment.offset, 0)
     data = datfile.read(segment.length)
 
     return data
@@ -99,14 +99,14 @@ def main():
     with open(logpath, "r") as f:
         lines = f.readlines()
 
-    func_calls = []
+    func_calls: list[FuncCall] = []
     for line in lines:
         func_calls.append(parse_line(line))
 
     file_segments = get_file_segments_from_func_calls(func_calls)
 
-    offsets = []
-    lengths = []
+    offsets: list[int] = []
+    lengths: list[int] = []
     int_index = 0
 
     with open(datfile_path, "rb") as datfile:

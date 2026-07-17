@@ -9,6 +9,8 @@ One of the most interesting things to figure out would be how to unlock the moon
 
 From the in-game menus, we can see that there 8 possible user accounts, and each of them has 5 championship save slots. So there must be space for 40 championship saves, along with a time trial record for every track per user. Which works out to ~52 * 8 ~= 400 time trial slots?
 
+The above is incorrect. It only saves the best time per track once, not per account. And the fun tracks wont be included.  It actually has space for 40 time trial results. 35 standard league + 5 league moon?
+
 Exploring tracks a bit more, there are 5 per league and 11 fun tracks. For the standard leagues A-G thats 7 x 5 + 11 = 46. That leaves 6 tracks.  Some of those are for League Moon, but I can't remember how many, so maybe there's some unseen tracks?!
 
 Known details:
@@ -21,6 +23,7 @@ There are up to 8 users.
 I created 8 brand new users, and the slots for each seem to spread over the whole file, so each users save data must be together. The overall format then is something like this:
 
 0000 [Header      ]
+0010 [Timetrials  ]
 0330 [Player 1    ]
 1058 [Player 2    ]
 1d80 [Player 3    ]
@@ -55,6 +58,19 @@ Interestingly, if you enter a single player game, then the first of these seems 
 
 I tried starting a multiplayer championship, but then realised you can't save multiplayer games! So that didnt have any impact on the save file. 
 
+Timetrial data:
+Theres 2 sections here, and 40 records available to store. The first section stores the name of the player who set the record (plus possibly some garbage bytes), the 2nd section stores the time:
+
+[Track 1: Player name]
+[Track 2: Player name]
+[Track 3: Player name]
+...
+[Track 40: Player name]
+[Track 1 time][Track 2 time]..
+[Track 40 time]
+
+Section 2 has the time as a 4 byte LE int. The number represents the time in 1/120ths of a second. So to get the time in seconds, divide the time by 120.
+Each section 1 entry is 16 bytes, each section 2 entry is 4 bytes. For a total of (16 + 4)*40 = 800 bytes for the timetrial data.
 
 Player data:
 
