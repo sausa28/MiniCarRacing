@@ -14277,7 +14277,7 @@ uint __thiscall FUN_00418190(void *this,undefined4 param_1,undefined4 *param_2)
       local_ca6 = 0xff;
       *(int *)(pcVar8 + -0x54) = iVar7;
       if (iVar7 != -1) {
-        FUN_004419f0(local_d2c,iVar7);
+        InitObjWithPlayerDataForId(local_d2c,iVar7);
         uVar5 = 0xffffffff;
         pcVar9 = local_d28;
         do {
@@ -15149,7 +15149,7 @@ LAB_00418f1b:
     do {
       iVar11 = iVar15;
       if (*piVar4 != -1) {
-        FUN_004419f0(&stack0x00007504,*piVar4);
+        InitObjWithPlayerDataForId(&stack0x00007504,*piVar4);
         iVar11 = iVar15 + 1;
         FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),iVar15,(uint *)&stack0x00007519);
       }
@@ -16532,7 +16532,7 @@ void __thiscall FUN_0041b730(void *this,int param_1)
     puVar7 = puVar7 + 1;
   }
   local_ca6 = 0xff;
-  FUN_004419f0(local_d2c,*(int *)((int)this + 0x33a8));
+  InitObjWithPlayerDataForId(local_d2c,*(int *)((int)this + 0x33a8));
   local_d30 = 8;
   cVar1 = acStack_ca5[param_1];
   *(int *)((int)this + 0x305c) = (int)acStack_ca0[param_1];
@@ -16856,7 +16856,7 @@ void __thiscall FUN_0041cb70(void *this,int param_1)
     puVar5 = puVar5 + 1;
   }
   local_ca6 = 0xff;
-  FUN_004419f0(&local_d2c,*(int *)(*(int *)((int)this + 0xa90c) + 4));
+  InitObjWithPlayerDataForId(&local_d2c,*(int *)(*(int *)((int)this + 0xa90c) + 4));
   puVar1 = *(undefined1 **)((int)this + 0x1764);
   puVar7 = *(undefined4 **)((int)this + 0xa908);
   local_d30 = 8;
@@ -28691,7 +28691,7 @@ undefined2 * FUN_0042e380(void)
         *puVar13 = 0;
         puVar13 = puVar13 + 1;
       }
-      FUN_004419f0(&stack0x00000d30,*(int *)(this[0x5d3] + 4 + iVar12));
+      InitObjWithPlayerDataForId(&stack0x00000d30,*(int *)(this[0x5d3] + 4 + iVar12));
       *(undefined4 *)(this[0x5d3] + 0x10 + iVar12) = 8;
     }
     iVar12 = iVar12 + 0x6c;
@@ -28719,7 +28719,7 @@ undefined2 * FUN_0042e380(void)
   } while (iVar9 < 0x360);
   if (*in_stack_00001a68 == 1) {
     (**(code **)(*this + 0x24))();
-    FUN_004419f0(&stack0x00000004,*(int *)(in_stack_00001a64 + 4));
+    InitObjWithPlayerDataForId(&stack0x00000004,*(int *)(in_stack_00001a64 + 4));
     iVar12 = 0;
     do {
       if ((&stack0x00000085)[iVar12] != '\0') {
@@ -29302,7 +29302,7 @@ LAB_004302bc:
       iVar13 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar4);
       if (iVar13 != -1) {
         iVar13 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar4);
-        FUN_004419f0(&stack0x00000368,*(int *)(*(int *)(extraout_ECX + 0x174c) + 4 + iVar13 * 0x6c))
+        InitObjWithPlayerDataForId(&stack0x00000368,*(int *)(*(int *)(extraout_ECX + 0x174c) + 4 + iVar13 * 0x6c))
         ;
         FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),iVar4,(uint *)&stack0x0000037d);
       }
@@ -29428,7 +29428,7 @@ void __fastcall FUN_00430690(void *param_1)
   }
   local_ca6 = 0xff;
   local_d38 = 0;
-  uVar2 = FUN_004419f0(local_d2c,0);
+  uVar2 = InitObjWithPlayerDataForId(local_d2c,0);
   iVar5 = 0;
   if ((char)uVar2 != '\0') {
     local_d34 = (undefined4 *)((int)param_1 + 0x1768);
@@ -29463,7 +29463,7 @@ void __fastcall FUN_00430690(void *param_1)
       *local_d34 = pcVar9;
       local_d34 = local_d34 + 1;
       pcVar9 = pcVar9 + 0x11;
-      uVar2 = FUN_004419f0(local_d2c,iVar5);
+      uVar2 = InitObjWithPlayerDataForId(local_d2c,iVar5);
       local_d38 = iVar5;
     } while ((char)uVar2 != '\0');
   }
@@ -34987,7 +34987,7 @@ void __fastcall FUN_00436bf0(int *param_1)
 {
   void *this;
   undefined1 uVar1;
-  byte bVar2;
+  byte volume;
   undefined *puVar3;
   int iVar4;
   undefined4 *puVar5;
@@ -34996,8 +34996,8 @@ void __fastcall FUN_00436bf0(int *param_1)
   puVar3 = GetPointerToSaveData();
   puVar3[10] = uVar1;
   this = (void *)(GLOBAL_STATE + 0xb284);
-  bVar2 = (**(code **)(*param_1 + 0x18))(0x42f);
-  SetObjectProperty0xe1c_IfLessThan101(this,bVar2);
+  volume = (**(code **)(*param_1 + 0x18))(0x42f);
+  SetVolumeIfLessThan101(this,volume);
   puVar3 = GetPointerToSaveData();
   *(undefined4 *)(puVar3 + 4) = 1;
   iVar4 = FUN_00428dc0(param_1,0x51a);
@@ -35031,7 +35031,7 @@ void __fastcall FUN_00436bf0(int *param_1)
 void __fastcall FUN_00436cc0(int *param_1)
 
 {
-  SetObjectProperty0xe1c_IfLessThan101((void *)(GLOBAL_STATE + 0xb284),*(byte *)(param_1 + 0x5b3));
+  SetVolumeIfLessThan101((void *)(GLOBAL_STATE + 0xb284),*(byte *)(param_1 + 0x5b3));
   (**(code **)(*param_1 + 4))(2);
   return;
 }
@@ -41961,30 +41961,32 @@ void __thiscall FUN_004418c0(void *this,undefined4 *param_1,int param_2,int para
 }
 
 
-uint __thiscall FUN_004419f0(void *this,int param_1)
+uint __thiscall InitObjWithPlayerDataForId(void *this,int playerId)
 
 {
-  undefined4 *puVar1;
-  int iVar2;
-  undefined4 *puVar3;
-  char *pcVar4;
+  undefined4 *playerDataPtr;
+  int i;
+  undefined4 *src;
+  char *dst;
   char *pcVar5;
   
-  if (7 < param_1) {
-    return param_1 & 0xffffff00;
+  if (7 < playerId) {
+    return playerId & 0xffffff00;
   }
-  *(int *)this = param_1;
+  *(int *)this = playerId;
   pcVar5 = (char *)((int)this + 4);
-  puVar1 = (undefined4 *)FUN_0044f9f0(param_1);
-  puVar3 = puVar1;
-  pcVar4 = pcVar5;
-  for (iVar2 = 0x34a; iVar2 != 0; iVar2 = iVar2 + -1) {
-    *(undefined4 *)pcVar4 = *puVar3;
-    puVar3 = puVar3 + 1;
-    pcVar4 = pcVar4 + 4;
+  playerDataPtr = (undefined4 *)GetPlayerDataPtr(playerId);
+  src = playerDataPtr;
+  dst = pcVar5;
+  // Copy 4 bytes 842 times, i.e. copy all 3368 bytes of player data
+  for (i = 0x34a; i != 0; i = i + -1) { 
+    *(undefined4 *)dst = *src;
+    src = src + 1;
+    dst = dst + 4;
   }
-  if (*pcVar5 == '\0') {
-    for (iVar2 = 0x34a; iVar2 != 0; iVar2 = iVar2 + -1) {
+  // Null out the (local) data if empty
+  if (*pcVar5 == '\0') {  // I.e. empty player name
+    for (i = 0x34a; i != 0; i = i + -1) {
       pcVar5[0] = '\0';
       pcVar5[1] = '\0';
       pcVar5[2] = '\0';
@@ -41993,7 +41995,7 @@ uint __thiscall FUN_004419f0(void *this,int param_1)
     }
     return 0;
   }
-  return CONCAT31((int3)((uint)puVar1 >> 8),1);
+  return CONCAT31((int3)((uint)playerDataPtr >> 8),1);
 }
 
 
@@ -42005,8 +42007,8 @@ undefined4 __fastcall FUN_00441a40(int *param_1)
   int iVar3;
   int *piVar4;
   
-  puVar1 = (undefined4 *)FUN_0044f9f0(*param_1);
-  for (iVar3 = 0x34a; iVar3 != 0; iVar3 = iVar3 + -1) {
+  puVar1 = (undefined4 *)GetPlayerDataPtr(*param_1);
+  for (iVar3 = 0x34a; iVar3 != 0; iVar3-- ) {
     *puVar1 = 0;
     puVar1 = puVar1 + 1;
   }
@@ -42015,7 +42017,7 @@ undefined4 __fastcall FUN_00441a40(int *param_1)
     *piVar4 = 0;
   }
   uVar2 = FUN_00441a70(param_1);
-  return CONCAT31((int3)((uint)uVar2 >> 8),1);
+  return CONCAT31((int3)((uint)uVar2 >> 8),1);  // Returns uVar2, but aligned to the previous 256 bytes (+1)?
 }
 
 
@@ -42030,29 +42032,29 @@ void __fastcall FUN_00441a70(int *param_1)
   
   do {
     iVar4 = 0;
-    uVar2 = FUN_004419f0(param_1,0);
+    uVar2 = InitObjWithPlayerDataForId(param_1,0);
     if ((char)uVar2 != '\0') {
       do {
         if (7 < iVar4) break;
         iVar4 = iVar4 + 1;
-        uVar2 = FUN_004419f0(param_1,iVar4);
+        uVar2 = InitObjWithPlayerDataForId(param_1,iVar4);
       } while ((char)uVar2 != '\0');
       if (iVar4 == 8) {
         return;
       }
     }
-    uVar2 = FUN_004419f0(param_1,iVar4);
+    uVar2 = InitObjWithPlayerDataForId(param_1,iVar4);
     cVar1 = (char)uVar2;
     iVar5 = iVar4;
     while ((cVar1 == '\0' && (iVar5 < 8))) {
       iVar5 = iVar5 + 1;
-      uVar2 = FUN_004419f0(param_1,iVar5);
+      uVar2 = InitObjWithPlayerDataForId(param_1,iVar5);
       cVar1 = (char)uVar2;
     }
     if (iVar5 == 8) {
       return;
     }
-    puVar3 = (undefined4 *)FUN_0044f9f0(*param_1);
+    puVar3 = (undefined4 *)GetPlayerDataPtr(*param_1);
     for (iVar5 = 0x34a; iVar5 != 0; iVar5 = iVar5 + -1) {
       *puVar3 = 0;
       puVar3 = puVar3 + 1;
@@ -42082,12 +42084,12 @@ int __fastcall FUN_00441af0(int *param_1)
   undefined4 local_6c [27];
   
   iVar6 = 0;
-  uVar2 = FUN_004419f0(param_1,0);
+  uVar2 = InitObjWithPlayerDataForId(param_1,0);
   if ((char)uVar2 != '\0') {
     do {
       if (7 < iVar6) break;
       iVar6 = iVar6 + 1;
-      uVar2 = FUN_004419f0(param_1,iVar6);
+      uVar2 = InitObjWithPlayerDataForId(param_1,iVar6);
     } while ((char)uVar2 != '\0');
     if (iVar6 == 8) {
       return -1;
@@ -42141,16 +42143,16 @@ undefined4 __fastcall FUN_00441b90(int *param_1)
   undefined *puVar2;
   undefined3 extraout_var;
   int iVar3;
-  DWORD DVar4;
+  DWORD saveFileSize;
   
-  piVar1 = (int *)FUN_0044f9f0(*param_1);
+  piVar1 = (int *)GetPlayerDataPtr(*param_1);
   for (iVar3 = 0x34a; param_1 = param_1 + 1, iVar3 != 0; iVar3 = iVar3 + -1) {
     *piVar1 = *param_1;
     piVar1 = piVar1 + 1;
   }
-  DVar4 = 0x6c74;
+  saveFileSize = 0x6c74;
   puVar2 = GetPointerToSaveData();
-  WriteSaveDataToFile(puVar2,DVar4);
+  WriteSaveDataToFile(puVar2,saveFileSize);
   return CONCAT31(extraout_var,1);
 }
 
@@ -42307,7 +42309,7 @@ void __fastcall FUN_00441e70(void *param_1)
   local_d34 = (undefined4 *)((int)param_1 + 0x3b48);
   local_d38 = (char *)((int)param_1 + 0x3ac0);
   do {
-    uVar2 = FUN_004419f0(local_d2c,local_d3c);
+    uVar2 = InitObjWithPlayerDataForId(local_d2c,local_d3c);
     if ((char)uVar2 == '\0') {
       pcVar3 = (char *)FUN_00426cd0(0x6c);
       uVar5 = 0xffffffff;
@@ -42429,7 +42431,7 @@ bool __thiscall FUN_004423a0(void *this,int param_1)
     puVar3 = puVar3 + 1;
   }
   local_ca6 = 0xff;
-  FUN_004419f0(&local_d2c,param_1);
+  InitObjWithPlayerDataForId(&local_d2c,param_1);
   FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),0,local_d17);
   *(undefined4 **)((int)this + 0x5238) = local_d28;
   iVar4 = (*(code *)**(undefined4 **)((int)this + 0x3b6c))();
@@ -42480,7 +42482,7 @@ void FUN_00442460(void)
     *puVar4 = 0;
     puVar4 = puVar4 + 1;
   }
-  uVar3 = FUN_004419f0(&stack0x000016c0,0);
+  uVar3 = InitObjWithPlayerDataForId(&stack0x000016c0,0);
   cVar1 = (char)uVar3;
   while( true ) {
     if (cVar1 != '\0') {
@@ -42498,7 +42500,7 @@ void FUN_00442460(void)
     uVar2 = FUN_00442330(extraout_ECX);
     if (CONCAT31(extraout_var,uVar2) != 1) break;
     FUN_004466f0(&local_c);
-    uVar3 = FUN_004419f0(&stack0x000016c0,0);
+    uVar3 = InitObjWithPlayerDataForId(&stack0x000016c0,0);
     cVar1 = (char)uVar3;
   }
   (**(code **)(*extraout_ECX + 0x58))();
@@ -43601,7 +43603,7 @@ char FUN_004438b0(void)
   do {
     iVar3 = *(int *)(*(int *)((int)this_00 + 0x16c8) + iVar4);
     if (iVar3 != -1) {
-      FUN_004419f0(&local_c,iVar3);
+      InitObjWithPlayerDataForId(&local_c,iVar3);
       FUN_004320f0((void *)(GLOBAL_STATE + 0x637c),(char *)local_8);
     }
     iVar4 = iVar4 + 4;
@@ -43675,7 +43677,7 @@ uint FUN_00443a80(void)
   do {
     iVar1 = *(int *)(*(int *)(extraout_ECX + 0x16c8) + 4 + iVar4 * 4);
     if (iVar1 != -1) {
-      FUN_004419f0(&stack0x00000074,iVar1);
+      InitObjWithPlayerDataForId(&stack0x00000074,iVar1);
       FUN_004320f0((void *)(GLOBAL_STATE + 0x637c),&stack0x00000078);
     }
     if (iVar4 == 0) {
@@ -44489,11 +44491,11 @@ uint __thiscall FUN_00444bf0(void *this,int param_1,int param_2,char param_3)
 }
 
 
-undefined1 __thiscall SetObjectProperty0xe1c_IfLessThan101(void *this,byte param_1)
+undefined1 __thiscall SetVolumeIfLessThan101(void *this,byte volume)
 
 {
-  if (param_1 < 0x65) {
-    *(byte *)((int)this + 0xe1c) = param_1;
+  if (volume < 0x65) {
+    *(byte *)((int)this + 0xe1c) = volume;
     return 1;
   }
   return 0;
@@ -49645,11 +49647,11 @@ undefined * FUN_0044f9e0(void)
   return &DAT_00476938;
 }
 
-
-undefined * __cdecl FUN_0044f9f0(int param_1)
+// Get start of playerdata save slot for player {id}
+undefined * __cdecl GetPlayerDataPtr(int id)
 
 {
-  return &DAT_00476c58 + param_1 * 0xd28;
+  return &DAT_00476c58 + id * 0xd28;
 }
 
 
@@ -50906,7 +50908,7 @@ undefined4 FUN_00450fc0(void)
 
     this = (void *)(GLOBAL_STATE + 0xb284);
     saveDataBuffer = GetPointerToSaveData();
-    SetObjectProperty0xe1c_IfLessThan101(this,saveDataBuffer[10]);
+    SetVolumeIfLessThan101(this,saveDataBuffer[10]);
     if (*(undefined1 **)(GLOBAL_STATE + 0xcde8) != (undefined1 *)0x0) {
       switch(**(undefined1 **)(GLOBAL_STATE + 0xcde8)) {
       case 0x30:
@@ -51077,7 +51079,7 @@ uint FUN_00451490(void)
     puVar4 = puVar4 + 1;
   }
   uStack0000007e = 0xff;
-  uVar1 = FUN_004419f0(&local_8,0);
+  uVar1 = InitObjWithPlayerDataForId(&local_8,0);
   if ((char)uVar1 == '\0') {
     FUN_004466c0((undefined4 *)&stack0x00002a48);
     local_c = &stack0x00004110;
