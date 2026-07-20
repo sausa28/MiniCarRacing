@@ -2,7 +2,7 @@
 // Func decomp timed out. FUN_004164a0
 // Func decomp timed out. FUN_00453712
 
-void thunk_FUN_0042e100(void)
+void thunk_FUN_0042e100_do_nothing(void)
 
 {
   return;
@@ -385,7 +385,7 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
   int iVar12;
   float10 fVar13;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) == 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) == 0) {
     puVar3 = FUN_00446760(this,param_1);
     (**(code **)(*(int *)this + 0x24))(0x78);
     *(undefined1 *)((int)this + 0x181d) = 0;
@@ -407,14 +407,14 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
     *(undefined2 **)((int)this + 0x1844) = puVar10 + 0x16e00;
     puVar10 = puVar10 + 0x2fe00;
     *(undefined2 **)((int)this + 0x1878) = puVar10;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,399);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,399);
     if ((char)uVar5 != '\0') {
-      FUN_0042c8a0(pvVar1,puVar10,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar10,0xffffffff,'\x01');
     }
     FUN_004415b0((int)puVar10);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,399);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,399);
     if ((char)uVar5 == '\0') {
       iVar8 = -1;
     }
@@ -435,14 +435,14 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
     iVar12 = 0;
     pvVar11 = (LPVOID)(uVar5 + iVar8);
     *(LPVOID *)((int)this + 0x187c) = pvVar11;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x191);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x191);
     if ((char)uVar5 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar11,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar11,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar11);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x191);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x191);
     if ((char)uVar5 == '\0') {
       iVar8 = -1;
     }
@@ -462,14 +462,14 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
     }
     pvVar11 = (LPVOID)(uVar5 + iVar8);
     *(LPVOID *)((int)this + 0x1880) = pvVar11;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x192);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x192);
     if ((char)uVar5 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar11,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar11,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar11);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x192);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x192);
     if ((char)uVar5 == '\0') {
       iVar8 = -1;
     }
@@ -489,14 +489,14 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
     }
     pvVar11 = (LPVOID)(uVar5 + iVar8);
     *(LPVOID *)((int)this + 0x1884) = pvVar11;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x193);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x193);
     if ((char)uVar5 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar11,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar11,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar11);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar5 = FUN_0042c830(pvVar1,0x193);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar5 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x193);
     if ((char)uVar5 == '\0') {
       iVar8 = -1;
     }
@@ -587,7 +587,7 @@ void FUN_00401f40(void)
   local_c = &PTR_thunk_FUN_00427190_0045d278;
   if ((char)this[0x607] == '\0') {
     bVar3 = FUN_004294e0(this,s_donation_00463040);
-    if ((!bVar3) || (*(int *)(GLOBAL_STATE + 0x63b0) != 0)) {
+    if ((!bVar3) || (*(int *)(GLOBAL_STATE.fieldM) != 0)) {
       piVar1 = (int *)(this[0x5b2] + 0x4c + this[0x5b3] * 0x6c);
       iVar4 = FUN_00450480(this[0x608]);
       iVar4 = (this[0x5b4] + *piVar1) - iVar4;
@@ -815,13 +815,13 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
   if (DAT_00476910 != 0) {
     return param_1;
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768fc = param_1;
-  uVar2 = FUN_0042c830(pvVar1,0x6f);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x6f);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,param_1,0xffffffff,'\0');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,param_1,0xffffffff,'\0');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768fc,0xa10);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768fc,0xa10);
   uVar2 = (int)param_1 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -834,13 +834,13 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     iVar3 = 4 - uVar5;
   }
   puVar6 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476900 = puVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x70);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x70);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar6,0xffffffff,'\0');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar6,0xffffffff,'\0');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476900,0xa10);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476900,0xa10);
   uVar2 = (int)puVar6 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -853,11 +853,11 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     iVar3 = 4 - uVar5;
   }
   puVar6 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476904 = puVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x71);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x71);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar6,0xffffffff,'\0');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar6,0xffffffff,'\0');
   }
   if (((uint)puVar6 & 3) == 0) {
     iVar3 = 0;
@@ -869,7 +869,7 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     }
     iVar3 = 4 - uVar2;
   }
-  iVar4 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476904,0xa10);
+  iVar4 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476904,0xa10);
   uVar2 = (int)puVar6 + iVar4 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -882,13 +882,13 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     iVar3 = 4 - uVar5;
   }
   puVar6 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_0047690c = puVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x73);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x73);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar6,0xffffffff,'\0');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar6,0xffffffff,'\0');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_0047690c,0x1275);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_0047690c,0x1275);
   uVar2 = (int)puVar6 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -901,11 +901,11 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     iVar3 = 4 - uVar5;
   }
   puVar6 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476908 = puVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x72);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x72);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar6,0xffffffff,'\0');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar6,0xffffffff,'\0');
   }
   if (((uint)puVar6 & 3) == 0) {
     iVar3 = 0;
@@ -917,7 +917,7 @@ undefined2 * FUN_00402e00(undefined2 *param_1)
     }
     iVar3 = 4 - uVar2;
   }
-  iVar4 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476908,4000);
+  iVar4 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476908,4000);
   puVar6 = (undefined2 *)((int)puVar6 + iVar4 + iVar3);
   if (((uint)puVar6 & 3) != 0) {
     uVar2 = (uint)puVar6 & 0x80000003;
@@ -1888,7 +1888,7 @@ int __thiscall FUN_00404c90(void *this,int param_1,int param_2,int param_3)
   int iVar2;
   int unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x7a);
@@ -2056,7 +2056,7 @@ void __thiscall FUN_00404f80(void *this,int param_1)
     }
   }
   else if (uVar2 == 0x4e6) {
-    iVar9 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),0);
+    iVar9 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),0);
     FUN_00436290(*(void **)((int)this + 0x16c8),iVar9);
   }
   else if (uVar2 == 0x58d) {
@@ -2088,8 +2088,8 @@ void __thiscall FUN_00404f80(void *this,int param_1)
     FUN_00405aa0(this);
   }
 LAB_00405345:
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-    cVar4 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+    cVar4 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar4 != '\0') {
       FUN_00405690((int)this);
       (**(code **)(*(int *)this + 0x10))(0);
@@ -2116,10 +2116,10 @@ void __fastcall FUN_00405690(int param_1)
   local_4 = 0;
   local_8 = 0;
   local_c = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_14,&local_10,&local_4,&local_8,&local_c);
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_14,&local_10,&local_4,&local_8,&local_c);
   local_14 = (*(undefined4 **)(param_1 + 0x16d0))[1];
   local_10 = **(undefined4 **)(param_1 + 0x16d0);
-  FUN_00431b20((void *)(GLOBAL_STATE + 0x637c),local_14,local_10,local_4,local_8,local_c);
+  FUN_00431b20((void *)(GLOBAL_STATE.fieldJ),local_14,local_10,local_4,local_8,local_c);
   return;
 }
 
@@ -2142,7 +2142,7 @@ void __fastcall FUN_00405720(int param_1)
   local_4 = 0;
   local_8 = 0;
   local_c = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_14,&local_10,&local_4,&local_8,&local_c);
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_14,&local_10,&local_4,&local_8,&local_c);
   *(undefined4 *)(*(int *)(param_1 + 0x16d0) + 4) = local_14;
   **(undefined4 **)(param_1 + 0x16d0) = local_10;
   iVar2 = **(int **)(param_1 + 0x16d4);
@@ -13978,11 +13978,11 @@ undefined2 * __thiscall FUN_004174c0(void *this,undefined2 *param_1,int param_2)
   int iVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) == 0) {
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) == 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
       iVar2 = 0;
       do {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar2,9);
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar2,9);
         iVar2 = iVar2 + 1;
       } while (iVar2 < 8);
     }
@@ -14011,11 +14011,11 @@ void __fastcall FUN_00417ba0(int param_1)
   local_10 = 0;
   local_8 = 0;
   local_c = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_4,&local_14,&local_10,&local_8,&local_c);
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_4,&local_14,&local_10,&local_8,&local_c);
   piVar1 = *(int **)(param_1 + 0x16c8);
   local_14 = piVar1[3];
   local_10 = (piVar1[2] * 0x10 + piVar1[1]) * 0x10 + *piVar1;
-  FUN_00431b20((void *)(GLOBAL_STATE + 0x637c),local_4,local_14,local_10,local_8,local_c);
+  FUN_00431b20((void *)(GLOBAL_STATE.fieldJ),local_4,local_14,local_10,local_8,local_c);
   return;
 }
 
@@ -14044,7 +14044,7 @@ void __fastcall FUN_00417c40(int *param_1)
   local_2c = 0;
   local_20 = 0;
   local_24 = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_1c,&local_28,&local_2c,&local_20,&local_24)
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_1c,&local_28,&local_2c,&local_20,&local_24)
   ;
   *(undefined4 *)(param_1[0x5b2] + 0xc) = local_28;
   *(uint *)param_1[0x5b2] = local_2c & 0xf;
@@ -14342,7 +14342,7 @@ uint __thiscall FUN_00418190(void *this,undefined4 param_1,undefined4 *param_2)
   uVar4 = (undefined3)((uint)uVar3 >> 8);
   if (*(char *)((int)this + 0x3024) != '\0') {
     FUN_00435160(DAT_004768d4);
-    FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     uVar4 = extraout_var;
   }
   return CONCAT31(uVar4,(char)uVar3);
@@ -14418,7 +14418,7 @@ FUN_004183f0(int param_1,int param_2,int param_3,int param_4,int param_5,int par
       FUN_0044f8a0(DVar5);
     }
     else {
-      cVar2 = FUN_00433b90((void *)(GLOBAL_STATE + 0x637c),DVar5);
+      cVar2 = FUN_00433b90((void *)(GLOBAL_STATE.fieldJ),DVar5);
       if (cVar2 == '\0') {
         FUN_004466f0((undefined4 *)&stack0x00004584);
         FUN_004466f0((undefined4 *)&stack0x00002e98);
@@ -14659,8 +14659,8 @@ LAB_00418b0a:
     *puVar13 = 0;
     puVar13 = puVar13 + 1;
   }
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-    iVar15 = FUN_00433630((void *)(GLOBAL_STATE + 0x637c),0);
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+    iVar15 = FUN_00433630((void *)(GLOBAL_STATE.fieldJ),0);
     *(int *)((int)this + 0x304c) = iVar15;
     FUN_004354a0((int)DAT_004768d4);
   }
@@ -14668,7 +14668,7 @@ LAB_00418b0a:
     if (*(char *)((int)this + 0x3024) != '\0') {
       iVar15 = 0;
       do {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar15,9);
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar15,9);
         iVar15 = iVar15 + 1;
       } while (iVar15 < 8);
     }
@@ -14736,8 +14736,8 @@ LAB_00418b0a:
 LAB_00418d80:
           FUN_0041b5a0(this,iVar15,*(int *)((int)this + 0x3058),uVar5,-1,'\0');
           *(int *)((int)this + 0x3050) = *(int *)((int)this + 0x3050) + 1;
-          if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-            FUN_00433e10((void *)(GLOBAL_STATE + 0x637c),iVar15);
+          if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+            FUN_00433e10((void *)(GLOBAL_STATE.fieldJ),iVar15);
           }
           *(int *)((int)this + 0x304c) = *(int *)((int)this + 0x304c) + -1;
         }
@@ -14747,7 +14747,7 @@ LAB_00418d80:
     }
     iVar15 = 0;
     do {
-      FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar15,9);
+      FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar15,9);
       iVar15 = iVar15 + 1;
     } while (iVar15 < 8);
     FUN_004466f0(&stack0x000000c0);
@@ -14902,19 +14902,19 @@ LAB_00418f1b:
         } while (iVar15 != 0);
       }
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
       bVar1 = false;
       iVar15 = 0;
       do {
-        iVar6 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar15);
+        iVar6 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),iVar15);
         if ((iVar6 != -1) &&
-           (iVar6 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar15), (&param_1)[iVar6] != '\0')
+           (iVar6 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),iVar15), (&param_1)[iVar6] != '\0')
            ) {
           bVar1 = true;
         }
         iVar15 = iVar15 + 1;
       } while (iVar15 < 4);
-      FUN_00433d30((void *)(GLOBAL_STATE + 0x637c),'\x01');
+      FUN_00433d30((void *)(GLOBAL_STATE.fieldJ),'\x01');
       if (bVar1) {
         iVar6 = 0;
         iVar15 = (int)this + 0x33fc;
@@ -14924,22 +14924,22 @@ LAB_00418f1b:
             format_string(&stack0x00000040,pbVar7);
             FUN_00435930(DAT_004768d4,&stack0x00000040);
             WaitForSingleObject((HANDLE)DAT_004768d4[1],0xffffffff);
-            FUN_00432390((void *)(GLOBAL_STATE + 0x637c),iVar6);
+            FUN_00432390((void *)(GLOBAL_STATE.fieldJ),iVar6);
             ReleaseMutex((HANDLE)DAT_004768d4[1]);
           }
           iVar6 = iVar6 + 1;
           iVar15 = iVar15 + 0x6c;
         } while (iVar6 < 8);
         *(undefined1 *)(DAT_004768d4 + 0x32b5) = 1;
-        FUN_00433d30((void *)(GLOBAL_STATE + 0x637c),'\x02');
-        FUN_00433d30((void *)(GLOBAL_STATE + 0x637c),'\x03');
+        FUN_00433d30((void *)(GLOBAL_STATE.fieldJ),'\x02');
+        FUN_00433d30((void *)(GLOBAL_STATE.fieldJ),'\x03');
       }
       else {
-        cVar3 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+        cVar3 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
         if (cVar3 != '\0') {
-          FUN_00433d30((void *)(GLOBAL_STATE + 0x637c),'\x02');
+          FUN_00433d30((void *)(GLOBAL_STATE.fieldJ),'\x02');
         }
-        FUN_004320c0((void *)(GLOBAL_STATE + 0x637c));
+        FUN_004320c0((void *)(GLOBAL_STATE.fieldJ));
         FUN_00435160(DAT_004768d4);
         uStack_c = (void *)CONCAT13(1,(uint3)uStack_c);
       }
@@ -14960,7 +14960,7 @@ LAB_00418f1b:
       FUN_004466f0((undefined4 *)&stack0x0000b074);
       goto LAB_0041a0a9;
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
       *(undefined1 *)(DAT_004768d4 + 0x32b5) = 0;
     }
     FUN_004466c0((undefined4 *)&stack0x0001421c);
@@ -15043,8 +15043,8 @@ LAB_00418f1b:
             uVar5 = *(uint *)((int)this + 0x33a0);
             *(uint *)((int)this + 0x33a0) = uVar5 + 1;
             FUN_0041b5a0(this,iVar6,*(int *)((int)this + 0x3058),uVar5,iVar15,'\x01');
-            if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-              FUN_00433e10((void *)(GLOBAL_STATE + 0x637c),iVar6);
+            if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+              FUN_00433e10((void *)(GLOBAL_STATE.fieldJ),iVar6);
             }
           }
         }
@@ -15091,10 +15091,10 @@ LAB_00418f1b:
       FUN_004466f0((undefined4 *)&stack0x0000b074);
       goto LAB_0041a0a9;
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-      iVar15 = FUN_00432720(GLOBAL_STATE + 0x637c);
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+      iVar15 = FUN_00432720(GLOBAL_STATE.fieldJ);
       while (iVar15 != 0) {
-        iVar15 = FUN_00432740(GLOBAL_STATE + 0x637c);
+        iVar15 = FUN_00432740(GLOBAL_STATE.fieldJ);
         *(int *)(GLOBAL_STATE + 0xac14) = *(int *)(GLOBAL_STATE + 0xac14) + -1;
         if (((&param_1)[iVar15] != '\0') && (*(char *)((int)this + iVar15 * 0x6c + 0x33a4) != '\0'))
         {
@@ -15123,7 +15123,7 @@ LAB_00418f1b:
             pcVar22 = pcVar22 + 1;
           }
         }
-        iVar15 = FUN_00432720(GLOBAL_STATE + 0x637c);
+        iVar15 = FUN_00432720(GLOBAL_STATE.fieldJ);
       }
     }
     puVar13 = (undefined4 *)&stack0x0000772c;
@@ -15151,7 +15151,7 @@ LAB_00418f1b:
       if (*piVar4 != -1) {
         InitObjWithPlayerDataForId(&stack0x00007504,*piVar4);
         iVar11 = iVar15 + 1;
-        FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),iVar15,(uint *)&stack0x00007519);
+        FUN_0042bca0((void *)(GLOBAL_STATE.fieldI),iVar15,(uint *)&stack0x00007519);
       }
       piVar4 = piVar4 + 0x1b;
       iVar6 = iVar6 + -1;
@@ -15175,9 +15175,9 @@ LAB_00418f1b:
     FUN_004466f0((undefined4 *)&stack0x00005e30);
     FUN_004466f0((undefined4 *)&stack0x00012b44);
   }
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
     iVar6 = *(int *)((int)this + 0x3050) + *(int *)((int)this + 0x304c);
-    iVar15 = FUN_00433630((void *)(GLOBAL_STATE + 0x637c),0);
+    iVar15 = FUN_00433630((void *)(GLOBAL_STATE.fieldJ),0);
     *(int *)((int)this + 0x304c) = iVar15;
     iVar15 = *(int *)((int)this + 0x3034);
     if ((((iVar15 != 3) && (iVar15 != 7)) && (iVar15 != 8)) && (iVar15 != 9)) {
@@ -15214,8 +15214,8 @@ LAB_00418f1b:
 LAB_004199b8:
             FUN_0041b5a0(this,iVar15,*(int *)((int)this + 0x3058),uVar5,-1,'\0');
             *(int *)((int)this + 0x3050) = *(int *)((int)this + 0x3050) + 1;
-            if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-              FUN_00433e10((void *)(GLOBAL_STATE + 0x637c),iVar15);
+            if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+              FUN_00433e10((void *)(GLOBAL_STATE.fieldJ),iVar15);
             }
           }
           iVar15 = iVar15 + 1;
@@ -15267,7 +15267,7 @@ LAB_004199b8:
 LAB_00419adf:
       if (bVar1) {
         WaitForSingleObject((HANDLE)DAT_004768d4[1],0xffffffff);
-        FUN_00433e20((void *)(GLOBAL_STATE + 0x637c));
+        FUN_00433e20((void *)(GLOBAL_STATE.fieldJ));
         ReleaseMutex((HANDLE)DAT_004768d4[1]);
       }
       iVar15 = *(int *)((int)this + 0x304c);
@@ -15587,11 +15587,11 @@ LAB_0041a552:
   if (*(int *)((int)this + 0x370c) < in_stack_0003bf44) {
     *(int *)((int)this + 0x370c) = in_stack_0003bf44;
   }
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
     FUN_00435650(DAT_004768d4,'\0');
     iVar6 = 0;
     do {
-      FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar6,7);
+      FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar6,7);
       iVar6 = iVar6 + 1;
     } while (iVar6 < 8);
   }
@@ -15610,7 +15610,7 @@ LAB_0041a692:
     if (*(int *)((int)this + 0x3034) != 3) {
       FUN_0041a7b0(this,&stack0x00000798);
     }
-    FUN_0042e100();
+    FUN_0042e100_do_nothing();
     FUN_0041dcc0((undefined4 *)&stack0x00000798);
     uVar4 = 3;
   }
@@ -15651,12 +15651,12 @@ void __fastcall FUN_0041a6e0(undefined1 *param_1)
 void FUN_0041a730(void)
 
 {
-  FUN_004459c0((void *)(GLOBAL_STATE + 0x17bc));
-  FUN_004446f0(GLOBAL_STATE + 0xb284);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcc);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcd);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xce);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcf);
+  FUN_004459c0((void *)(GLOBAL_STATE.fieldF));
+  FUN_004446f0(GLOBAL_STATE.fieldP);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcc);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcd);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xce);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcf);
   return;
 }
 
@@ -16690,18 +16690,18 @@ int * FUN_0041c320(void)
     ExceptionList = in_stack_00001d18;
     return (int *)0x2;
   }
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
     extraout_ECX[0x5ba] = (int)DAT_004768d4;
     FUN_00436200(this_00,extraout_ECX);
     bVar1 = true;
     iVar3 = 0;
     do {
       if (bVar1) {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar3,6);
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar3,6);
         bVar1 = false;
       }
       else {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar3,4);
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar3,4);
       }
       iVar3 = iVar3 + 1;
     } while (iVar3 < 8);
@@ -16729,8 +16729,8 @@ int * FUN_0041c320(void)
       piVar6 = (int *)(**(code **)*extraout_ECX)();
       iVar3 = GLOBAL_STATE;
       if (piVar6 == (int *)0x2) break;
-      if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar8,5);
+      if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar8,5);
         iVar3 = GLOBAL_STATE;
       }
     }
@@ -16811,14 +16811,14 @@ void __fastcall FUN_0041c9e0(int param_1)
   short *local_8;
   int local_4;
   
-  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_8,&local_4);
+  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_8,&local_4);
   if (cVar1 != '\0') {
-    FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)(param_1 + 0x16e4),local_8,local_4,'\0');
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
-    FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\x01');
-    FUN_00442d50(GLOBAL_STATE + 0xc500);
-    FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\0');
-    *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xb8;
+    FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)(param_1 + 0x16e4),local_8,local_4,'\0');
+    FUN_00442d80(GLOBAL_STATE.fieldR);
+    FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\x01');
+    FUN_00442d50(GLOBAL_STATE.fieldR);
+    FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\0');
+    *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xb8;
   }
   return;
 }
@@ -16910,46 +16910,46 @@ undefined2 * __thiscall FUN_0041cc90(void *this,int param_1)
   *(int *)((int)this + 0x16c8) = param_1;
   *(undefined4 *)((int)this + 0x16d0) = 0xffffffff;
   piVar3 = (int *)FUN_00429840(this,0x9f,unaff_retaddr);
-  switch(*(undefined4 *)(GLOBAL_STATE + 0xd01c)) {
+  switch(*(undefined4 *)(GLOBAL_STATE.Language)) {
   case 1:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa1);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar3,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar3);
     goto LAB_0041cd27;
   case 2:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa2);
     cVar2 = (char)uVar4;
     break;
   case 3:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa3);
     cVar2 = (char)uVar4;
     goto joined_r0x0041cdd7;
   case 4:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa4);
     cVar2 = (char)uVar4;
     break;
   case 5:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa5);
     cVar2 = (char)uVar4;
 joined_r0x0041cdd7:
     if (cVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar3,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar3);
 LAB_0041cd27:
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar3 + iVar5;
     if ((uVar4 & 3) != 0) {
       uVar7 = uVar4 & 0x80000003;
@@ -16962,15 +16962,15 @@ LAB_0041cd27:
     goto LAB_0041ce6e;
   default:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0xa0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xa0);
     cVar2 = (char)uVar4;
   }
   if (cVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar3,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar3);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar3 + iVar5;
   if ((uVar4 & 3) == 0) {
 LAB_0041ce6e:
@@ -17000,10 +17000,10 @@ void __fastcall FUN_0041cf90(void *param_1)
   
   FUN_00428e70(param_1,0x4d9,
                *(int *)((int)param_1 + 0x16c8) + 0x58 + *(int *)((int)param_1 + 0x16cc) * 0x6c);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xd2);
-  iVar1 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd2,1e+10,1e+10);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xd2);
+  iVar1 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd2,1e+10,1e+10);
   *(int *)((int)param_1 + 0x16d0) = iVar1;
-  FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+  FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
   return;
 }
 
@@ -17018,7 +17018,7 @@ undefined2 * __thiscall FUN_0041d010(void *this,int param_1)
   (**(code **)(*(int *)this + 0x24))(0x91);
   *(undefined4 *)((int)this + 0x16d0) = 0xffffffff;
   *(int *)((int)this + 0x16c8) = param_1;
-  switch(*(undefined4 *)(GLOBAL_STATE + 0xd01c)) {
+  switch(*(undefined4 *)(GLOBAL_STATE.Language)) {
   case 1:
     iVar2 = 0xa7;
     break;
@@ -17054,10 +17054,10 @@ void __fastcall FUN_0041d130(void *param_1)
   
   FUN_00428e70(param_1,0x4d9,
                *(int *)((int)param_1 + 0x16c8) + 0x58 + *(int *)((int)param_1 + 0x16cc) * 0x6c);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xd3);
-  iVar1 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd3,1e+10,1e+10);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xd3);
+  iVar1 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd3,1e+10,1e+10);
   *(int *)((int)param_1 + 0x16d0) = iVar1;
-  FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+  FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
   return;
 }
 
@@ -17065,8 +17065,8 @@ void __fastcall FUN_0041d130(void *param_1)
 void __fastcall FUN_0041d1b0(int *param_1)
 
 {
-  FUN_00445250((void *)(GLOBAL_STATE + 0x17bc),param_1[0x5b4]);
-  FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+  FUN_00445250((void *)(GLOBAL_STATE.fieldF),param_1[0x5b4]);
+  FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
   (**(code **)(*param_1 + 4))(1);
   return;
 }
@@ -17089,48 +17089,48 @@ undefined2 * __thiscall FUN_0041d1f0(void *this,int param_1,int *param_2)
   *(int *)((int)this + 0x16cc) = *param_2;
   *(int *)((int)this + 0x16c8) = param_1;
   piVar3 = (int *)FUN_00429840(this,0x98,unaff_retaddr);
-  switch(*(undefined4 *)(GLOBAL_STATE + 0xd01c)) {
+  switch(*(undefined4 *)(GLOBAL_STATE.Language)) {
   case 1:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x9a);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x9a);
     cVar2 = (char)uVar4;
     break;
   case 2:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x9b);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x9b);
     cVar2 = (char)uVar4;
     goto joined_r0x0041d374;
   case 3:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x9c);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x9c);
     cVar2 = (char)uVar4;
     break;
   case 4:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x9d);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x9d);
     cVar2 = (char)uVar4;
     goto joined_r0x0041d374;
   case 5:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x9e);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x9e);
     cVar2 = (char)uVar4;
     break;
   default:
     *(int **)((int)this + 0x16d4) = piVar3;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x99);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x99);
     cVar2 = (char)uVar4;
 joined_r0x0041d374:
     if (cVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar3,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar3);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar3 + iVar5;
     if ((uVar4 & 3) != 0) {
       uVar7 = uVar4 & 0x80000003;
@@ -17143,10 +17143,10 @@ joined_r0x0041d374:
     goto LAB_0041d3c1;
   }
   if (cVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar3,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar3);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar3 + iVar5;
   if ((uVar4 & 3) == 0) {
 LAB_0041d3c1:
@@ -17241,7 +17241,7 @@ undefined4 * __fastcall FUN_0041da80(undefined4 *param_1)
   local_4._0_1_ = 2;
   FUN_00405e20((undefined1 *)(param_1 + 0x1b27));
   local_4._0_1_ = 3;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 4;
   iVar2 = 100;
   puVar1 = param_1 + 0x23a9;
@@ -17264,9 +17264,9 @@ undefined4 * __fastcall FUN_0041da80(undefined4 *param_1)
   local_4._0_1_ = 6;
   FUN_00439920((int)(param_1 + 0x58cb));
   local_4._0_1_ = 7;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 8;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 9;
   FUN_00425220(param_1 + 0x8b04);
   local_4._0_1_ = 10;
@@ -17320,7 +17320,7 @@ void __fastcall FUN_0041dcc0(undefined4 *param_1)
   ExceptionList = &local_c;
   *param_1 = &PTR_FUN_0045e028;
   local_4 = 7;
-  FUN_0045360e(param_1 + 0xac5f,0x23c,8,FUN_0042e100);
+  FUN_0045360e(param_1 + 0xac5f,0x23c,8,FUN_0042e100_do_nothing);
   local_4._0_1_ = 6;
   FUN_0042cc90(param_1 + 0xa4ca);
   local_4._0_1_ = 5;
@@ -17328,13 +17328,13 @@ void __fastcall FUN_0041dcc0(undefined4 *param_1)
   local_4._0_1_ = 0xd;
   thunk_FUN_004235d0((int)(param_1 + 0x210f));
   local_4._0_1_ = 10;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 9;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 8;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 0xe;
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   local_4._0_1_ = 2;
   FUN_00405f70((int)(param_1 + 0x1b27));
   local_4._0_1_ = 1;
@@ -17529,9 +17529,9 @@ uint __fastcall FUN_0041dde0(int param_1)
     local_49c = auStack_490 + 1;
     do {
       if (*local_49c != 0xffffffff) {
-        fVar6 = (float)FUN_0042c830((void *)(GLOBAL_STATE + 4),*local_49c);
+        fVar6 = (float)FUN_0042c830_SetDatFilePointerToAsset((void *)(GLOBAL_STATE.AssetManager),*local_49c);
         if (SUB41(fVar6,0) == '\0') goto LAB_0041e5e0;
-        iVar4 = FUN_0042c9c0(GLOBAL_STATE + 4);
+        iVar4 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
         local_4a4 = (uint *)((int)local_4a4 + iVar4);
         fVar6 = local_4a0;
       }
@@ -17654,13 +17654,13 @@ uint __fastcall FUN_0041dde0(int param_1)
       uVar9 = *local_4a4;
       iVar4 = (int)*(short *)(pfVar18 + 0x15);
       local_4a4 = local_4a4 + 1;
-      FUN_0042c830((void *)(GLOBAL_STATE + 4),uVar9);
-      iVar8 = FUN_0042c9c0(GLOBAL_STATE + 4);
+      FUN_0042c830_SetDatFilePointerToAsset((void *)(GLOBAL_STATE.AssetManager),uVar9);
+      iVar8 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
       piVar14 = (int *)(*(int *)(param_1 + 0x16cc) - iVar8);
       if (((uint)piVar14 & 3) != 0) {
         piVar14 = (int *)((int)piVar14 - ((uint)piVar14 & 3));
       }
-      FUN_0042c8a0((void *)(GLOBAL_STATE + 4),piVar14,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile((void *)(GLOBAL_STATE.AssetManager),piVar14,0xffffffff,'\x01');
       local_4a0 = *pfVar18;
       local_494 = piVar14;
       fVar6 = (float)FUN_00425060((void *)(param_1 + 0x843c),&local_494,local_4a0,
@@ -17673,20 +17673,20 @@ uint __fastcall FUN_0041dde0(int param_1)
     } while ((int)local_49c < *(int *)(param_1 + 0x410ac));
   }
   iVar8 = 9;
-  fVar6 = (float)FUN_0042c830((void *)(GLOBAL_STATE + 4),auStack_490[8]);
+  fVar6 = (float)FUN_0042c830_SetDatFilePointerToAsset((void *)(GLOBAL_STATE.AssetManager),auStack_490[8]);
   if (SUB41(fVar6,0) == '\0') {
 LAB_0041e5e0:
     return (uint)fVar6 & 0xffffff00;
   }
-  iVar4 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar4 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   psVar15 = (short *)(*(int *)(param_1 + 0x16cc) - iVar4);
-  FUN_0042c8a0((void *)(GLOBAL_STATE + 4),psVar15,0xffffffff,'\x01');
+  FUN_0042c8a0_ReadFromDatFile((void *)(GLOBAL_STATE.AssetManager),psVar15,0xffffffff,'\x01');
   FUN_00424de0((void *)(param_1 + 0x843c),psVar15);
   *(undefined4 *)(param_1 + 0x16c4) = *(undefined4 *)(param_1 + 0x234c8);
   if (*(char **)(GLOBAL_STATE + 0xcdb4) == (char *)0x0) {
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
     iVar8 = 10;
-    uVar9 = FUN_0042c830(pvVar1,auStack_490[9]);
+    uVar9 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,auStack_490[9]);
     if ((char)uVar9 == '\0') {
       nNumberOfBytesToRead = 0xffffffff;
     }
@@ -17694,10 +17694,10 @@ LAB_0041e5e0:
       nNumberOfBytesToRead = FUN_0042c9c0((int)pvVar1);
     }
     local_498 = *(int **)(param_1 + 0x16c4);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar9 = FUN_0042c830(pvVar1,*(int *)(param_1 + 0x41560));
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar9 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,*(int *)(param_1 + 0x41560));
     if ((char)uVar9 != '\0') {
-      FUN_0042c8a0(pvVar1,local_498,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,local_498,0xffffffff,'\x01');
     }
   }
   else {
@@ -17728,7 +17728,7 @@ LAB_0041e5e0:
     nNumberOfBytesToRead = GetFileSize(hFile,(LPDWORD)0x0);
     if (hFile == (HANDLE)0xffffffff) {
       format_string(aCStack_184,(byte *)s_LoadError____s_00465b90);
-      uVar9 = FUN_00426c50(aCStack_184);
+      uVar9 = FUN_00426c50_exit(aCStack_184);
       return uVar9 & 0xffffff00;
     }
     ReadFile(hFile,*(LPVOID *)(param_1 + 0x16c4),nNumberOfBytesToRead,(LPDWORD)&local_4a4,
@@ -17746,79 +17746,79 @@ LAB_0041e5e0:
     if (uVar9 != 0) {
       *puVar3 = (*puVar3 - uVar9) + 4;
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
       uVar9 = (**(code **)(*(int *)(param_1 + 0x16e4) + 0x20))(*puVar3);
     }
     else {
       uVar9 = (**(code **)(*(int *)(param_1 + 0x2db0) + 0x20))(*puVar3);
     }
     *puVar3 = uVar9;
-    FUN_004459c0((void *)(GLOBAL_STATE + 0x17bc));
-    FUN_004446f0(GLOBAL_STATE + 0xb284);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + -1]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 1]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 2]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 3]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 4]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 5]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 6]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 7]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 8]);
+    FUN_004459c0((void *)(GLOBAL_STATE.fieldF));
+    FUN_004446f0(GLOBAL_STATE.fieldP);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + -1]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 1]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 2]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 3]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 4]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 5]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 6]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 7]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 8]);
     iVar4 = 8;
     puVar3 = auStack_490 + iVar8 + 9;
     do {
       uVar9 = *puVar3;
       puVar3 = puVar3 + 1;
-      FUN_00444400((void *)(GLOBAL_STATE + 0xb284),uVar9);
+      FUN_00444400((void *)(GLOBAL_STATE.fieldP),uVar9);
       iVar4 = iVar4 + -1;
     } while (iVar4 != 0);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x11]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x12]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x13]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x14]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x15]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x16]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x17]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x18]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x19]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1a]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1b]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1c]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1d]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1e]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x1f]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x20]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x21]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x22]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x23]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x24]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x25]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x26]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x27]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x28]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x29]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2a]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2b]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2c]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2d]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2e]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x2f]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x30]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x31]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x32]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x33]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x34]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x35]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x36]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x37]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x38]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x39]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x3a]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x3b]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x3c]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x3d]);
-    FUN_00444400((void *)(GLOBAL_STATE + 0xb284),auStack_490[iVar8 + 0x3e]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x11]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x12]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x13]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x14]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x15]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x16]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x17]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x18]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x19]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1a]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1b]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1c]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1d]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1e]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x1f]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x20]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x21]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x22]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x23]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x24]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x25]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x26]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x27]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x28]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x29]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2a]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2b]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2c]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2d]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2e]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x2f]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x30]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x31]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x32]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x33]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x34]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x35]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x36]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x37]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x38]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x39]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x3a]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x3b]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x3c]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x3d]);
+    FUN_00444400((void *)(GLOBAL_STATE.fieldP),auStack_490[iVar8 + 0x3e]);
     iVar8 = GLOBAL_STATE;
     fVar17 = (float10)fcos((float10)_DAT_0045e0e0);
     *(undefined4 *)(GLOBAL_STATE + 0x27dc) = 0x3f19999a;
@@ -17884,7 +17884,7 @@ undefined4 __fastcall FUN_0041edf0(int param_1)
     local_40 = 0;
     local_3c = 0x27f;
     local_38 = 0x1cb;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),0,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),0,&local_44);
     *(undefined4 *)(param_1 + 0x41118) = 0x280;
     *(undefined4 *)(param_1 + 0x4111c) = 0x1cc;
     goto switchD_0041ee0b_default;
@@ -17893,12 +17893,12 @@ undefined4 __fastcall FUN_0041edf0(int param_1)
     local_40 = 0x14;
     local_3c = 0x27f;
     local_38 = 0xef;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),0,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),0,&local_44);
     local_44 = 0;
     local_40 = 0xf0;
     local_3c = 0x27f;
     local_38 = 0x1cb;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),1,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),1,&local_44);
     *(undefined4 *)(param_1 + 0x41118) = 0x280;
     break;
   case 3:
@@ -17907,22 +17907,22 @@ undefined4 __fastcall FUN_0041edf0(int param_1)
     local_40 = 0x14;
     local_3c = 0x13f;
     local_38 = 0xef;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),0,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),0,&local_44);
     local_40 = 0x14;
     local_44 = 0x140;
     local_3c = 0x27f;
     local_38 = 0xef;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),1,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),1,&local_44);
     local_44 = 0;
     local_40 = 0xf0;
     local_3c = 0x13f;
     local_38 = 0x1cb;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),2,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),2,&local_44);
     local_44 = 0x140;
     local_40 = 0xf0;
     local_3c = 0x27f;
     local_38 = 0x1cb;
-    FUN_00442db0((void *)(GLOBAL_STATE + 0xc500),3,&local_44);
+    FUN_00442db0((void *)(GLOBAL_STATE.fieldR),3,&local_44);
     *(undefined4 *)(param_1 + 0x41118) = 0x140;
     break;
   default:
@@ -18090,7 +18090,7 @@ undefined4 __fastcall FUN_0041f0c0(int *param_1)
           iVar7 = *piVar6;
           dVar1 = *(double *)(param_1 + iVar7 * 0x2ee + 0x8f1a);
           dVar2 = *(double *)(param_1 + iVar7 * 0x2ee + 0x8f18);
-          iVar3 = GLOBAL_STATE + 0x17bc;
+          iVar3 = GLOBAL_STATE.fieldF;
           lVar11 = FUN_004459f0(iVar3,iVar7 * 0x177,(float)dVar2,(float)dVar1);
           iVar7 = (-0x2b154 - (int)param_1) + (int)piVar6;
           *(int *)(iVar7 + iVar3) = (int)lVar11;
@@ -18101,7 +18101,7 @@ undefined4 __fastcall FUN_0041f0c0(int *param_1)
           piVar6 = piVar6 + 1;
         } while (iStack_1c < param_1[0x1042c]);
       }
-      FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+      FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
       iStack_24 = iStack_24 + 1;
       if (iStack_24 == 5) {
         iStack_24 = 0;
@@ -18215,11 +18215,11 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
     (**(code **)(*param_1 + 0xc))();
     return 3;
   }
-  cVar4 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  cVar4 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
   if (cVar4 != '\0') {
     FUN_00435650(DAT_004768d4,'\x01');
   }
-  FUN_00433d20(GLOBAL_STATE + 0x637c);
+  FUN_00433d20(GLOBAL_STATE.fieldJ);
   iStack_2c = 0;
   uVar13 = FUN_00426da0();
   iStack_20 = (int)uVar13;
@@ -18241,12 +18241,12 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
         FUN_00423530((int)param_1);
         uVar6 = FUN_004268d0();
         if ((uVar6 & 0xc) != 0) {
-          FUN_00433c80(GLOBAL_STATE + 0x637c);
+          FUN_00433c80(GLOBAL_STATE.fieldJ);
           (**(code **)(*param_1 + 0xc))();
           return 3;
         }
         if ((char)param_1[0x10557] != '\0') {
-          FUN_00433c80(GLOBAL_STATE + 0x637c);
+          FUN_00433c80(GLOBAL_STATE.fieldJ);
           (**(code **)(*param_1 + 0xc))();
           return 4;
         }
@@ -18276,7 +18276,7 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
       (**(code **)(*param_1 + 0xc))();
       return 0xffffffff;
     }
-    iVar8 = FUN_00433c40(GLOBAL_STATE + 0x637c);
+    iVar8 = FUN_00433c40(GLOBAL_STATE.fieldJ);
     if (5 < iVar8) {
       Sleep(0);
     }
@@ -18293,7 +18293,7 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
           iVar10 = *piVar9;
           dVar2 = *(double *)(param_1 + iVar10 * 0x2ee + 0x8f1a);
           dVar3 = *(double *)(param_1 + iVar10 * 0x2ee + 0x8f18);
-          iVar1 = GLOBAL_STATE + 0x17bc;
+          iVar1 = GLOBAL_STATE.fieldF;
           lVar15 = FUN_004459f0(iVar1,iVar10 * 0x177,(float)dVar3,(float)dVar2);
           iVar10 = (-0x2b154 - (int)param_1) + (int)piVar9;
           *(int *)(iVar10 + iVar1) = (int)lVar15;
@@ -18303,7 +18303,7 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
           piVar9 = piVar9 + 1;
         } while (iStack_24 < param_1[0x1042c]);
       }
-      FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+      FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
       iStack_2c = iStack_2c + 1;
       if (iStack_2c == 5) {
         iStack_2c = 0;
@@ -18320,14 +18320,14 @@ undefined4 __fastcall FUN_0041f4b0(int *param_1)
     param_1[0x10444] = param_1[0x10444] + 1;
     uVar11 = FUN_00421450((int)param_1);
   } while ((char)uVar11 == '\0');
-  cVar4 = FUN_00433cb0(GLOBAL_STATE + 0x637c);
+  cVar4 = FUN_00433cb0(GLOBAL_STATE.fieldJ);
   while (cVar4 == '\0') {
-    cVar4 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    cVar4 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar4 == '\0') {
-      FUN_00433ce0((void *)(GLOBAL_STATE + 0x637c));
+      FUN_00433ce0((void *)(GLOBAL_STATE.fieldJ));
     }
     Sleep(100);
-    cVar4 = FUN_00433cb0(GLOBAL_STATE + 0x637c);
+    cVar4 = FUN_00433cb0(GLOBAL_STATE.fieldJ);
   }
   (**(code **)(*param_1 + 0xc))();
   return 0;
@@ -18349,8 +18349,8 @@ uint __fastcall FUN_0041fa40(void *param_1)
   undefined4 *unaff_retaddr;
   undefined4 local_4;
   
-  FUN_00444db0(GLOBAL_STATE + 0xb284);
-  if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+  FUN_00444db0(GLOBAL_STATE.fieldP);
+  if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
     this = (int *)((int)param_1 + 0x16e4);
     if (*(int *)((int)param_1 + 0x16d8) == 1) {
       (**(code **)(*this + 0x24))(0x8f);
@@ -18377,7 +18377,7 @@ uint __fastcall FUN_0041fa40(void *param_1)
       do {
         pvVar1 = DAT_004768d4;
         lParam = *(LPARAM *)(local_4 + GLOBAL_STATE);
-        PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,200,lParam);
+        PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,200,lParam);
         *(undefined4 *)((int)pvVar1 + 0x10) = 200;
         *(LPARAM *)((int)pvVar1 + 0x14) = lParam;
         Sleep(0);
@@ -18391,7 +18391,7 @@ uint __fastcall FUN_0041fa40(void *param_1)
     iVar3 = (*(code *)**(undefined4 **)((int)param_1 + 0x2db0))();
     iVar4 = iVar3;
     if (iVar3 != 0x51e) {
-      cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+      cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
       iVar4 = CONCAT31(extraout_var,cVar2);
       if (cVar2 != '\0') {
         iVar4 = FUN_00435650(DAT_004768d4,'\x01');
@@ -18401,26 +18401,26 @@ uint __fastcall FUN_0041fa40(void *param_1)
   if (iVar3 < 0x436) {
     if (iVar3 == 0x435) {
       *(undefined1 *)((int)param_1 + 0x4149f) = 0;
-      FUN_00444e20((void *)(GLOBAL_STATE + 0xb284));
+      FUN_00444e20((void *)(GLOBAL_STATE.fieldP));
       return (uint)extraout_var_01 << 8;
     }
     if (iVar3 == 1) {
-      FUN_00444e20((void *)(GLOBAL_STATE + 0xb284));
+      FUN_00444e20((void *)(GLOBAL_STATE.fieldP));
       return CONCAT31(extraout_var_00,1);
     }
     if (iVar3 == 0x430) {
-      FUN_004459c0((void *)(GLOBAL_STATE + 0x17bc));
-      FUN_004446f0(GLOBAL_STATE + 0xb284);
-      FUN_00444e20((void *)(GLOBAL_STATE + 0xb284));
+      FUN_004459c0((void *)(GLOBAL_STATE.fieldF));
+      FUN_004446f0(GLOBAL_STATE.fieldP);
+      FUN_00444e20((void *)(GLOBAL_STATE.fieldP));
       FUN_004232f0(param_1,'\0');
       *unaff_retaddr = 2;
       return (uint)unaff_retaddr & 0xffffff00;
     }
   }
   else if (iVar3 == 0x51e) {
-    FUN_004459c0((void *)(GLOBAL_STATE + 0x17bc));
-    FUN_004446f0(GLOBAL_STATE + 0xb284);
-    FUN_00444e20((void *)(GLOBAL_STATE + 0xb284));
+    FUN_004459c0((void *)(GLOBAL_STATE.fieldF));
+    FUN_004446f0(GLOBAL_STATE.fieldP);
+    FUN_00444e20((void *)(GLOBAL_STATE.fieldP));
     *unaff_retaddr = 4;
     return (uint)unaff_retaddr & 0xffffff00;
   }
@@ -18596,7 +18596,7 @@ uint __thiscall FUN_0041fdc0(void *this,int param_1,int *param_2)
       if (10 < iVar17) {
         piVar13[-0x1bd] = 10;
       }
-      FUN_0040b5a0(piVar13 + -0x27f,(void *)(GLOBAL_STATE + 0x17bc));
+      FUN_0040b5a0(piVar13 + -0x27f,(void *)(GLOBAL_STATE.fieldF));
       piVar13 = piVar13 + 0x2ee;
       *param_2 = iVar10;
       param_2 = param_2 + 1;
@@ -18960,7 +18960,7 @@ LAB_0042058f:
                                *(float **)((int)param_1 + 0x41504)), (char)uVar8 != '\0')) {
         FUN_004070e0((undefined4 *)((int)param_1 + 0x3a3e4));
         FUN_0040dfa0((void *)((int)param_1 + *(int *)((int)param_1 + 0x414f0) * 3000 + 0x23568),3);
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x173,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x173,1e+10,1e+10);
         FUN_004231a0((int)param_1);
         *(undefined4 *)((int)param_1 + 0x414f0) = 0xffffffff;
       }
@@ -18969,7 +18969,7 @@ LAB_0042058f:
          (iVar14 = *(int *)((int)param_1 + 0x41508) + -1, *(int *)((int)param_1 + 0x41508) = iVar14,
          iVar14 < 0)) {
         FUN_0040dfa0((void *)((int)param_1 + *(int *)((int)param_1 + 0x414f0) * 3000 + 0x23568),3);
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x175,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x175,1e+10,1e+10);
         *(undefined4 *)((int)param_1 + 0x41508) = 0xf0;
       }
       if ((-1 < *(int *)((int)param_1 + 0x414f0)) &&
@@ -19132,7 +19132,7 @@ LAB_00420daa:
       if (iVar14 != iVar13) goto LAB_00420deb;
       iVar14 = 0x136;
     }
-    FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),iVar14,1e+10,1e+10);
+    FUN_00445170((void *)(GLOBAL_STATE.fieldF),iVar14,1e+10,1e+10);
   }
 LAB_00420deb:
   iVar14 = *(int *)((int)param_1 + 0x41570);
@@ -19141,7 +19141,7 @@ LAB_00420deb:
     uVar4 = FUN_00450e80();
     *(int *)((int)param_1 + 0x41574) =
          (int)(uVar4 * 0x78) / 0x17ffd + 0x28 + *(int *)((int)param_1 + 0x16d4);
-    iVar14 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x173,1e+10,1e+10);
+    iVar14 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x173,1e+10,1e+10);
   }
 LAB_00420e6b:
   if ((*(int *)((int)param_1 + 0x16d8) == 2) && (*(int *)((int)param_1 + 0x41568) != 0)) {
@@ -19153,10 +19153,10 @@ LAB_00420e6b:
       iVar14 = -iVar7;
       iVar10 = iVar13 + iVar14;
       if ((iVar10 == 10) || (((iVar10 == 5 || (iVar10 == 2)) || (iVar10 == 1)))) {
-        iVar14 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x135,1e+10,1e+10);
+        iVar14 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x135,1e+10,1e+10);
       }
       else if (iVar13 == iVar7) {
-        iVar14 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x136,1e+10,1e+10);
+        iVar14 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x136,1e+10,1e+10);
         return CONCAT31((int3)((uint)iVar14 >> 8),1);
       }
     }
@@ -19176,7 +19176,7 @@ void __fastcall FUN_00420f30(int param_1)
   local_c = ExceptionList;
   local_4 = 0;
   ExceptionList = &local_c;
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   local_4 = 0xffffffff;
   FUN_00405f70(param_1 + 0x27dc);
   ExceptionList = local_c;
@@ -19265,7 +19265,7 @@ void __fastcall FUN_004210b0(int param_1)
     if (iVar1 == 0) {
       *(undefined1 *)(param_1 + 0x41182) = 1;
 LAB_004211a9:
-      FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x135,1e+10,1e+10);
+      FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x135,1e+10,1e+10);
     }
     else {
       if (iVar1 == 1) {
@@ -19273,7 +19273,7 @@ LAB_004211a9:
         goto LAB_004211a9;
       }
       if (iVar1 == 2) {
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x136,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x136,1e+10,1e+10);
         *(undefined1 *)(param_1 + 0x41182) = 0;
         iVar1 = 0;
         if (0 < *(int *)(param_1 + 0x410ac)) {
@@ -19357,10 +19357,10 @@ void __fastcall FUN_00421270(int param_1)
 }
 
 
-void thunk_FUN_0042e100(void)
+void thunk_FUN_0042e100_do_nothing(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -19494,7 +19494,7 @@ uint __fastcall FUN_00421450(int param_1)
               *(undefined4 *)(param_1 + 0x41574) = *(undefined4 *)(param_1 + 0x16d4);
             }
             else {
-              FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x138,1e+10,1e+10);
+              FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x138,1e+10,1e+10);
             }
           }
           iVar1 = 0;
@@ -19539,11 +19539,11 @@ void __fastcall FUN_00421680(int param_1)
   ExceptionList = &local_c;
   thunk_FUN_004235d0(param_1);
   local_4._0_1_ = 2;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 1;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4 = (uint)local_4._1_3_ << 8;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   ExceptionList = local_c;
   return;
 }
@@ -19575,7 +19575,7 @@ undefined4 __fastcall FUN_004216f0(int param_1)
   int local_10;
   int local_c;
   
-  pvVar10 = (void *)(GLOBAL_STATE + 0xc500);
+  pvVar10 = (void *)(GLOBAL_STATE.fieldR);
   local_20 = pvVar10;
   uVar4 = FUN_00420f80(param_1);
   if ((char)uVar4 != '\0') {
@@ -20050,10 +20050,10 @@ undefined4 __thiscall FUN_00422040(void *this,int *param_1)
   uVar5 = FUN_0041dde0((int)this);
   if ((char)uVar5 != '\0') {
     FUN_0040fcb0((void *)((int)this + 0x2ddfc),0x78,(int)this + 0x23568,
-                 *(undefined4 *)((int)this + 0x410ac),GLOBAL_STATE + 0x17bc,(int)this + 0x3a3e4,
+                 *(undefined4 *)((int)this + 0x410ac),GLOBAL_STATE.fieldF,(int)this + 0x3a3e4,
                  (int)this + 0x843c,(int)this + 0x44c0);
     FUN_0040e4b0((void *)((int)this + 0x3b7bc),0x78,(int)this + 0x843c,(int)this + 0x3a3e4,
-                 (int)this + 0x23568,GLOBAL_STATE + 0x17bc,(int)this + 0x2ddfc,
+                 (int)this + 0x23568,GLOBAL_STATE.fieldF,(int)this + 0x2ddfc,
                  *(undefined4 *)((int)this + 0x410ac),*(undefined4 *)((int)this + 0x840c));
     local_28 = (int *)0x0;
     if (0 < *(int *)((int)this + 0x410ac)) {
@@ -20090,7 +20090,7 @@ undefined4 __thiscall FUN_00422040(void *this,int *param_1)
     if ((char)uVar5 == '\0') {
       return 0xffffffff;
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
       uVar4 = FUN_0041f4b0(this);
       return uVar4;
     }
@@ -20171,11 +20171,11 @@ int FUN_004223d0(float param_1)
         iVar6 = -1;
       }
       else {
-        FUN_0040fcb0(this + 0xb77f,0x78,this + 0x8d5a,this[0x1042b],GLOBAL_STATE + 0x17bc,
+        FUN_0040fcb0(this + 0xb77f,0x78,this + 0x8d5a,this[0x1042b],GLOBAL_STATE.fieldF,
                      this + 0xe8f9,this + 0x210f,(int)(this + 0x1130));
         local_8 = (undefined1 *)this[0x2103];
         FUN_0040e4b0(this + 0xedef,0x78,this + 0x210f,this + 0xe8f9,this + 0x8d5a,
-                     GLOBAL_STATE + 0x17bc,this + 0xb77f,this[0x1042b],local_8);
+                     GLOBAL_STATE.fieldF,this + 0xb77f,this[0x1042b],local_8);
         local_8 = (undefined1 *)0x0;
         if (0 < this[0x1042b]) {
           piVar10 = this + 0x8fb7;
@@ -20268,9 +20268,9 @@ int FUN_004223d0(float param_1)
             FUN_00406ca0(this + 0xe8f9,0x78,piVar1,piVar10);
             FUN_00407170(piVar10,0,*(int *)(in_stack_000016fc + 0xc),
                          *(int *)(in_stack_000016fc + 0x10));
-            FUN_0040fcb0(this + 0xb77f,0x78,piVar10,this[0x1042b],GLOBAL_STATE + 0x17bc,
+            FUN_0040fcb0(this + 0xb77f,0x78,piVar10,this[0x1042b],GLOBAL_STATE.fieldF,
                          this + 0xe8f9,piVar1,(int)(this + 0x1130));
-            FUN_0040e4b0(this + 0xedef,0x78,piVar1,this + 0xe8f9,piVar10,GLOBAL_STATE + 0x17bc,
+            FUN_0040e4b0(this + 0xedef,0x78,piVar1,this + 0xe8f9,piVar10,GLOBAL_STATE.fieldF,
                          this + 0xb77f,this[0x1042b],this[0x2103]);
             local_8 = (undefined1 *)0x0;
             if (0 < this[0x1042b]) {
@@ -20406,10 +20406,10 @@ undefined4 __thiscall FUN_00422b30(void *this,int *param_1)
     return 0xffffffff;
   }
   FUN_0040fcb0((void *)((int)this + 0x2ddfc),0x78,(int)this + 0x23568,
-               *(undefined4 *)((int)this + 0x410ac),GLOBAL_STATE + 0x17bc,(int)this + 0x3a3e4,
+               *(undefined4 *)((int)this + 0x410ac),GLOBAL_STATE.fieldF,(int)this + 0x3a3e4,
                (int)this + 0x843c,(int)this + 0x44c0);
   FUN_0040e4b0((void *)((int)this + 0x3b7bc),0x78,(int)this + 0x843c,(int)this + 0x3a3e4,
-               (int)this + 0x23568,GLOBAL_STATE + 0x17bc,(int)this + 0x2ddfc,
+               (int)this + 0x23568,GLOBAL_STATE.fieldF,(int)this + 0x2ddfc,
                *(undefined4 *)((int)this + 0x410ac),*(undefined4 *)((int)this + 0x840c));
   local_24 = 0;
   if (0 < *(int *)((int)this + 0x410ac)) {
@@ -20487,7 +20487,7 @@ undefined4 __thiscall FUN_00422b30(void *this,int *param_1)
     }
   }
   *(undefined4 *)((int)this + 0x414f0) = 0xffffffff;
-  if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
     uVar3 = FUN_0041f0c0(this);
     return uVar3;
   }
@@ -20605,7 +20605,7 @@ ulonglong __thiscall FUN_00422f40(void *this,int param_1)
                         (int)*(short *)((int)this + 0x23292),*(char *)((int)this + 0x23423),cVar18,
                         0xff,0);
   if (-1 < iVar15) {
-    iVar15 = FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0x174,local_2c[2],local_2c[3]);
+    iVar15 = FUN_00445170((void *)(GLOBAL_STATE.fieldF),0x174,local_2c[2],local_2c[3]);
     return CONCAT44(extraout_EDX_01,CONCAT31((int3)((uint)iVar15 >> 8),1));
   }
   return CONCAT44(extraout_EDX_00,iVar15) & 0xffffffffffffff00;
@@ -20801,7 +20801,7 @@ void __thiscall FUN_00423480(void *this,undefined4 param_1,byte param_2)
 {
   FUN_0043d970((int)this + 0x4112c);
   if ((param_2 & 1) != 0) {
-    FUN_00443130(GLOBAL_STATE + 0xc500);
+    FUN_00443130(GLOBAL_STATE.fieldR);
     FUN_004216f0((int)this);
     FUN_004216f0((int)this);
   }
@@ -21848,7 +21848,7 @@ undefined4 __thiscall FUN_00424de0(void *this,short *param_1)
   puStack_8 = &LAB_0045c6eb;
   local_c = ExceptionList;
   ExceptionList = &local_c;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4 = 0;
   puVar6 = (undefined4 *)((int)this + 0x1ad78);
   for (iVar5 = 0x80; iVar5 != 0; iVar5 = iVar5 + -1) {
@@ -21877,7 +21877,7 @@ undefined4 __thiscall FUN_00424de0(void *this,short *param_1)
     psVar2 = param_1;
   }
   local_4 = 0xffffffff;
-  uVar4 = thunk_FUN_0042e100();
+  uVar4 = thunk_FUN_0042e100_do_nothing();
   ExceptionList = local_c;
   return CONCAT31((int3)((uint)uVar4 >> 8),1);
 }
@@ -21997,10 +21997,10 @@ void __thiscall FUN_00425150(void *this,undefined4 param_1,int *param_2,byte *pa
 }
 
 
-void thunk_FUN_0042e100(void)
+void thunk_FUN_0042e100_do_nothing(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -22364,7 +22364,7 @@ undefined4 __thiscall FUN_00425830(void *this,uint param_1)
 }
 
 
-int __fastcall FUN_00425890(int param_1)
+int __fastcall FUN_00425890_set_globalstate_flags(int param_1)
 
 {
   int iVar1;
@@ -22400,14 +22400,14 @@ int __fastcall FUN_00425890(int param_1)
   *(undefined4 *)(param_1 + 0xd030) = 0;
   iVar1 = 0;
   *(undefined4 *)(param_1 + 0xc900) = 0;
-  *(undefined4 *)(param_1 + 0xcb04) = 0;
+  *(undefined4 *)(param_1.Window) = 0;
   *(undefined4 *)(param_1 + 0xcb08) = 0;
   *(undefined4 *)(param_1 + 0xcb14) = 0;
   *(undefined1 *)(param_1 + 0xcb18) = 1;
   *(undefined1 *)(param_1 + 0xd080) = 0;
   *(undefined4 *)(param_1 + 0xcb10) = 0;
   *(undefined4 *)(param_1 + 0xd088) = 0;
-  *(undefined1 *)(param_1 + 0xc904) = 0;
+  *(undefined1 *)(param_1.CurrentDirectory) = 0;
   *(undefined1 *)(param_1 + 0xd08d) = 0;
   *(undefined1 *)(param_1 + 0xd08c) = 0;
   *(undefined1 *)(param_1 + 0xd081) = 0;
@@ -22449,19 +22449,19 @@ void __fastcall FUN_00425a00(int param_1)
   local_4._0_1_ = 7;
   thunk_FUN_004426c0(param_1 + 0xc500);
   local_4._0_1_ = 6;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 5;
   FUN_00430cb0((void *)(param_1 + 0x637c));
   local_4._0_1_ = 4;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 3;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4._0_1_ = 2;
   FUN_0044f7a0(param_1 + 0x169c);
   local_4._0_1_ = 1;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4 = (uint)local_4._1_3_ << 8;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   local_4 = 0xffffffff;
   FUN_0042c600(param_1 + 4);
   ExceptionList = local_c;
@@ -22529,7 +22529,7 @@ uint __thiscall CreateWindowAndInitalizeState(void *this,undefined4 param_1,byte
     bVar2 = *pbVar1;
   }
   if (*param_2 == 0) {
-    GetCurrentDirectoryA(0x200,(LPSTR)((int)this + 0xc904));
+    GetCurrentDirectoryA(0x200,(LPSTR)((int)this.CurrentDirectory));
   }
   else {
     pcVar18 = (char *)FUN_00453fe5(param_2,(byte *)&DAT_00465bf8);
@@ -22553,7 +22553,7 @@ uint __thiscall CreateWindowAndInitalizeState(void *this,undefined4 param_1,byte
         } while (cVar4 != '\0');
         uVar9 = ~uVar9;
         pcVar18 = pcVar19 + -uVar9;
-        pcVar19 = (char *)((int)this + 0xc904);
+        pcVar19 = (char *)((int)this.CurrentDirectory);
         for (uVar16 = uVar9 >> 2; uVar16 != 0; uVar16 = uVar16 - 1) {
           *(undefined4 *)pcVar19 = *(undefined4 *)pcVar18;
           pcVar18 = pcVar18 + 4;
@@ -22568,7 +22568,7 @@ uint __thiscall CreateWindowAndInitalizeState(void *this,undefined4 param_1,byte
       pcVar18 = (char *)FUN_00453fe5((byte *)0x0,(byte *)&DAT_00465bf8);
     }
   }
-  SetCurrentDirectoryA((LPCSTR)((int)this + 0xc904));
+  SetCurrentDirectoryA((LPCSTR)((int)this.CurrentDirectory));
   if (*(char *)((int)GLOBAL_STATE + 0xcb8d) == '\0') {
     if (*(char *)((int)GLOBAL_STATE + 0xcb89) != '\0') {
       pcVar18 = (char *)GLOBAL_STATE[0x3377];
@@ -22644,57 +22644,58 @@ uint __thiscall CreateWindowAndInitalizeState(void *this,undefined4 param_1,byte
   pHVar8 = CreateWindowExA(0,s_MiniCarRacing_00465bfc,s_MiniCarRacing_00465bfc,0x80000000,0,0,0x280,
                            0x1e0,(HWND)0x0,(HMENU)0x0,*(HINSTANCE *)((int)this + 0xcb08),(LPVOID)0x0
                           );
-  *(HWND *)((int)this + 0xcb04) = pHVar8;
+  *(HWND *)((int)this.Window) = pHVar8;
   if (pHVar8 == (HWND)0x0) {
     return 0;
   }
   ShowCursor(0);
   SystemParametersInfoA(0x30,0,local_90,0);
-  SetWindowPos(*(HWND *)((int)this + 0xcb04),(HWND)0x0,local_88 / 2 + -0x140,local_84 / 2 + -0xf0,-1
+  SetWindowPos(*(HWND *)((int)this.Window),(HWND)0x0,local_88 / 2 + -0x140,local_84 / 2 + -0xf0,-1
                ,-1,0x15);
-  ShowWindow(*(HWND *)((int)this + 0xcb04),5);
-  UpdateWindow(*(HWND *)((int)this + 0xcb04));
+  ShowWindow(*(HWND *)((int)this.Window),5);
+  UpdateWindow(*(HWND *)((int)this.Window));
   uVar12 = FUN_004425d0((int *)((int)this + 0x13b8),s_software_AEONDesign_MiniCarRacin_00465bc8);
   if (((char)uVar12 == '\0') &&
-     (uVar9 = FUN_00426730((int *)((int)this + 0x13b8)), (char)uVar9 == '\0')) {
+     (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x13b8)), (char)uVar9 == '\0')) {
     return uVar9;
   }
   cVar4 = FUN_0043fdb0();
-  if ((cVar4 == '\0') && (uVar9 = FUN_00426730((int *)((int)this + 0x13c8)), (char)uVar9 == '\0')) {
+  if ((cVar4 == '\0') && (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x13c8)), (char)uVar9 == '\0')) {
     return uVar9;
   }
-  uVar12 = FUN_0042a700((int *)((int)this + 0x27f0),*(int *)((int)this + 0xcb04),
+  uVar12 = FUN_0042a700((int *)((int)this + 0x27f0),*(int *)((int)this.Window),
                         *(undefined4 *)((int)this + 0xcb08));
   if (((char)uVar12 == '\0') &&
-     (uVar9 = FUN_00426730((int *)((int)this + 0x27f0)), (char)uVar9 == '\0')) {
+     (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x27f0)), (char)uVar9 == '\0')) {
     return uVar9;
   }
-  bVar3 = FUN_00430f50((int *)((int)this + 0x637c),*(undefined4 *)((int)this + 0xcb04));
-  if ((!bVar3) && (uVar9 = FUN_00426730((int *)((int)this + 0x637c)), (char)uVar9 == '\0')) {
+  bVar3 = FUN_00430f50((int *)((int)this + 0x637c),*(undefined4 *)((int)this.Window));
+  if ((!bVar3) && (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x637c)), (char)uVar9 == '\0')) {
     return uVar9;
   }
   this_00 = (int *)((int)this + 4);
-  uVar12 = FUN_0042c620(this_00,(LPCSTR)((int)this + 0xc904));
-  if (((char)uVar12 == '\0') && (uVar9 = FUN_00426730(this_00), (char)uVar9 == '\0')) {
+  uVar12 = FUN_0042c620_read_datfile_offsets(this_00,(LPCSTR)((int)this.CurrentDirectory));
+  if (((char)uVar12 == '\0') && (uVar9 = FUN_00426730_show_message_box(this_00), (char)uVar9 == '\0')) {
     return uVar9;
   }
   this_01 = (int *)((int)this + 0xb284);
-  uVar12 = FUN_00444250(this_01,*(undefined4 *)((int)this + 0xcb04),this_00);
-  if (((char)uVar12 == '\0') && (uVar9 = FUN_00426730(this_01), (char)uVar9 == '\0')) {
+  // this_01 = SoundManager
+  uVar12 = FUN_00444250_InitSoundManager(this_01,*(undefined4 *)((int)this.Window),this_00);
+  if (((char)uVar12 == '\0') && (uVar9 = FUN_00426730_show_message_box(this_01), (char)uVar9 == '\0')) {
     return uVar9;
   }
   uVar12 = FUN_00444f60((int *)((int)this + 0x17bc),this_01);
   if (((char)uVar12 == '\0') &&
-     (uVar9 = FUN_00426730((int *)((int)this + 0x17bc)), (char)uVar9 == '\0')) {
+     (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x17bc)), (char)uVar9 == '\0')) {
     return uVar9;
   }
-  uVar9 = FUN_00442730((int *)((int)this + 0xc500),*(undefined4 *)((int)this + 0xcb04));
+  uVar9 = FUN_00442730((int *)((int)this + 0xc500),*(undefined4 *)((int)this.Window));
   if (((char)uVar9 == '\0') &&
-     (uVar9 = FUN_00426730((int *)((int)this + 0xc500)), (char)uVar9 == '\0')) {
+     (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0xc500)), (char)uVar9 == '\0')) {
     return uVar9;
   }
   cVar4 = FUN_0044f840((int)this + 0x169c);
-  if ((cVar4 == '\0') && (uVar9 = FUN_00426730((int *)((int)this + 0x169c)), (char)uVar9 == '\0')) {
+  if ((cVar4 == '\0') && (uVar9 = FUN_00426730_show_message_box((int *)((int)this + 0x169c)), (char)uVar9 == '\0')) {
     return uVar9;
   }
   pHVar13 = FindResourceA((HMODULE)0x0,s_CGSYSTEMFONT8_00465bb0,s_GDATA_00465bc0);
@@ -22746,7 +22747,7 @@ void __thiscall FUN_00426640(void *this,char param_1)
     iVar2 = *(int *)((int)this + 0xcb14);
     if (param_1 == '\0') {
       if ((iVar2 != 8) && (iVar2 != 1)) {
-        *(undefined4 *)(GLOBAL_STATE + 0xcb14) = 1;
+        *(undefined4 *)(GLOBAL_STATE.fieldAA) = 1;
         FUN_0042a870((int)this + 0x27f0);
         iVar2 = 0;
         do {
@@ -22782,7 +22783,7 @@ void __thiscall FUN_00426640(void *this,char param_1)
 }
 
 
-uint __cdecl FUN_00426730(int *param_1)
+uint __cdecl FUN_00426730_show_message_box(int *param_1)
 
 {
   LPCSTR lpText;
@@ -22803,7 +22804,7 @@ uint __cdecl FUN_00426730(int *param_1)
     iVar2 = 0x160;
   }
   lpText = (LPCSTR)FUN_00426cd0(iVar2);
-  uVar1 = MessageBoxA(*(HWND *)(GLOBAL_STATE + 0xcb04),lpText,s_MiniCarRacing_00465bfc,0x40010);
+  uVar1 = MessageBoxA(*(HWND *)(GLOBAL_STATE.Window),lpText,s_MiniCarRacing_00465bfc,0x40010);
   return uVar1 & 0xffffff00;
 }
 
@@ -22819,11 +22820,11 @@ undefined4 FUN_00426790(void)
   if (piVar1 != (int *)0x0) {
     (**(code **)(*piVar1 + 0x4c))(piVar1);
   }
-  *(undefined4 *)(GLOBAL_STATE + 0xcb14) = 8;
-  if (*(HWND *)(GLOBAL_STATE + 0xcb04) == (HWND)0x0) {
+  *(undefined4 *)(GLOBAL_STATE.fieldAA) = 8;
+  if (*(HWND *)(GLOBAL_STATE.Window) == (HWND)0x0) {
     return 0;
   }
-  PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x10,0,0);
+  PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x10,0,0);
   iVar2 = GetMessageA(&tStack_1c,(HWND)0x0,0,0);
   while (iVar2 == 1) {
     TranslateMessage(&tStack_1c);
@@ -22849,16 +22850,16 @@ undefined4 FUN_00426830(void)
     TranslateMessage(&local_1c);
     DispatchMessageA(&local_1c);
   }
-  iVar1 = *(int *)((int)GLOBAL_STATE + 0xcb14);
+  iVar1 = *(int *)((int)GLOBAL_STATE.fieldAA);
   while (iVar1 == 1) {
     BVar2 = GetMessageA(&local_1c,(HWND)0x0,0,0);
     if (BVar2 == 1) {
       TranslateMessage(&local_1c);
       DispatchMessageA(&local_1c);
     }
-    iVar1 = *(int *)((int)GLOBAL_STATE + 0xcb14);
+    iVar1 = *(int *)((int)GLOBAL_STATE.fieldAA);
   }
-  return *(undefined4 *)((int)GLOBAL_STATE + 0xcb14);
+  return *(undefined4 *)((int)GLOBAL_STATE.fieldAA);
 }
 
 
@@ -22879,7 +22880,7 @@ int FUN_004268d0(void)
     }
     iVar1 = PeekMessageA(&local_1c,(HWND)0x0,0,0,1);
   }
-  iVar1 = *(int *)((int)GLOBAL_STATE + 0xcb14);
+  iVar1 = *(int *)((int)GLOBAL_STATE.fieldAA);
   if (iVar1 == 1) {
     do {
       BVar3 = GetMessageA(&local_1c,(HWND)0x0,0,0);
@@ -22887,7 +22888,7 @@ int FUN_004268d0(void)
         TranslateMessage(&local_1c);
         DispatchMessageA(&local_1c);
       }
-    } while (*(int *)((int)GLOBAL_STATE + 0xcb14) == 1);
+    } while (*(int *)((int)GLOBAL_STATE.fieldAA) == 1);
     iVar1 = 2;
   }
   return iVar1;
@@ -22902,7 +22903,7 @@ undefined4 __cdecl FUN_00426990(undefined4 param_1)
   
   *(int *)(GLOBAL_STATE + 0xd020) = *(int *)(GLOBAL_STATE + 0xd020) + 1;
   if (*(int *)(GLOBAL_STATE + 0xd058) == 0) {
-    UVar1 = SetTimer(*(HWND *)(GLOBAL_STATE + 0xcb04),GLOBAL_STATE,0x32,(TIMERPROC)0x0);
+    UVar1 = SetTimer(*(HWND *)(GLOBAL_STATE.Window),GLOBAL_STATE,0x32,(TIMERPROC)0x0);
     *(UINT_PTR *)(GLOBAL_STATE + 0xd088) = UVar1;
   }
   iVar2 = 0xd07c;
@@ -22938,7 +22939,7 @@ undefined1 __cdecl FUN_00426a10(int param_1)
   } while (iVar3 < 0xd080);
   FUN_00443130(UVar2 + 0xc500);
   if ((*(int *)(GLOBAL_STATE + 0xd058) == 0) && (*(int *)(GLOBAL_STATE + 0xd088) != 0)) {
-    KillTimer(*(HWND *)(GLOBAL_STATE + 0xcb04),GLOBAL_STATE);
+    KillTimer(*(HWND *)(GLOBAL_STATE.Window),GLOBAL_STATE);
     *(undefined4 *)(GLOBAL_STATE + 0xd088) = 0;
   }
   *(int *)(GLOBAL_STATE + 0xd020) = *(int *)(GLOBAL_STATE + 0xd020) + -1;
@@ -22950,10 +22951,10 @@ void __cdecl FUN_00426ac0(int param_1)
 
 {
   if (param_1 != 0) {
-    PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x465,0,param_1);
+    PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x465,0,param_1);
     return;
   }
-  RedrawWindow(*(HWND *)(GLOBAL_STATE + 0xcb04),(RECT *)0x0,(HRGN)0x0,1);
+  RedrawWindow(*(HWND *)(GLOBAL_STATE.Window),(RECT *)0x0,(HRGN)0x0,1);
   return;
 }
 
@@ -23006,7 +23007,7 @@ undefined4 __cdecl FUN_00426bd0(undefined4 param_1,undefined4 param_2)
   local_8 = param_2;
   local_c = 0;
   local_4 = param_1;
-  LVar1 = SendMessageA(*(HWND *)(GLOBAL_STATE + 0xd094),0x4a,*(WPARAM *)(GLOBAL_STATE + 0xcb04),
+  LVar1 = SendMessageA(*(HWND *)(GLOBAL_STATE + 0xd094),0x4a,*(WPARAM *)(GLOBAL_STATE.Window),
                        (LPARAM)&local_c);
   return CONCAT31((int3)((uint)LVar1 >> 8),1);
 }
@@ -23022,7 +23023,7 @@ bool __cdecl FUN_00426c20(LPVOID param_1,DWORD param_2)
 }
 
 
-undefined4 __cdecl FUN_00426c50(LPCSTR param_1)
+undefined4 __cdecl FUN_00426c50_exit(LPCSTR param_1)
 
 {
   int *piVar1;
@@ -23037,7 +23038,7 @@ undefined4 __cdecl FUN_00426c50(LPCSTR param_1)
     (**(code **)(*piVar2 + 0x4c))(piVar2);
   }
   MessageBoxA((HWND)0x0,param_1,s_Error___Exit_00465c2c,0);
-  FUN_00454227(0xdadead);
+  FUN_00454227_exit(0xdadead);
   piVar2 = (int *)*GLOBAL_STATE;
   iVar5 = 0;
   iVar3 = *piVar2;
@@ -23098,7 +23099,7 @@ int __cdecl FUN_00426cd0(int param_1)
 }
 
 
-undefined4 __cdecl FUN_00426d20(undefined4 param_1)
+undefined4 __cdecl FUN_00426d20_set_language(undefined4 param_1)
 
 {
   switch(param_1) {
@@ -23112,7 +23113,7 @@ undefined4 __cdecl FUN_00426d20(undefined4 param_1)
   default:
     param_1 = 0;
   }
-  *(undefined4 *)(GLOBAL_STATE + 0xd01c) = param_1;
+  *(undefined4 *)(GLOBAL_STATE.Language) = param_1;
   return CONCAT31((int3)((uint)param_1 >> 8),1);
 }
 
@@ -23121,7 +23122,7 @@ void __cdecl FUN_00426d60(WPARAM param_1)
 
 {
   if ((*(int *)(GLOBAL_STATE + 0xd058) != 0) && (*(char *)(GLOBAL_STATE + 0xd024) != '\0')) {
-    PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46c,param_1,0);
+    PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46c,param_1,0);
     FUN_004268d0();
     return;
   }
@@ -23352,12 +23353,12 @@ int __fastcall FUN_00427190(int *param_1)
   FUN_004293c0();
   DAT_004768ac = *(undefined4 *)(GLOBAL_STATE + 0xc858);
   DAT_004768b0 = *(undefined4 *)(GLOBAL_STATE + 0xc85c);
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return 2;
   }
   cVar1 = (**(code **)(*param_1 + 0x1c))();
   if (cVar1 != '\0') {
-    *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+    *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
     FUN_00429320(0);
     DAT_004768c8 = DAT_004768c8 + 1;
     FUN_004293f0(-1,-1);
@@ -23373,7 +23374,7 @@ int __fastcall FUN_00427190(int *param_1)
       FUN_004293a0();
       FUN_00426a10((int)param_1);
       (**(code **)(*param_1 + 0x60))();
-      *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+      *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
       (**(code **)(*param_1 + 0x10))(1);
       return param_1[2];
     }
@@ -23392,14 +23393,14 @@ uint __fastcall FUN_00427290(int *param_1)
   *(undefined1 *)(param_1 + 1) = 0;
   param_1[0x5a8] = 0;
   param_1[0x5a9] = 0;
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return GLOBAL_STATE & 0xffffff00;
   }
   uVar1 = (**(code **)(*param_1 + 0x1c))();
   if ((char)uVar1 == '\0') {
     return uVar1;
   }
-  *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+  *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
   FUN_004293f0(-1,-1);
   uVar1 = FUN_00426990(param_1);
   if ((char)uVar1 == '\0') {
@@ -23423,7 +23424,7 @@ void __fastcall FUN_00427310(int *param_1)
   }
   *(undefined1 *)((int)param_1 + 5) = 0;
   (**(code **)(*param_1 + 0x60))();
-  *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+  *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
   (**(code **)(*param_1 + 0x10))(1);
   return;
 }
@@ -23549,10 +23550,10 @@ LAB_00427a7e:
       FUN_004293f0(DAT_004768a0,DAT_004768a4);
       return;
     case 0x10:
-      if (*(int *)(GLOBAL_STATE + 0xcb14) == 0) {
+      if (*(int *)(GLOBAL_STATE.fieldAA) == 0) {
         return;
       }
-      (**(code **)(*(int *)this + 0x94))(*(int *)(GLOBAL_STATE + 0xcb14));
+      (**(code **)(*(int *)this + 0x94))(*(int *)(GLOBAL_STATE.fieldAA));
       return;
     default:
       return;
@@ -23837,7 +23838,7 @@ FUN_00427cf0(void *this,int param_1,undefined4 param_2,undefined4 param_3,undefi
   case 0x85:
     (**(code **)(*(int *)this + 0xac))(param_1,param_2,param_3,param_4);
   }
-  PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x466,
+  PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x466,
                (uint)*(ushort *)(*(int *)(param_1 + 0x2c) + 0x10),param_1);
   return;
 }
@@ -23863,7 +23864,7 @@ void __fastcall FUN_00427de0(int param_1)
   local_1c = *(int *)(param_1 + 0x16b4);
   local_18 = local_20 + -1 + *(int *)(param_1 + 0x16b8);
   local_14 = local_1c + -1 + *(int *)(param_1 + 0x16bc);
-  FUN_004432b0((void *)(GLOBAL_STATE + 0xc500),&local_10,&local_20);
+  FUN_004432b0((void *)(GLOBAL_STATE.fieldR),&local_10,&local_20);
   return;
 }
 
@@ -24082,7 +24083,7 @@ void __fastcall FUN_00428200(int *param_1)
   int iVar1;
   int *piVar2;
   
-  if (*(int *)(GLOBAL_STATE + 0xc8f8) != param_1[0x5a3]) {
+  if (*(int *)(GLOBAL_STATE.fieldY) != param_1[0x5a3]) {
     (**(code **)(*param_1 + 0x34))();
     iVar1 = param_1[0xe];
     piVar2 = param_1;
@@ -24094,8 +24095,8 @@ void __fastcall FUN_00428200(int *param_1)
     iVar1 = param_1[0x5a7];
     param_1[0x5a7] = 0;
     (**(code **)(*param_1 + 0x30))();
-    FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\x01');
-    *(int *)(GLOBAL_STATE + 0xc8f8) = param_1[0x5a3];
+    FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\x01');
+    *(int *)(GLOBAL_STATE.fieldY) = param_1[0x5a3];
     param_1[0x5a7] = iVar1;
     if (iVar1 != 0) {
       *(undefined1 *)(iVar1 + 0x18) = 1;
@@ -24103,12 +24104,12 @@ void __fastcall FUN_00428200(int *param_1)
     (**(code **)(*param_1 + 0x30))();
     return;
   }
-  FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\0');
+  FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\0');
   if (param_1[0x5a7] != 0) {
     *(undefined1 *)(param_1[0x5a7] + 0x18) = 1;
   }
   (**(code **)(*param_1 + 0x30))();
-  FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\x01');
+  FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\x01');
   return;
 }
 
@@ -24121,17 +24122,17 @@ void __fastcall FUN_004282d0(int param_1)
   int local_4;
   
   if (*(int *)(param_1 + 0x16a8) == 0) {
-    FUN_00443590((void *)(GLOBAL_STATE + 0xc500),0,0,*(int *)(param_1 + 0x16b8) + -1,
+    FUN_00443590((void *)(GLOBAL_STATE.fieldR),0,0,*(int *)(param_1 + 0x16b8) + -1,
                  *(int *)(param_1 + 0x16bc) + -1,0x7f7f7f);
-    FUN_00443590((void *)(GLOBAL_STATE + 0xc500),2,2,*(int *)(param_1 + 0x16b8) + -3,
+    FUN_00443590((void *)(GLOBAL_STATE.fieldR),2,2,*(int *)(param_1 + 0x16b8) + -3,
                  *(int *)(param_1 + 0x16bc) + -3,0);
   }
   else {
-    cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_8,&local_4);
+    cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_8,&local_4);
     if (cVar1 != '\0') {
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)(param_1 + 0x16a8),local_8,local_4,'\0')
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)(param_1 + 0x16a8),local_8,local_4,'\0')
       ;
-      FUN_00442d80(GLOBAL_STATE + 0xc500);
+      FUN_00442d80(GLOBAL_STATE.fieldR);
       return;
     }
   }
@@ -24210,11 +24211,11 @@ void __thiscall FUN_004285e0(void *this,int *param_1)
   
   iVar1 = param_1[0xb];
   iVar2 = 0;
-  FUN_00443590((void *)(GLOBAL_STATE + 0xc500),(int)*(short *)(iVar1 + 8),
+  FUN_00443590((void *)(GLOBAL_STATE.fieldR),(int)*(short *)(iVar1 + 8),
                (int)*(short *)(iVar1 + 10),*(short *)(iVar1 + 0xc) + -1 + (int)*(short *)(iVar1 + 8)
                ,*(short *)(iVar1 + 10) + -1 + (int)*(short *)(iVar1 + 0xe),0x7f7f00);
   iVar1 = param_1[0xb];
-  FUN_00443590((void *)(GLOBAL_STATE + 0xc500),*(short *)(iVar1 + 8) + 2,*(short *)(iVar1 + 10) + 2,
+  FUN_00443590((void *)(GLOBAL_STATE.fieldR),*(short *)(iVar1 + 8) + 2,*(short *)(iVar1 + 10) + 2,
                *(short *)(iVar1 + 0xc) + -3 + (int)*(short *)(iVar1 + 8),
                *(short *)(iVar1 + 10) + -3 + (int)*(short *)(iVar1 + 0xe),0);
   if (*param_1 != 0) {
@@ -24222,7 +24223,7 @@ void __thiscall FUN_004285e0(void *this,int *param_1)
     FUN_00429250(*(short *)(iVar1 + 8) + 2,*(short *)(iVar1 + 10) + 2,
                  *(short *)(iVar1 + 0xc) + -3 + (int)*(short *)(iVar1 + 8),
                  *(short *)(iVar1 + 0xe) + -3 + (int)*(short *)(iVar1 + 10),*param_1,0,0);
-    iVar2 = FUN_00440770((void *)(GLOBAL_STATE + 0x13c8),0,(byte *)*param_1);
+    iVar2 = FUN_00440770((void *)(GLOBAL_STATE.fieldB),0,(byte *)*param_1);
   }
   if (*(int **)((int)this + 0x169c) == param_1) {
     iVar1 = param_1[0xb];
@@ -24254,7 +24255,7 @@ void __thiscall FUN_00428800(void *this,int param_1)
     iVar4 = *(int *)(param_1 + 4);
     iVar3 = *(int *)(param_1 + 8);
     iVar5 = (int)*(short *)(pbVar2 + 10) + ((int)*(short *)(pbVar2 + 0xe) >> 1);
-    FUN_00443590((void *)(GLOBAL_STATE + 0xc500),*(short *)(pbVar2 + 8) + 2,iVar5,
+    FUN_00443590((void *)(GLOBAL_STATE.fieldR),*(short *)(pbVar2 + 8) + 2,iVar5,
                  *(short *)(pbVar2 + 8) + -2 + (int)sVar1,iVar5 + 3,0x7f7f7f);
     iVar5 = *(int *)(param_1 + 0x2c);
     iVar6 = (int)*(short *)(iVar5 + 10);
@@ -24268,7 +24269,7 @@ void __thiscall FUN_00428800(void *this,int param_1)
     iVar4 = *(int *)(param_1 + 4);
     iVar3 = *(int *)(param_1 + 8);
     iVar5 = (int)*(short *)(pbVar2 + 8) + ((int)*(short *)(pbVar2 + 0xc) >> 1);
-    FUN_00443590((void *)(GLOBAL_STATE + 0xc500),iVar5,*(short *)(pbVar2 + 10) + 2,iVar5 + 3,
+    FUN_00443590((void *)(GLOBAL_STATE.fieldR),iVar5,*(short *)(pbVar2 + 10) + 2,iVar5 + 3,
                  *(short *)(pbVar2 + 10) + -2 + (int)sVar1,0x7f7f7f);
     iVar5 = *(int *)(param_1 + 0x2c);
     iVar7 = (int)*(short *)(iVar5 + 8);
@@ -24277,7 +24278,7 @@ void __thiscall FUN_00428800(void *this,int param_1)
     iVar4 = iVar6 + 3;
     iVar6 = iVar6 + -3;
   }
-  FUN_00443590((void *)(GLOBAL_STATE + 0xc500),iVar7,iVar6,iVar3,iVar4,0x7f7f00);
+  FUN_00443590((void *)(GLOBAL_STATE.fieldR),iVar7,iVar6,iVar3,iVar4,0x7f7f00);
   if (*(int *)((int)this + 0x169c) == param_1) {
     (**(code **)(*(int *)this + 0x54))(param_1);
   }
@@ -24497,7 +24498,7 @@ void __thiscall FUN_00429010(void *this,uint param_1,char param_2)
      (*(char *)((int)pvVar3 + 0x26) != param_2)) {
     *(undefined1 *)((int)pvVar3 + 0x24) = 1;
     if (*(char *)((int)pvVar3 + 0x26) != '\0') {
-      *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+      *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
     }
     *(char *)((int)pvVar3 + 0x26) = param_2;
   }
@@ -24605,7 +24606,7 @@ void __thiscall FUN_00429130(void *this,int param_1)
         *(undefined1 *)(**(int **)((int)this + 0x169c) + 1 + iVar8) = 0;
       }
       piVar4 = *(int **)((int)this + 0x169c);
-      iVar6 = FUN_00440770((void *)(GLOBAL_STATE + 0x13c8),0,(byte *)*piVar4);
+      iVar6 = FUN_00440770((void *)(GLOBAL_STATE.fieldB),0,(byte *)*piVar4);
       if (iVar6 < *(short *)(piVar4[0xb] + 0xc) + -0x1e) {
         *(undefined1 *)(*piVar4 + 1 + iVar8) = 0;
       }
@@ -24645,7 +24646,7 @@ void FUN_00429250(int param_1,undefined4 param_2,undefined4 param_3,undefined4 p
   local_4 = 0;
   local_c = 0xffffff;
   local_8 = 0xffffff;
-  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_34,&local_30);
+  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_34,&local_30);
   if (cVar1 != '\0') {
     local_2c = param_1;
     local_28 = param_2;
@@ -24657,8 +24658,8 @@ void FUN_00429250(int param_1,undefined4 param_2,undefined4 param_3,undefined4 p
     local_18 = local_34;
     local_14 = param_7;
     local_c = 0xffffff;
-    FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&local_2c);
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
+    FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&local_2c);
+    FUN_00442d80(GLOBAL_STATE.fieldR);
   }
   return;
 }
@@ -24700,7 +24701,7 @@ void FUN_004293c0(void)
 
 {
   if (DAT_00476898 != -1) {
-    FUN_004436c0((void *)(GLOBAL_STATE + 0xc500),DAT_00476898,DAT_0047689c,'\0');
+    FUN_004436c0((void *)(GLOBAL_STATE.fieldR),DAT_00476898,DAT_0047689c,'\0');
     DAT_00476898 = -1;
   }
   return;
@@ -24734,11 +24735,11 @@ void FUN_004293f0(int param_1,int param_2)
     if (iVar3 < 0) {
       iVar3 = 0;
     }
-    FUN_004436c0((void *)(GLOBAL_STATE + 0xc500),iVar2,iVar3,'\x01');
-    cVar1 = FUN_00442d00((void *)(GLOBAL_STATE + 0xc500),(undefined4 *)&DAT_004768a8,&DAT_004768b4);
+    FUN_004436c0((void *)(GLOBAL_STATE.fieldR),iVar2,iVar3,'\x01');
+    cVar1 = FUN_00442d00((void *)(GLOBAL_STATE.fieldR),(undefined4 *)&DAT_004768a8,&DAT_004768b4);
     if (cVar1 != '\0') {
-      FUN_00440be0((void *)(GLOBAL_STATE + 0x13c8),&DAT_00476898);
-      FUN_00442d80(GLOBAL_STATE + 0xc500);
+      FUN_00440be0((void *)(GLOBAL_STATE.fieldB),&DAT_00476898);
+      FUN_00442d80(GLOBAL_STATE.fieldR);
       DAT_0047689c = iVar3;
       DAT_00476898 = iVar2;
       return;
@@ -24802,9 +24803,9 @@ int __thiscall FUN_00429520(void *this,int param_1)
   if (param_1 != 0) {
     *(int *)((int)this + 0x16ac) = param_1;
   }
-  uVar2 = FUN_004404b0((void *)(GLOBAL_STATE + 0x13c8),0xff,0,0xff);
+  uVar2 = FUN_004404b0((void *)(GLOBAL_STATE.fieldB),0xff,0,0xff);
   local_8 = uVar2;
-  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_14,&local_10);
+  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_14,&local_10);
   if (cVar1 == '\0') {
     return -1;
   }
@@ -24818,7 +24819,7 @@ int __thiscall FUN_00429520(void *this,int param_1)
     } while (iVar3 < 0x1e0);
     iVar5 = iVar5 + 1;
   } while (iVar5 < 0x280);
-  FUN_00442d80(GLOBAL_STATE + 0xc500);
+  FUN_00442d80(GLOBAL_STATE.fieldR);
   iVar5 = *(int *)((int)this + 0x169c);
   piVar4 = (int *)((int)this + 0x38);
   *(undefined4 *)((int)this + 0x169c) = 0;
@@ -24838,7 +24839,7 @@ int __thiscall FUN_00429520(void *this,int param_1)
   if (iVar5 != 0) {
     *(undefined1 *)(iVar5 + 0x18) = 1;
   }
-  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_14,&local_10);
+  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_14,&local_10);
   if (cVar1 == '\0') {
     return -1;
   }
@@ -24883,7 +24884,7 @@ int __thiscall FUN_00429520(void *this,int param_1)
       iStack_4 = iStack_4 + -1;
       iStack_c = iStack_c + local_10;
       if (iStack_4 == 0) {
-        FUN_00442d80(GLOBAL_STATE + 0xc500);
+        FUN_00442d80(GLOBAL_STATE.fieldR);
         uVar2 = uVar8 & 0x80000001;
         if ((int)uVar2 < 0) {
           uVar2 = (uVar2 - 1 | 0xfffffffe) + 1;
@@ -24917,7 +24918,7 @@ uint __thiscall FUN_00429730(void *this,int param_1)
   if (iVar3 == 0) {
     return in_EAX & 0xffffff00;
   }
-  uVar4 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_c,&local_4);
+  uVar4 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_c,&local_4);
   if ((char)uVar4 != '\0') {
     local_8 = 0;
     do {
@@ -24966,7 +24967,7 @@ uint __thiscall FUN_00429730(void *this,int param_1)
         }
       }
     } while (local_8 < 0x1e0);
-    uVar4 = FUN_00442d80(GLOBAL_STATE + 0xc500);
+    uVar4 = FUN_00442d80(GLOBAL_STATE.fieldR);
     return uVar4 & 0xffffff00;
   }
   return uVar4;
@@ -24981,13 +24982,13 @@ int __thiscall FUN_00429840(void *this,int param_1,LPVOID param_2)
   int iVar3;
   
   *(LPVOID *)((int)this + 0x16a8) = param_2;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,param_1);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,param_1);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,param_2,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,param_2,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,param_1);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,param_1);
   if ((char)uVar2 == '\0') {
     return (int)param_2 + -1;
   }
@@ -25869,7 +25870,7 @@ undefined4 __fastcall FUN_0042a8e0(void *param_1)
   if ((char)uVar1 != '\0') {
     FUN_0042b3b0(param_1);
   }
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   uVar1 = FUN_0042b6d0((int)param_1);
   return CONCAT31((int3)((uint)uVar1 >> 8),1);
 }
@@ -26837,7 +26838,7 @@ uint __thiscall FUN_0042b750(void *this,undefined4 *param_1,uint *param_2)
   uVar7 = 0xffffffff;
   uVar6 = 0xfffff2fb;
   FUN_0042b6d0((int)this);
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   FUN_0042b3b0(this);
   uVar5 = 0;
   do {
@@ -26907,7 +26908,7 @@ undefined4 __thiscall FUN_0042b820(void *this,int *param_1,int *param_2)
   
   local_8 = -1;
   local_14 = -0xd05;
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   FUN_0042b3b0(this);
   local_18 = (int *)((int)this + 0xdd8);
   piVar3 = (int *)((int)this + 0x39ac);
@@ -27434,7 +27435,7 @@ int __thiscall FUN_0042c050(void *this,int param_1,int param_2)
   undefined2 *puVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   *(int *)((int)this + 0x16c8) = param_2;
@@ -27455,25 +27456,25 @@ void __fastcall FUN_0042c180(void *param_1)
 {
   char *pcVar1;
   
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,1,'\0');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,1,'\0');
   FUN_00428e70(param_1,0x3f3,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,3,'\0');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,3,'\0');
   FUN_00428e70(param_1,0x3f7,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,2,'\0');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,2,'\0');
   FUN_00428e70(param_1,0x3f5,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,0,'\0');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,0,'\0');
   FUN_00428e70(param_1,0x3f9,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,0,'\x01');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,0,'\x01');
   FUN_00428e70(param_1,0x3fc,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,1,'\x01');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,1,'\x01');
   FUN_00428e70(param_1,0x408,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,2,'\x01');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,2,'\x01');
   FUN_00428e70(param_1,0x40a,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,3,'\x01');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,3,'\x01');
   FUN_00428e70(param_1,0x40c,pcVar1);
-  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE + 0x27f0),0,4,'\x01');
+  pcVar1 = FUN_0042bdd0((void *)(GLOBAL_STATE.fieldI),0,4,'\x01');
   FUN_00428e70(param_1,0x40d,pcVar1);
-  *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+  *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
   return;
 }
 
@@ -27503,27 +27504,27 @@ void __thiscall FUN_0042c2e0(void *this,int param_1)
       iVar2 = 3;
     }
 LAB_0042c3d6:
-    FUN_0042b930((void *)(GLOBAL_STATE + 0x27f0),0,iVar2);
+    FUN_0042b930((void *)(GLOBAL_STATE.fieldI),0,iVar2);
     goto switchD_0042c311_caseD_5;
   }
   if (uVar1 == 0xc) {
     iVar2 = 0;
 LAB_0042c371:
-    FUN_0042b9d0((void *)(GLOBAL_STATE + 0x27f0),0,iVar2);
+    FUN_0042b9d0((void *)(GLOBAL_STATE.fieldI),0,iVar2);
   }
   else {
     switch(uVar1) {
     case 4:
-      FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),0,(uint *)((int)this + 0x1750));
+      FUN_0042bca0((void *)(GLOBAL_STATE.fieldI),0,(uint *)((int)this + 0x1750));
       break;
     case 8:
       iVar2 = 4;
       goto LAB_0042c3d6;
     case 9:
-      FUN_0042b9d0((void *)(GLOBAL_STATE + 0x27f0),0,1);
+      FUN_0042b9d0((void *)(GLOBAL_STATE.fieldI),0,1);
       break;
     case 10:
-      FUN_0042b9d0((void *)(GLOBAL_STATE + 0x27f0),0,3);
+      FUN_0042b9d0((void *)(GLOBAL_STATE.fieldI),0,3);
       break;
     case 0xb:
       iVar2 = 2;
@@ -27570,7 +27571,7 @@ void __fastcall FUN_0042c600(int param_1)
 }
 
 
-undefined4 __thiscall FUN_0042c620(void *this,char *param_1)
+undefined4 __thiscall FUN_0042c620_read_datfile_offsets(void *this,char *param_1)
 
 {
   char cVar1;
@@ -27722,6 +27723,8 @@ LAB_0042c70c:
   }
   uVar6 = 0xffffffff;
   pcVar9 = s_datfile_dat_00465fcc;
+
+  // uVar6 = strlen(pcVar9)
   do {
     pcVar8 = pcVar9;
     if (uVar6 == 0) break;
@@ -27758,6 +27761,16 @@ LAB_0042c70c:
   if (pvVar2 != (HANDLE)0xffffffff) {
     local_13c = 0;
     lpBuffer = (LPVOID)((int)this + 0xa6c);
+
+    // Read datfile offsets and lengths into 2 buffers:
+    // lpBuffer - 0x948 (offsets)
+    // lpBuffer (lengths)
+    // each contains 594 4 byte ints
+    //
+    // So,
+    // this + 0x114 = datfile handle
+    // this + 0x124 = offsets array
+    // this + 0xa6c = lengths array
     while( true ) {
       BVar3 = ReadFile(*(HANDLE *)((int)this + 0x114),(LPVOID)((int)lpBuffer + -0x948),4,&local_140,
                        (LPOVERLAPPED)0x0);
@@ -27780,7 +27793,7 @@ LAB_0042c70c:
 }
 
 
-uint __thiscall FUN_0042c830(void *this,int param_1)
+uint __thiscall FUN_0042c830_SetDatFilePointerToAsset(void *this,int assetId)
 
 {
   undefined4 uVar1;
@@ -27791,10 +27804,10 @@ uint __thiscall FUN_0042c830(void *this,int param_1)
   if (*(HANDLE *)((int)this + 0x114) == (HANDLE)0xffffffff) {
     return in_EAX & 0xffffff00;
   }
-  uVar1 = *(undefined4 *)((int)this + param_1 * 4 + 0xa6c);
+  uVar1 = *(undefined4 *)((int)this + assetId * 4 + 0xa6c);
   *(undefined4 *)((int)this + 0x11c) = 0;
   *(undefined4 *)((int)this + 0x118) = uVar1;
-  iVar3 = *(int *)((int)this + param_1 * 4 + 0x124) - *(int *)((int)this + 0x120);
+  iVar3 = *(int *)((int)this + assetId * 4 + 0x124) - *(int *)((int)this + 0x120);
   DVar2 = SetFilePointer(*(HANDLE *)((int)this + 0x114),iVar3,(PLONG)0x0,1);
   if (DVar2 == 0xffffffff) {
     return 0xffffff00;
@@ -27805,7 +27818,7 @@ uint __thiscall FUN_0042c830(void *this,int param_1)
 }
 
 
-uint __thiscall FUN_0042c8a0(void *this,LPVOID param_1,WPARAM param_2,char param_3)
+uint __thiscall FUN_0042c8a0_ReadFromDatFile(void *this,LPVOID targetBuffer,WPARAM num_bytes,char param_3)
 
 {
   uint uVar1;
@@ -27818,25 +27831,25 @@ uint __thiscall FUN_0042c8a0(void *this,LPVOID param_1,WPARAM param_2,char param
   LPVOID lpBuffer;
   
   uVar3 = (uint3)((uint)in_EAX >> 8);
-  if (param_1 == (LPVOID)0x0) {
+  if (targetBuffer == (LPVOID)0x0) {
     return (uint)uVar3 << 8;
   }
   if (*(int *)((int)this + 0x114) == -1) {
     return (uint)uVar3 << 8;
   }
   uVar1 = *(uint *)((int)this + 0x118);
-  if ((int)uVar1 < (int)(*(int *)((int)this + 0x11c) + param_2)) {
+  if ((int)uVar1 < (int)(*(int *)((int)this + 0x11c) + num_bytes)) {
     return uVar1 & 0xffffff00;
   }
-  lpBuffer = param_1;
-  nNumberOfBytesToRead = param_2;
-  if (param_2 == 0xffffffff) {
+  lpBuffer = targetBuffer;
+  nNumberOfBytesToRead = num_bytes;
+  if (num_bytes == 0xffffffff) {
     nNumberOfBytesToRead = uVar1 - *(int *)((int)this + 0x11c);
   }
   do {
     if ((int)nNumberOfBytesToRead < 0x186a1) {
       BVar2 = ReadFile(*(HANDLE *)((int)this + 0x114),lpBuffer,nNumberOfBytesToRead,
-                       (LPDWORD)&param_1,(LPOVERLAPPED)0x0);
+                       (LPDWORD)&targetBuffer,(LPOVERLAPPED)0x0);
       uVar3 = (uint3)((uint)BVar2 >> 8);
       *(WPARAM *)((int)this + 0x11c) = *(int *)((int)this + 0x11c) + nNumberOfBytesToRead;
       *(WPARAM *)((int)this + 0x120) = *(int *)((int)this + 0x120) + nNumberOfBytesToRead;
@@ -27850,7 +27863,7 @@ uint __thiscall FUN_0042c8a0(void *this,LPVOID param_1,WPARAM param_2,char param
       break;
     }
     nNumberOfBytesToRead = nNumberOfBytesToRead - 100000;
-    BVar2 = ReadFile(*(HANDLE *)((int)this + 0x114),lpBuffer,100000,(LPDWORD)&param_1,
+    BVar2 = ReadFile(*(HANDLE *)((int)this + 0x114),lpBuffer,100000,(LPDWORD)&targetBuffer,
                      (LPOVERLAPPED)0x0);
     uVar3 = 0x186;
     *(int *)((int)this + 0x120) = *(int *)((int)this + 0x120) + 100000;
@@ -28003,7 +28016,7 @@ undefined4 * __fastcall FUN_0042c9e0(undefined4 *param_1)
   iVar6 = 0;
   puVar9 = (undefined2 *)((int)param_1 + 0x182e);
   do {
-    uVar5 = FUN_004404b0((void *)(GLOBAL_STATE + 0x13c8),iVar12 / 0x1f,iVar6 / 0x1f,0);
+    uVar5 = FUN_004404b0((void *)(GLOBAL_STATE.fieldB),iVar12 / 0x1f,iVar6 / 0x1f,0);
     *puVar9 = (short)uVar5;
     iVar6 = iVar6 + 0x3c;
     puVar9 = puVar9 + 1;
@@ -28034,7 +28047,7 @@ LPVOID __thiscall FUN_0042cca0(void *this,LPVOID param_1)
   LPVOID pvVar1;
   uint uVar2;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   if (*(int *)((int)this + 0x168c) == 0) {
@@ -28077,12 +28090,12 @@ undefined1 __fastcall FUN_0042cd80(int *param_1)
   int lParam;
   
   iVar2 = GLOBAL_STATE;
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
     lParam = 0;
     do {
       iVar1 = DAT_004768d4;
       if (*(char *)((int)param_1 + lParam + 0x1825) != '\0') {
-        PostMessageA(*(HWND *)(iVar2 + 0xcb04),0x46b,200,lParam);
+        PostMessageA(*(HWND *)(iVar2.Window),0x46b,200,lParam);
         *(undefined4 *)(iVar1 + 0x10) = 200;
         *(int *)(iVar1 + 0x14) = lParam;
         Sleep(0);
@@ -28468,9 +28481,9 @@ uint __thiscall FUN_0042dc50(void *this,int param_1,LPVOID param_2,WPARAM param_
 {
   uint uVar1;
   
-  uVar1 = FUN_0042c830(this,param_1);
+  uVar1 = FUN_0042c830_SetDatFilePointerToAsset(this,param_1);
   if ((char)uVar1 != '\0') {
-    uVar1 = FUN_0042c8a0(this,param_2,param_3,param_4);
+    uVar1 = FUN_0042c8a0_ReadFromDatFile(this,param_2,param_3,param_4);
     return uVar1;
   }
   return uVar1 & 0xffffff00;
@@ -28596,7 +28609,7 @@ undefined4 __thiscall FUN_0042df10(void *this,undefined4 param_1)
   undefined4 uVar3;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x59b);
@@ -28616,7 +28629,7 @@ undefined4 __thiscall FUN_0042df10(void *this,undefined4 param_1)
 }
 
 
-void FUN_0042e100(void)
+void FUN_0042e100_do_nothing(void)
 
 {
   return;
@@ -28651,7 +28664,7 @@ undefined2 * FUN_0042e380(void)
   int in_stack_00001a6c;
   
   FUN_00453910();
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return in_stack_00001a60;
   }
   puVar4 = FUN_00446760(this,in_stack_00001a60);
@@ -28741,7 +28754,7 @@ LAB_0042e5f2:
     puVar4 = (undefined2 *)FUN_00429840(this,0x8f,puVar4);
   }
   else if (*in_stack_00001a68 == 5) {
-    if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
       (**(code **)(*this + 0x24))();
       iVar12 = 0x90;
     }
@@ -28767,15 +28780,15 @@ LAB_0042e5f2:
   piVar11 = this + 0x5b3;
   do {
     *piVar11 = (int)puVar4;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
     iVar9 = FUN_0044fb20(iVar12);
-    uVar8 = FUN_0042c830(pvVar1,iVar9);
+    uVar8 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar9);
     if ((char)uVar8 != '\0') {
-      FUN_0042c8a0(pvVar1,puVar4,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar4,0xffffffff,'\x01');
     }
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
     iVar9 = FUN_0044fb20(iVar12);
-    uVar8 = FUN_0042c830(pvVar1,iVar9);
+    uVar8 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar9);
     if ((char)uVar8 == '\0') {
       iVar9 = -1;
     }
@@ -28808,7 +28821,7 @@ void __fastcall FUN_0042f5e0(int param_1)
   local_4 = 0;
   local_14 = 0;
   local_8 = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_10,&local_c,&local_4,&local_14,&local_8);
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_10,&local_c,&local_4,&local_14,&local_8);
   iVar2 = 0;
   local_10 = **(undefined4 **)(param_1 + 0x1750);
   local_c = 100;
@@ -28822,7 +28835,7 @@ void __fastcall FUN_0042f5e0(int param_1)
     iVar2 = iVar2 + 4;
     piVar1 = piVar1 + 0x1b;
   } while (iVar2 < 0x20);
-  FUN_00431b20((void *)(GLOBAL_STATE + 0x637c),local_10,100,local_4,iVar3,local_8);
+  FUN_00431b20((void *)(GLOBAL_STATE.fieldJ),local_10,100,local_4,iVar3,local_8);
   return;
 }
 
@@ -28868,7 +28881,7 @@ void __fastcall FUN_0042f690(void *param_1)
   local_40 = 0;
   local_54 = 0;
   local_44 = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_48,&local_3c,&local_40,&local_54,&local_44)
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_48,&local_3c,&local_40,&local_54,&local_44)
   ;
   iVar5 = 0;
   local_50 = 0xf;
@@ -28926,7 +28939,7 @@ int FUN_0042f820(void)
   local_14[3] = 0;
   local_14[2] = 0;
   local_14[1] = 0;
-  uVar1 = FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,local_14 + 4,local_14,local_14 + 3,
+  uVar1 = FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,local_14 + 4,local_14,local_14 + 3,
                        local_14 + 2,local_14 + 1);
   uVar2 = (uint3)((uint)uVar1 >> 8);
   if (local_14[0] != 100) {
@@ -28941,10 +28954,10 @@ void __fastcall FUN_0042f880(int *param_1)
 {
   char cVar1;
   
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-    cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+    cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar1 != '\0') {
-      FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+      FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     }
   }
   (**(code **)(*param_1 + 4))(2);
@@ -28976,7 +28989,7 @@ void __fastcall FUN_0042fbc0(void *param_1)
   local_40[0xd] = 0x428;
   local_40[0xe] = 0x429;
   local_40[0xf] = 0x42a;
-  if ((-(uint)(*(int *)(GLOBAL_STATE + 0x63b0) != 0) & 4) != 0xfffffffc) {
+  if ((-(uint)(*(int *)(GLOBAL_STATE.fieldM) != 0) & 4) != 0xfffffffc) {
     iVar1 = 0;
     do {
       FUN_004290d0(param_1,local_40[iVar2],
@@ -28985,7 +28998,7 @@ void __fastcall FUN_0042fbc0(void *param_1)
                    *(int *)(*(int *)((int)param_1 + 0x174c) + 4 + iVar1) != -1);
       iVar2 = iVar2 + 1;
       iVar1 = iVar1 + 0x6c;
-    } while (iVar2 < (int)((-(uint)(*(int *)(GLOBAL_STATE + 0x63b0) != 0) & 4) + 4));
+    } while (iVar2 < (int)((-(uint)(*(int *)(GLOBAL_STATE.fieldM) != 0) & 4) + 4));
   }
   return;
 }
@@ -29060,8 +29073,8 @@ void __fastcall FUN_0042fd00(int *param_1)
     if (iVar2 != 0) {
       *(undefined1 *)(iVar2 + 0x18) = 1;
     }
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-      cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+      cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
       if (cVar1 != '\0') {
         if ((*(int *)(iVar4 + 4 + param_1[0x5d3]) == -1) &&
            (*(char *)(iVar4 + param_1[0x5d3]) != '\0')) {
@@ -29076,8 +29089,8 @@ void __fastcall FUN_0042fd00(int *param_1)
     iVar4 = iVar4 + 0x6c;
     iVar3 = iVar3 + 4;
   } while (iVar4 < 0x360);
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-    cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+    cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar1 != '\0') {
       cVar1 = '\x01';
       iVar3 = 0;
@@ -29099,7 +29112,7 @@ void __fastcall FUN_0042fd00(int *param_1)
       FUN_004290d0(param_1,1,cVar1);
     }
   }
-  *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+  *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
   (**(code **)(*param_1 + 0x10))(0);
   return;
 }
@@ -29205,7 +29218,7 @@ void FUN_00430150(void)
   iVar4 = 0;
 LAB_004301fd:
   iVar8 = iStack00000004;
-  iVar2 = FUN_004326f0((void *)(GLOBAL_STATE + 0x637c),iStack00000004);
+  iVar2 = FUN_004326f0((void *)(GLOBAL_STATE.fieldJ),iStack00000004);
   if (iVar2 != 0) {
     iVar2 = 0;
     piVar7 = (int *)&stack0xfffffff0;
@@ -29250,7 +29263,7 @@ code_r0x00430232:
   if (7 < iVar2) goto code_r0x0043023b;
   goto LAB_0043022a;
 code_r0x0043023b:
-  pcVar3 = (char *)FUN_004326f0((void *)(GLOBAL_STATE + 0x637c),iVar8);
+  pcVar3 = (char *)FUN_004326f0((void *)(GLOBAL_STATE.fieldJ),iVar8);
   uVar5 = 0xffffffff;
   do {
     pcVar11 = pcVar3;
@@ -29299,12 +29312,12 @@ LAB_004302bc:
       puVar12 = puVar12 + 1;
     }
     do {
-      iVar13 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar4);
+      iVar13 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),iVar4);
       if (iVar13 != -1) {
-        iVar13 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar4);
+        iVar13 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),iVar4);
         InitObjWithPlayerDataForId(&stack0x00000368,*(int *)(*(int *)(extraout_ECX + 0x174c) + 4 + iVar13 * 0x6c))
         ;
-        FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),iVar4,(uint *)&stack0x0000037d);
+        FUN_0042bca0((void *)(GLOBAL_STATE.fieldI),iVar4,(uint *)&stack0x0000037d);
       }
       iVar4 = iVar4 + 1;
     } while (iVar4 < 4);
@@ -29321,7 +29334,7 @@ int __thiscall FUN_00430520(void *this,int param_1)
   int iVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x67);
@@ -29349,7 +29362,7 @@ void __fastcall FUN_004305f0(void *param_1)
   int iVar4;
   
   FUN_00430690(param_1);
-  iVar1 = FUN_00431170(GLOBAL_STATE + 0x637c);
+  iVar1 = FUN_00431170(GLOBAL_STATE.fieldJ);
   FUN_00426cd0(0x3ef);
   format_string((undefined1 *)((int)param_1 + 0x183c),&DAT_00466038);
   *(undefined1 **)((int)param_1 + 0x1814) = (undefined1 *)((int)param_1 + 0x183c);
@@ -29357,7 +29370,7 @@ void __fastcall FUN_004305f0(void *param_1)
   if (0 < iVar1) {
     puVar3 = (undefined4 *)((int)param_1 + 0x1818);
     do {
-      uVar2 = FUN_004311b0((void *)(GLOBAL_STATE + 0x637c),iVar4);
+      uVar2 = FUN_004311b0((void *)(GLOBAL_STATE.fieldJ),iVar4);
       *puVar3 = uVar2;
       iVar4 = iVar4 + 1;
       puVar3 = puVar3 + 1;
@@ -33339,7 +33352,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
   uint uVar5;
   undefined2 *puVar6;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   *(undefined1 *)((int)this + 0x16d8) = 1;
@@ -33347,12 +33360,12 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
   *(undefined4 *)((int)this + 0x16dc) = 0;
   if (DAT_00476910 == 0) {
     DAT_004768fc = param_1;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,0x6f);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x6f);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,param_1,0xffffffff,'\0');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,param_1,0xffffffff,'\0');
     }
-    iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768fc,0xa10);
+    iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768fc,0xa10);
     uVar2 = iVar3 + (int)param_1;
     if ((uVar2 & 3) == 0) {
       iVar3 = 0;
@@ -33366,8 +33379,8 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476900 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE + 4),0x70,puVar6,0xffffffff,'\0');
-    iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476900,0xa10);
+    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x70,puVar6,0xffffffff,'\0');
+    iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476900,0xa10);
     uVar2 = (int)puVar6 + iVar3;
     if ((uVar2 & 3) == 0) {
       iVar3 = 0;
@@ -33381,7 +33394,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476904 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE + 4),0x71,puVar6,0xffffffff,'\0');
+    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x71,puVar6,0xffffffff,'\0');
     if (((uint)puVar6 & 3) == 0) {
       iVar3 = 0;
     }
@@ -33392,7 +33405,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
       }
       iVar3 = 4 - uVar2;
     }
-    iVar4 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476904,0xa10);
+    iVar4 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476904,0xa10);
     uVar2 = (int)puVar6 + iVar4 + iVar3;
     if ((uVar2 & 3) == 0) {
       iVar3 = 0;
@@ -33406,8 +33419,8 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_0047690c = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE + 4),0x73,puVar6,0xffffffff,'\0');
-    iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_0047690c,0x1275);
+    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x73,puVar6,0xffffffff,'\0');
+    iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_0047690c,0x1275);
     uVar2 = (int)puVar6 + iVar3;
     if ((uVar2 & 3) == 0) {
       iVar3 = 0;
@@ -33421,7 +33434,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476908 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE + 4),0x72,puVar6,0xffffffff,'\0');
+    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x72,puVar6,0xffffffff,'\0');
     if (((uint)puVar6 & 3) == 0) {
       iVar3 = 0;
     }
@@ -33432,7 +33445,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
       }
       iVar3 = 4 - uVar2;
     }
-    iVar4 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476908,4000);
+    iVar4 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476908,4000);
     uVar2 = (int)puVar6 + iVar4 + iVar3;
     if ((uVar2 & 3) == 0) {
       iVar3 = 0;
@@ -33447,14 +33460,14 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     param_1 = (undefined2 *)(uVar2 + iVar3);
   }
   *(undefined2 **)((int)this + 0x16e0) = param_1;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x89);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x89);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,param_1,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,param_1,0xffffffff,'\x01');
   }
   FUN_004415b0((int)param_1);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x89);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x89);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -33571,7 +33584,7 @@ void __fastcall FUN_00434a60(int *param_1)
   local_ac[0x28] = 0x139;
   local_ac[0x29] = 0x13a;
   local_ac[0x2a] = 0x13b;
-  local_b4 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  local_b4 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
   iVar6 = 0;
   iVar7 = 0;
   piVar5 = param_1 + 0x5ba;
@@ -33592,7 +33605,7 @@ void __fastcall FUN_00434a60(int *param_1)
       puVar3 = (undefined1 *)FUN_00426cd0(local_ac[*piVar5 + 0x20]);
     }
     FUN_00428e70(param_1,local_ac[iVar6 + 0x18],puVar3);
-    cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar2 != '\0') {
       if ((*(int *)(iVar7 + 4 + param_1[0x5b3]) == -1) &&
          (*(char *)(iVar7 + param_1[0x5b3]) != '\0')) {
@@ -33651,7 +33664,7 @@ void __fastcall FUN_00434a60(int *param_1)
   else {
     local_b4 = '\0';
   }
-  cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
   if (cVar2 != '\0') {
     FUN_004290d0(param_1,1,local_b4);
   }
@@ -33704,7 +33717,7 @@ void __fastcall FUN_00435160(undefined4 *param_1)
 {
   FUN_00426da0();
   *(undefined1 *)(param_1 + 3) = 1;
-  FUN_00433c80(GLOBAL_STATE + 0x637c);
+  FUN_00433c80(GLOBAL_STATE.fieldJ);
   WaitForSingleObject((HANDLE)*param_1,0xffffffff);
   CloseHandle((HANDLE)param_1[1]);
   return;
@@ -33729,15 +33742,15 @@ void __fastcall FUN_00435210(void *param_1)
     FUN_00435540((int)param_1);
     uVar2 = extraout_EDX_00;
   }
-  FUN_004337c0((void *)(GLOBAL_STATE + 0x637c),uVar2);
+  FUN_004337c0((void *)(GLOBAL_STATE.fieldJ),uVar2);
   do {
-    FUN_00433ac0((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433ac0((void *)(GLOBAL_STATE.fieldJ));
     FUN_004359e0(param_1);
     FUN_004356b0(param_1);
     if (*(char *)((int)param_1 + 0xd) != '\0') {
       FUN_00435380((int)param_1);
     }
-    iVar1 = FUN_00433c00(GLOBAL_STATE + 0x637c);
+    iVar1 = FUN_00433c00(GLOBAL_STATE.fieldJ);
     if (iVar1 == 0) break;
     uVar4 = FUN_00426da0();
   } while ((uint)((int)uVar4 - (int)uVar3) < 0x1e);
@@ -33770,12 +33783,12 @@ void __fastcall FUN_004352d0(void *param_1)
   if (*(char *)((int)param_1 + 0xd) != '\0') {
     FUN_00435540((int)param_1);
   }
-  FUN_004338b0(GLOBAL_STATE + 0x637c);
+  FUN_004338b0(GLOBAL_STATE.fieldJ);
   if (*(char *)((int)param_1 + 0xd) != '\0') {
     FUN_00435380((int)param_1);
   }
-  FUN_00433900((void *)(GLOBAL_STATE + 0x637c));
-  FUN_00433700((void *)(GLOBAL_STATE + 0x637c));
+  FUN_00433900((void *)(GLOBAL_STATE.fieldJ));
+  FUN_00433700((void *)(GLOBAL_STATE.fieldJ));
   FUN_004359e0(param_1);
   ReleaseMutex(*(HANDLE *)((int)param_1 + 4));
   uVar2 = FUN_00426da0();
@@ -33813,7 +33826,7 @@ void __fastcall FUN_00435380(int param_1)
   iVar6 = 0;
   local_4 = 0;
   do {
-    cVar4 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    cVar4 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar4 == '\0') {
       iVar2 = *(int *)(param_1 + 0xcc70);
       bVar1 = *(byte *)(param_1 + 0xcac9);
@@ -33896,17 +33909,17 @@ void __fastcall FUN_00435540(int param_1)
   int iVar8;
   undefined2 local_4;
   
-  FUN_0042a8e0((void *)(GLOBAL_STATE + 0x27f0));
+  FUN_0042a8e0((void *)(GLOBAL_STATE.fieldI));
   WaitForSingleObject(*(HANDLE *)(param_1 + 4),0xffffffff);
   iVar8 = 0;
   do {
-    iVar2 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),iVar8);
+    iVar2 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),iVar8);
     if (iVar2 != -1) {
-      uVar3 = FUN_0042a910((void *)(GLOBAL_STATE + 0x27f0),iVar8);
-      iVar4 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar8,0);
-      iVar5 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar8,2);
-      iVar6 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar8,1);
-      iVar7 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar8,3);
+      uVar3 = FUN_0042a910((void *)(GLOBAL_STATE.fieldI),iVar8);
+      iVar4 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar8,0);
+      iVar5 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar8,2);
+      iVar6 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar8,1);
+      iVar7 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar8,3);
       local_4 = CONCAT11((char)iVar6 - (char)iVar7,(char)iVar4 - (char)iVar5);
       iVar2 = iVar2 * 0x65;
       *(undefined1 *)(*(int *)(param_1 + 0xcc6c) + 1 + iVar2) = 4;
@@ -33936,7 +33949,7 @@ void __thiscall FUN_00435650(void *this,char param_1)
   SetThreadPriority(hThread,0);
   WaitForSingleObject(*(HANDLE *)((int)this + 4),0xffffffff);
   *(char *)((int)this + 0xd) = param_1;
-  FUN_00433b60((void *)(GLOBAL_STATE + 0x637c),param_1);
+  FUN_00433b60((void *)(GLOBAL_STATE.fieldJ),param_1);
   ReleaseMutex(*(HANDLE *)((int)this + 4));
   return;
 }
@@ -33962,7 +33975,7 @@ void __fastcall FUN_004356b0(void *param_1)
   local_4 = 0;
   do {
     if (*(char *)(local_c + *(int *)((int)param_1 + 0xcc70)) != '\0') {
-      cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+      cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
       if (cVar2 == '\0') {
         cVar2 = *(char *)(local_c + 1 + *(int *)((int)param_1 + 0xcc70));
         if (cVar2 == '\0') {
@@ -34001,20 +34014,20 @@ switchD_00435711_caseD_1:
             puVar4 = puVar4 + 1;
             puVar5 = puVar5 + 1;
           }
-          PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0x83,lParam);
+          PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0x83,lParam);
           *(undefined4 *)((int)param_1 + 0x10) = 0x83;
           *(int *)((int)param_1 + 0x14) = lParam;
           Sleep(0);
           break;
         case 2:
           *(undefined1 *)(lParam + 0x20 + (int)param_1) = 1;
-          PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0x83,lParam);
+          PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0x83,lParam);
           *(undefined4 *)((int)param_1 + 0x10) = 0x83;
           *(int *)((int)param_1 + 0x14) = lParam;
           Sleep(0);
           break;
         case 3:
-          PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xd3,lParam);
+          PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xd3,lParam);
           *(undefined4 *)((int)param_1 + 0x10) = 0xd3;
           *(int *)((int)param_1 + 0x14) = lParam;
           Sleep(0);
@@ -34039,7 +34052,7 @@ switchD_00435711_caseD_1:
           break;
         case 5:
           iVar3 = (uint)*(byte *)((int)puVar4 + 2) + local_4;
-          PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0x167,iVar3);
+          PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0x167,iVar3);
           *(undefined4 *)((int)param_1 + 0x10) = 0x167;
           *(int *)((int)param_1 + 0x14) = iVar3;
           Sleep(0);
@@ -34051,7 +34064,7 @@ switchD_00435711_caseD_1:
     local_c = local_c + 0x65;
     local_4 = local_4 + 0x10;
     if (0x7f < local_4) {
-      cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+      cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
       if (((cVar2 == '\0') && (!bVar1)) && (*(char *)((int)param_1 + 0xd) != '\0')) {
         FUN_00435650(param_1,'\0');
       }
@@ -34123,7 +34136,7 @@ void __thiscall FUN_00435930(void *this,char *param_1)
     pcVar4 = pcVar4 + 1;
     pcVar6 = pcVar6 + 1;
   }
-  PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xd5,-1);
+  PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xd5,-1);
   *(undefined4 *)((int)this + 0x10) = 0xd5;
   *(undefined4 *)((int)this + 0x14) = 0xffffffff;
   Sleep(0);
@@ -34142,7 +34155,7 @@ void __fastcall FUN_004359e0(void *param_1)
   
   local_4 = 0;
   local_8 = 0;
-  uVar3 = FUN_004333e0((void *)(GLOBAL_STATE + 0x637c),&local_4,&local_8);
+  uVar3 = FUN_004333e0((void *)(GLOBAL_STATE.fieldJ),&local_4,&local_8);
   cVar2 = (char)uVar3;
   LVar1 = local_8;
   do {
@@ -34153,7 +34166,7 @@ void __fastcall FUN_004359e0(void *param_1)
     switch(local_4) {
     case 1:
       SetThreadPriority((HANDLE)*DAT_004768d4,0);
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xcd,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xcd,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xcd;
       break;
     case 2:
@@ -34161,12 +34174,12 @@ void __fastcall FUN_004359e0(void *param_1)
         FUN_00435650(param_1,'\0');
       }
       LVar1 = local_8;
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,200,local_8);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,200,local_8);
       *(undefined4 *)((int)param_1 + 0x10) = 200;
       *(LPARAM *)((int)param_1 + 0x14) = LVar1;
       goto LAB_00435d2f;
     case 3:
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xc4,LVar1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xc4,LVar1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xc4;
       *(LPARAM *)((int)param_1 + 0x14) = LVar1;
       goto LAB_00435d2f;
@@ -34174,12 +34187,12 @@ void __fastcall FUN_004359e0(void *param_1)
       goto switchD_00435a30_caseD_4;
     case 5:
       SetThreadPriority((HANDLE)*DAT_004768d4,0);
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xca,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xca,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xca;
       break;
     case 6:
       SetThreadPriority((HANDLE)*DAT_004768d4,0);
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xcc,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xcc,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xcc;
       break;
     case 7:
@@ -34187,56 +34200,56 @@ void __fastcall FUN_004359e0(void *param_1)
         FUN_00435650(param_1,'\0');
       }
       LVar1 = local_8;
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xce,local_8);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xce,local_8);
       *(undefined4 *)((int)param_1 + 0x10) = 0xce;
       *(LPARAM *)((int)param_1 + 0x14) = LVar1;
       goto LAB_00435d2f;
     case 8:
       SetThreadPriority((HANDLE)*DAT_004768d4,0);
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,199,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,199,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 199;
       break;
     case 9:
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xd0,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xd0,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xd0;
       break;
     case 10:
       if (*(char *)((int)param_1 + 0xd) == '\0') {
-        PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0x13f,-1);
+        PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0x13f,-1);
         *(undefined4 *)((int)param_1 + 0x10) = 0x13f;
       }
       else {
-        PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,199,-1);
+        PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,199,-1);
         *(undefined4 *)((int)param_1 + 0x10) = 199;
       }
       break;
     case 0xb:
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0x141,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0x141,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0x141;
       break;
     case 0xc:
       if (*(char *)((int)param_1 + 0xd) != '\0') {
         FUN_00435650(param_1,'\0');
       }
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xc6,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xc6,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xc6;
       break;
     case 0xd:
       if (*(char *)((int)param_1 + 0xd) != '\0') {
         FUN_00435650(param_1,'\0');
       }
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xd7,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xd7,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xd7;
       break;
     case 0xe:
       if (*(char *)((int)param_1 + 0xd) != '\0') {
         FUN_00435650(param_1,'\0');
       }
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xd8,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xd8,-1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xd8;
       break;
     case 0xf:
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,0xb9,LVar1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,0xb9,LVar1);
       *(undefined4 *)((int)param_1 + 0x10) = 0xb9;
       *(LPARAM *)((int)param_1 + 0x14) = LVar1;
       goto LAB_00435d2f;
@@ -34245,7 +34258,7 @@ void __fastcall FUN_004359e0(void *param_1)
 LAB_00435d2f:
     Sleep(0);
 switchD_00435a30_caseD_4:
-    uVar3 = FUN_004333e0((void *)(GLOBAL_STATE + 0x637c),&local_4,&local_8);
+    uVar3 = FUN_004333e0((void *)(GLOBAL_STATE.fieldJ),&local_4,&local_8);
     cVar2 = (char)uVar3;
     LVar1 = local_8;
   } while( true );
@@ -34291,19 +34304,19 @@ undefined4 FUN_00435da0(void)
     goto switchD_00435e0c_caseD_83;
   case 0xb9:
     if (in_stack_00001760 != '\0') {
-      FUN_004326f0((void *)(GLOBAL_STATE + 0x637c),in_stack_00001754);
+      FUN_004326f0((void *)(GLOBAL_STATE.fieldJ),in_stack_00001754);
       pbVar3 = (byte *)FUN_00426cd0(0xba);
       format_string((undefined1 *)&local_c,pbVar3);
       FUN_00435930(this,(char *)&local_c);
     }
     goto switchD_00435e0c_caseD_83;
   case 199:
-    FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     iVar5 = 0x66;
     goto LAB_00436053;
   case 200:
-    if ((in_stack_00001760 != '\0') && (iVar5 = FUN_00432720(GLOBAL_STATE + 0x637c), iVar5 != 0)) {
-      FUN_00432720(GLOBAL_STATE + 0x637c);
+    if ((in_stack_00001760 != '\0') && (iVar5 = FUN_00432720(GLOBAL_STATE.fieldJ), iVar5 != 0)) {
+      FUN_00432720(GLOBAL_STATE.fieldJ);
       pbVar3 = (byte *)FUN_00426cd0(0xd9);
       format_string((undefined1 *)&local_c,pbVar3);
       *(int *)(GLOBAL_STATE + 0xac14) = *(int *)(GLOBAL_STATE + 0xac14) + -1;
@@ -34339,15 +34352,15 @@ switchD_00435e0c_caseD_83:
     uVar8 = 3;
     break;
   case 0xca:
-    FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     iVar5 = 0xdf;
     goto LAB_00436053;
   case 0xcc:
-    FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     iVar5 = 0xdd;
     goto LAB_00436053;
   case 0xcd:
-    FUN_00433310((void *)(GLOBAL_STATE + 0x637c));
+    FUN_00433310((void *)(GLOBAL_STATE.fieldJ));
     iVar5 = 0x143;
 LAB_00436053:
     iVar5 = FUN_00426cd0(iVar5);
@@ -34366,7 +34379,7 @@ LAB_00436053:
     break;
   case 0x13f:
     if (*(char *)((int)this + 0xcad4) == '\0') {
-      PostMessageA(*(HWND *)(GLOBAL_STATE + 0xcb04),0x46b,199,-1);
+      PostMessageA(*(HWND *)(GLOBAL_STATE.Window),0x46b,199,-1);
       *(undefined4 *)((int)this + 0x10) = 199;
       *(undefined4 *)((int)this + 0x14) = 0xffffffff;
       Sleep(0);
@@ -34452,7 +34465,7 @@ void __thiscall FUN_00436290(void *this,int param_1)
   
   if (param_1 != -1) {
     WaitForSingleObject(*(HANDLE *)((int)this + 4),0xffffffff);
-    cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar1 == '\0') {
       iVar6 = *(int *)((int)this + 0xcc6c);
     }
@@ -34462,7 +34475,7 @@ void __thiscall FUN_00436290(void *this,int param_1)
     pcVar3 = (char *)(iVar6 + param_1 * 0x65);
     pcVar3[1] = '\0';
     pcVar9 = pcVar3 + 2;
-    pcVar2 = (char *)FUN_004326f0((void *)(GLOBAL_STATE + 0x637c),param_1);
+    pcVar2 = (char *)FUN_004326f0((void *)(GLOBAL_STATE.fieldJ),param_1);
     uVar4 = 0xffffffff;
     do {
       pcVar8 = pcVar2;
@@ -34584,19 +34597,19 @@ void __thiscall FUN_004363b0(void *this,char *param_1)
   char *pcVar7;
   char *pcVar8;
   
-  iVar2 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),0);
+  iVar2 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),0);
   if (iVar2 != -1) {
     WaitForSingleObject(*(HANDLE *)((int)this + 4),0xffffffff);
-    cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+    cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar1 == '\0') {
       iVar2 = *(int *)((int)this + 0xcc6c);
     }
     else {
       iVar2 = *(int *)((int)this + 0xcc70);
     }
-    iVar3 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),0);
+    iVar3 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),0);
     *(undefined1 *)(iVar2 + iVar3 * 0x65 + 1) = 0;
-    iVar3 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),0);
+    iVar3 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),0);
     uVar4 = 0xffffffff;
     do {
       pcVar7 = param_1;
@@ -34619,7 +34632,7 @@ void __thiscall FUN_004363b0(void *this,char *param_1)
       pcVar7 = pcVar7 + 1;
       pcVar8 = pcVar8 + 1;
     }
-    this_00 = (void *)(GLOBAL_STATE + 0x637c);
+    this_00 = (void *)(GLOBAL_STATE.fieldJ);
     iVar3 = FUN_004335f0(this_00,0);
     iVar6 = -1;
     pcVar7 = (char *)(iVar3 * 0x65 + iVar2 + 2);
@@ -34720,7 +34733,7 @@ uint __thiscall FUN_004365c0(void *this,char *param_1)
         iVar3 = iVar3 + 1;
         piVar5 = piVar5 + 0x1b;
       } while (iVar3 < 8);
-      cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+      cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
       pcVar7 = param_1;
       uVar6 = extraout_var;
       if (cVar2 == '\0') {
@@ -34738,7 +34751,7 @@ uint __thiscall FUN_004365c0(void *this,char *param_1)
     iVar3 = iVar3 + 1;
     pcVar7 = pcVar7 + 0x6c;
   } while (iVar3 < 8);
-  cVar2 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  cVar2 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
   if (cVar2 == '\0') {
     WaitForSingleObject(*(HANDLE *)((int)this + 4),0xffffffff);
     iVar3 = 0;
@@ -34926,7 +34939,7 @@ int __thiscall FUN_00436a00(void *this,int param_1,int param_2)
   int iVar1;
   int unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   *(int *)((int)this + 0x16c8) = param_2;
@@ -34937,7 +34950,7 @@ int __thiscall FUN_00436a00(void *this,int param_1,int param_2)
   FUN_00428e70(this,2,iVar1);
   iVar1 = FUN_00429520(this,unaff_retaddr);
   iVar1 = FUN_00429840(this,0x8d,(LPVOID)(unaff_retaddr + iVar1));
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xd0);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xd0);
   return iVar1;
 }
 
@@ -34995,7 +35008,7 @@ void __fastcall FUN_00436bf0(int *param_1)
   uVar1 = (**(code **)(*param_1 + 0x18))(0x42f);
   puVar3 = GetPointerToSaveData();
   puVar3[10] = uVar1;
-  this = (void *)(GLOBAL_STATE + 0xb284);
+  this = (void *)(GLOBAL_STATE.fieldP);
   volume = (**(code **)(*param_1 + 0x18))(0x42f);
   SetVolumeIfLessThan101(this,volume);
   puVar3 = GetPointerToSaveData();
@@ -35031,7 +35044,7 @@ void __fastcall FUN_00436bf0(int *param_1)
 void __fastcall FUN_00436cc0(int *param_1)
 
 {
-  SetVolumeIfLessThan101((void *)(GLOBAL_STATE + 0xb284),*(byte *)(param_1 + 0x5b3));
+  SetVolumeIfLessThan101((void *)(GLOBAL_STATE.fieldP),*(byte *)(param_1 + 0x5b3));
   (**(code **)(*param_1 + 4))(2);
   return;
 }
@@ -35048,7 +35061,7 @@ FUN_00436d60(void *this,uint param_1,int param_2,int param_3,int param_4,int par
   uint uVar5;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x87);
@@ -35059,14 +35072,14 @@ FUN_00436d60(void *this,uint param_1,int param_2,int param_3,int param_4,int par
   *(int *)((int)this + 0x17c8) = param_4;
   puVar2 = FUN_00446760(this,unaff_retaddr);
   *(undefined2 **)((int)this + 0x1f74) = puVar2;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar3 = FUN_0042c830(pvVar1,0x89);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar3 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x89);
   if ((char)uVar3 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar2,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar2,0xffffffff,'\x01');
   }
   FUN_004415b0((int)puVar2);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar3 = FUN_0042c830(pvVar1,0x89);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar3 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x89);
   if ((char)uVar3 == '\0') {
     iVar4 = -1;
   }
@@ -37736,12 +37749,12 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   do {
     iVar5 = *piVar8;
     *puVar10 = piVar7;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,iVar5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar5);
     if (((char)uVar4 != '\0') &&
-       (uVar4 = FUN_0042c8a0(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
+       (uVar4 = FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
       FUN_00440f50(piVar7);
-      iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+      iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
       piVar7 = (int *)((int)piVar7 + iVar5);
     }
     if (((uint)piVar7 & 3) == 0) {
@@ -37765,12 +37778,12 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   do {
     iVar5 = *piVar8;
     *puVar10 = piVar7;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,iVar5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar5);
     if (((char)uVar4 != '\0') &&
-       (uVar4 = FUN_0042c8a0(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
+       (uVar4 = FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
       FUN_00440f50(piVar7);
-      iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+      iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
       piVar7 = (int *)((int)piVar7 + iVar5);
     }
     if (((uint)piVar7 & 3) == 0) {
@@ -37789,13 +37802,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     param_1 = (int *)((int)param_1 + -1);
   } while (param_1 != (int *)0x0);
   *(int **)((int)this + 0x29c) = piVar7;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18a);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18a);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar7,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar7);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar7 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37809,13 +37822,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   piVar8 = (int *)(uVar4 + iVar5);
   *(int **)((int)this + 0x2a0) = piVar8;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18b);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18b);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37829,13 +37842,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   piVar8 = (int *)(uVar4 + iVar5);
   *(int **)((int)this + 0x2a4) = piVar8;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18c);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18c);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37849,14 +37862,14 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2d4) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,400);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,400);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar9);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,400);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,400);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -37876,13 +37889,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2e8) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18d);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18d);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18d);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18d);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -37902,13 +37915,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2ec) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18e);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18e);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x18e);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x18e);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -37928,14 +37941,14 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2d8) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,399);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,399);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar9);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,399);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,399);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -37955,14 +37968,14 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2dc) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x191);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x191);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar9);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x191);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x191);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -37982,14 +37995,14 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2e0) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x192);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x192);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar9);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x192);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x192);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -38009,14 +38022,14 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
   }
   pvVar9 = (LPVOID)(uVar4 + iVar5);
   *(LPVOID *)((int)this + 0x2e4) = pvVar9;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x193);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x193);
   if ((char)uVar4 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar9,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar9,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar9);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar4 = FUN_0042c830(pvVar1,0x193);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x193);
   if ((char)uVar4 == '\0') {
     iVar5 = -1;
   }
@@ -38035,16 +38048,16 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = 4 - uVar6;
   }
   piVar8 = (int *)(uVar4 + iVar5);
-  switch(*(undefined4 *)(GLOBAL_STATE + 0xd01c)) {
+  switch(*(undefined4 *)(GLOBAL_STATE.Language)) {
   case 1:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a3);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38058,13 +38071,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a4);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38078,13 +38091,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a5);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38098,13 +38111,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a6);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a6);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38118,13 +38131,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a7);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a7);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38138,13 +38151,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a9);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a9);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38158,13 +38171,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1aa);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1aa);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38178,13 +38191,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a8);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a8);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38198,13 +38211,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ab);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ab);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38218,13 +38231,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ac);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ac);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38238,13 +38251,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ad);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ad);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38258,13 +38271,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ae);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ae);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38278,13 +38291,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x280) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1af);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1af);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38298,13 +38311,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x284) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b0);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38318,19 +38331,19 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x288) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b1);
     cVar3 = (char)uVar4;
     break;
   case 2:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b2);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38344,13 +38357,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b3);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38364,13 +38377,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b4);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38384,13 +38397,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b5);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38404,13 +38417,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b6);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b6);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38424,13 +38437,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b8);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b8);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38444,13 +38457,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b9);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b9);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38464,13 +38477,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1b7);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1b7);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38484,13 +38497,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ba);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ba);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38504,13 +38517,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1bb);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1bb);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38524,13 +38537,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1bc);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1bc);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38544,13 +38557,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1bd);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1bd);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) goto LAB_0043cc29;
     uVar6 = uVar4 & 0x80000003;
@@ -38561,13 +38574,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     goto LAB_0043cc2b;
   case 3:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1be);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1be);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38581,13 +38594,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1bf);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1bf);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38601,13 +38614,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c0);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38621,13 +38634,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c1);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38641,13 +38654,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c2);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38661,13 +38674,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c4);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38681,13 +38694,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c5);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38701,13 +38714,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c3);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38721,13 +38734,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c6);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c6);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38741,13 +38754,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c7);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c7);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38761,13 +38774,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c8);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c8);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38781,13 +38794,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1c9);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1c9);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38801,13 +38814,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x280) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ca);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ca);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38830,13 +38843,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     goto LAB_0043d2e3;
   case 4:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1cb);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1cb);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38850,13 +38863,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1cc);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1cc);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38870,13 +38883,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1cd);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1cd);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38890,13 +38903,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1ce);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1ce);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38910,13 +38923,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1cf);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1cf);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38930,13 +38943,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d1);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38950,13 +38963,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d2);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38970,13 +38983,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d0);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38990,13 +39003,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d3);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39010,13 +39023,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d4);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d4);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39030,13 +39043,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d5);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d5);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39050,19 +39063,19 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d6);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d6);
     cVar3 = (char)uVar4;
     goto joined_r0x0043cc1e;
   case 5:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d7);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d7);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39076,13 +39089,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d8);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d8);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39096,13 +39109,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1d9);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1d9);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39116,13 +39129,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1da);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1da);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39136,13 +39149,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1db);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1db);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39156,13 +39169,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1dd);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1dd);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39176,13 +39189,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1de);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1de);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39196,13 +39209,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1dc);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1dc);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39216,13 +39229,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1df);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1df);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39236,13 +39249,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1e0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1e0);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39256,13 +39269,13 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1e1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1e1);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39276,15 +39289,15 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1e2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1e2);
     cVar3 = (char)uVar4;
 joined_r0x0043cc1e:
     if (cVar3 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
 LAB_0043cc29:
@@ -39310,13 +39323,13 @@ LAB_0043cc2b:
     goto LAB_0043d2e3;
   default:
     *(int **)((int)this + 0x2b4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x194);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x194);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39330,13 +39343,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x195);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x195);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39350,13 +39363,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 700) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x196);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x196);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39370,13 +39383,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x197);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x197);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39390,13 +39403,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c4) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x198);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x198);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39410,13 +39423,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2cc) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19a);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19a);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39430,13 +39443,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2d0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19b);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19b);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39450,13 +39463,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2c8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x199);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x199);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39470,13 +39483,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2a8) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19c);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19c);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39490,13 +39503,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2ac) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19d);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19d);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39510,13 +39523,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x2b0) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19e);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19e);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39530,13 +39543,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x27c) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x19f);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x19f);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39550,13 +39563,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x280) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a0);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a0);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39570,13 +39583,13 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x284) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a1);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a1);
     if ((char)uVar4 != '\0') {
-      FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39590,15 +39603,15 @@ LAB_0043cc2b:
     }
     piVar8 = (int *)(uVar4 + iVar5);
     *(int **)((int)this + 0x288) = piVar8;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar4 = FUN_0042c830(pvVar1,0x1a2);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar4 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x1a2);
     cVar3 = (char)uVar4;
   }
   if (cVar3 != '\0') {
-    FUN_0042c8a0(pvVar1,piVar8,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE + 4);
+  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -39647,7 +39660,7 @@ FUN_0043d310(void *this,undefined4 param_1,undefined4 *param_2,int param_3,int p
   *(undefined4 *)((int)this + 0x1c) = param_5;
   *(int *)((int)this + 0x10) = param_10;
   *(undefined4 *)((int)this + 0x34) = param_7;
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xffffff);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xffffff);
   *(short *)((int)this + 0x18) = (short)uVar3;
   uVar4 = FUN_00440f50((int *)(*(int *)(param_3 + 0x37fc) + 4));
   *(undefined4 *)((int)this + 4) = uVar4;
@@ -39662,7 +39675,7 @@ FUN_0043d310(void *this,undefined4 param_1,undefined4 *param_2,int param_3,int p
           lVar9 = __ftol();
           lVar10 = __ftol();
           lVar11 = __ftol();
-          uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),
+          uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),
                                (uint)CONCAT11((char)lVar9,(char)lVar10) << 8 | (uint)lVar11 & 0xff);
           *puVar8 = (short)uVar3;
           puVar8 = puVar8 + 1;
@@ -39679,7 +39692,7 @@ FUN_0043d310(void *this,undefined4 param_1,undefined4 *param_2,int param_3,int p
     iVar7 = 5;
     do {
       lVar9 = __ftol();
-      uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),(uint)lVar9 & 0xff);
+      uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),(uint)lVar9 & 0xff);
       *puVar8 = (short)uVar3;
       puVar8 = puVar8 + 1;
       iVar7 = iVar7 + -1;
@@ -39702,43 +39715,43 @@ FUN_0043d310(void *this,undefined4 param_1,undefined4 *param_2,int param_3,int p
   else {
     *(undefined4 *)((int)this + 0x36c) = 0xffffffff;
   }
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0x60ff60);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0x60ff60);
   *(short *)((int)this + 0x21a) = (short)uVar3;
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff2020);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff2020);
   *(short *)((int)this + 0x222) = (short)uVar3;
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff2020);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff2020);
   *(short *)((int)this + 0x224) = (short)uVar3;
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff2020);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff2020);
   *(short *)((int)this + 0x226) = (short)uVar3;
-  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff2020);
+  uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff2020);
   *(short *)((int)this + 0x228) = (short)uVar3;
   switch(*(undefined4 *)((int)this + 0x20)) {
   case 1:
   case 2:
   case 3:
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xffff60);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xffff60);
     *(short *)((int)this + 0x21c) = (short)uVar3;
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff2020);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff2020);
     *(short *)((int)this + 0x21e) = (short)uVar3;
     break;
   case 4:
   case 5:
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xffff60);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xffff60);
     *(short *)((int)this + 0x21c) = (short)uVar3;
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xffff60);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xffff60);
     *(short *)((int)this + 0x21e) = (short)uVar3;
     uVar3 = 0xff2020;
     goto LAB_0043d763;
   case 6:
   case 7:
   case 8:
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0x60ff60);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0x60ff60);
     *(short *)((int)this + 0x21c) = (short)uVar3;
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xffff60);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xffff60);
     *(short *)((int)this + 0x21e) = (short)uVar3;
     uVar3 = 0xffff60;
 LAB_0043d763:
-    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),uVar3);
+    uVar3 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),uVar3);
     *(short *)((int)this + 0x220) = (short)uVar3;
   }
   switch(param_5) {
@@ -39777,20 +39790,20 @@ LAB_0043d763:
   *(int *)((int)this + 0xc) = param_3;
   *(undefined1 *)((int)this + 0x56) = 1;
   FUN_0043d970((int)this);
-  if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+  if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
     *(undefined4 *)((int)this + 0x24) = *param_2;
     *(undefined4 *)((int)this + 0x28) = param_2[1];
     *(undefined4 *)((int)this + 0x2c) = param_2[2];
     *(undefined4 *)((int)this + 0x30) = param_2[3];
   }
   else {
-    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),0);
+    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),0);
     *(int *)((int)this + 0x24) = iVar7;
-    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),1);
+    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),1);
     *(int *)((int)this + 0x28) = iVar7;
-    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),2);
+    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),2);
     *(int *)((int)this + 0x2c) = iVar7;
-    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE + 0x637c),3);
+    iVar7 = FUN_004335f0((void *)(GLOBAL_STATE.fieldJ),3);
     *(int *)((int)this + 0x30) = iVar7;
   }
   piVar2 = *(int **)((int)this + 0x34);
@@ -39876,21 +39889,21 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
   
   *(int *)this = param_1;
   if (*(int *)((int)this + 0x1c) == 3) {
-    FUN_00443590((void *)(GLOBAL_STATE + 0xc500),0x140,0xf0,0x27f,0x1df,0);
+    FUN_00443590((void *)(GLOBAL_STATE.fieldR),0x140,0xf0,0x27f,0x1df,0);
   }
-  cVar3 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_8,&param_1);
+  cVar3 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_8,&param_1);
   if (cVar3 == '\0') {
     return 0;
   }
   switch(*(undefined4 *)((int)this + 0x1c)) {
   case 1:
     if (*(int *)((int)this + 0x2f0) != 0) {
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2ec),
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2ec),
                    local_8 + param_1 * 0x1cc,param_1,'\0');
       *(int *)((int)this + 0x2f0) = *(int *)((int)this + 0x2f0) + -1;
     }
     if (*(char *)((int)this + 0x55) == '\0') {
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2b0),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2b0),
                    (int)(local_8 + (0x32 - *(short *)((int)*(int **)((int)this + 0x2b0) + 10))),0,0,
                    param_1,*(ushort *)((int)this + 0x18));
       iVar7 = *(int *)(*(int *)((int)this + 8) + 0xac4 + *(int *)((int)this + 0x24) * 3000);
@@ -39898,11 +39911,11 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
       if (iVar6 <= iVar7) {
         iVar7 = iVar6 + -1;
       }
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x230),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x230),
                    (int)(local_8 + 0x32),0,0,param_1,*(ushort *)((int)this + 0x18));
     }
     if (**(int **)((int)this + 0x34) == 3) {
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2ac),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2ac),
                    (int)(local_8 + param_1 * 0x13 + 0x1db),0,0,param_1,*(ushort *)((int)this + 0x18)
                   );
       FUN_0043f930(this,(int)(local_8 + (param_1 * 5 + 0x7d) * 4),param_1,
@@ -39913,11 +39926,11 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
     }
     else {
       iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x24) * 4);
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x27c),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x27c),
                    (int)(local_8 + 0xa0),0,0,param_1,*(ushort *)((int)this + iVar7 * 2 + 0x21a));
       iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x24) * 4);
       piVar2 = *(int **)((int)this + iVar7 * 4 + 0x230);
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),piVar2,
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),piVar2,
                    (int)(local_8 + (0xa0 - *(short *)((int)piVar2 + 10))),0,0,param_1,
                    *(ushort *)((int)this + iVar7 * 2 + 0x21a));
     }
@@ -39929,14 +39942,14 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
     break;
   case 2:
     if (*(int *)((int)this + 0x2f0) != 0) {
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2ec),local_8,param_1,'\0'
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2ec),local_8,param_1,'\0'
                   );
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2ec),
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2ec),
                    local_8 + param_1 * 0x1cc,param_1,'\0');
       *(int *)((int)this + 0x2f0) = *(int *)((int)this + 0x2f0) + -1;
     }
     if (*(char *)((int)this + 0x55) == '\0') {
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2b0),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2b0),
                    (int)(local_8 +
                         (param_1 * 0x16 - (int)*(short *)((int)*(int **)((int)this + 0x2b0) + 10)) +
                         0x32),0,0,param_1,*(ushort *)((int)this + 0x18));
@@ -39945,10 +39958,10 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
       if (iVar6 <= iVar7) {
         iVar7 = iVar6 + -1;
       }
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x230),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x230),
                    (int)(local_8 + param_1 * 0x16 + 0x32),0,0,param_1,*(ushort *)((int)this + 0x18))
       ;
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2b0),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2b0),
                    (int)(local_8 +
                         (param_1 * 0x1a2 - (int)*(short *)((int)*(int **)((int)this + 0x2b0) + 10))
                         + 0x32),0,0,param_1,*(ushort *)((int)this + 0x18));
@@ -39957,26 +39970,26 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
       if (iVar6 <= iVar7) {
         iVar7 = iVar6 + -1;
       }
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x230),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x230),
                    (int)(local_8 + param_1 * 0x1a2 + 0x32),0,0,param_1,*(ushort *)((int)this + 0x18)
                   );
     }
     iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x24) * 4);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x27c),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x27c),
                  (int)(local_8 + param_1 * 0x16 + 0xa0),0,0,param_1,
                  *(ushort *)((int)this + iVar7 * 2 + 0x21a));
     iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x24) * 4);
     piVar2 = *(int **)((int)this + iVar7 * 4 + 0x230);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),piVar2,
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),piVar2,
                  (int)(local_8 + (param_1 * 0x16 - (int)*(short *)((int)piVar2 + 10)) + 0xa0),0,0,
                  param_1,*(ushort *)((int)this + iVar7 * 2 + 0x21a));
     iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x28) * 4);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar7 * 4 + 0x27c),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar7 * 4 + 0x27c),
                  (int)(local_8 + param_1 * 0x1a2 + 0xa0),0,0,param_1,
                  *(ushort *)((int)this + iVar7 * 2 + 0x21a));
     iVar7 = *(int *)(*(int *)((int)this + 0x14) + *(int *)((int)this + 0x28) * 4);
     piVar2 = *(int **)((int)this + iVar7 * 4 + 0x230);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),piVar2,
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),piVar2,
                  (int)(local_8 + (param_1 * 0x1a2 - (int)*(short *)((int)piVar2 + 10)) + 0xa0),0,0,
                  param_1,*(ushort *)((int)this + iVar7 * 2 + 0x21a));
     FUN_0043f310(this,0,(int)local_8,param_1);
@@ -40003,11 +40016,11 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
     break;
   case 3:
     if (*(int *)((int)this + 0x2f0) != 0) {
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),local_8,param_1,'\0'
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),local_8,param_1,'\0'
                   );
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),local_8 + 0x140,
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),local_8 + 0x140,
                    param_1,'\0');
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),
                    local_8 + param_1 * 0x1cc,param_1,'\0');
       *(int *)((int)this + 0x2f0) = *(int *)((int)this + 0x2f0) + -1;
     }
@@ -40049,13 +40062,13 @@ undefined1 __thiscall FUN_0043da50(void *this,int param_1,int param_2)
     break;
   case 4:
     if (*(int *)((int)this + 0x2f0) != 0) {
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),local_8,param_1,'\0'
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),local_8,param_1,'\0'
                   );
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),local_8 + 0x140,
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),local_8 + 0x140,
                    param_1,'\0');
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),
                    local_8 + param_1 * 0x1cc,param_1,'\0');
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2e8),
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2e8),
                    local_8 + param_1 * 0x1cc + 0x140,param_1,'\0');
       *(int *)((int)this + 0x2f0) = *(int *)((int)this + 0x2f0) + -1;
     }
@@ -40110,7 +40123,7 @@ switchD_0043dac1_default:
                            *(int *)((int)this + 0x50) * param_1 + *(int *)((int)this + 0x4c)),
                  param_1,(param_2 * 100) / 0x78);
   }
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 4),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 4),
                (int)(local_8 + *(int *)((int)this + 0x44) * param_1 + *(int *)((int)this + 0x40)),0,
                0,param_1,*(ushort *)((int)this + 0x18));
   local_4 = 0;
@@ -40182,7 +40195,7 @@ switchD_0043dac1_default:
     local_8[param_1 * 4] = *(short *)((int)this + 0x210);
     (local_8 + param_1 * 4)[4] = *(short *)((int)this + 0x218);
   }
-  FUN_00442d80(GLOBAL_STATE + 0xc500);
+  FUN_00442d80(GLOBAL_STATE.fieldR);
   return 1;
 }
 
@@ -40197,7 +40210,7 @@ void __thiscall FUN_0043eb40(void *this,int param_1,int param_2,int param_3)
   
   iVar1 = *(int *)((int)this + param_1 * 4 + 0x24);
   if (*(char *)((int)this + 0x55) == '\0') {
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2b0),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2b0),
                  param_2 + (0x32 - *(short *)((int)*(int **)((int)this + 0x2b0) + 10)) * 2,0,0,
                  param_3,*(ushort *)((int)this + 0x18));
     iVar4 = *(int *)(*(int *)((int)this + 8) + 0xac4 + iVar1 * 3000);
@@ -40205,15 +40218,15 @@ void __thiscall FUN_0043eb40(void *this,int param_1,int param_2,int param_3)
     if (iVar2 <= iVar4) {
       iVar4 = iVar2 + -1;
     }
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar4 * 4 + 600),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar4 * 4 + 600),
                  param_2 + 100,0,0,param_3,*(ushort *)((int)this + 0x18));
   }
   iVar4 = *(int *)(*(int *)((int)this + 0x14) + iVar1 * 4);
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + iVar4 * 4 + 0x27c),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + iVar4 * 4 + 0x27c),
                param_2 + 0xa0,0,0,param_3,*(ushort *)((int)this + iVar4 * 2 + 0x21a));
   iVar1 = *(int *)(*(int *)((int)this + 0x14) + iVar1 * 4);
   piVar3 = *(int **)((int)this + iVar1 * 4 + 600);
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),piVar3,
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),piVar3,
                param_2 + (0x50 - *(short *)((int)piVar3 + 10)) * 2,0,0,param_3,
                *(ushort *)((int)this + iVar1 * 2 + 0x21a));
   return;
@@ -40244,9 +40257,9 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
   if ((-1 < iVar4) && (iVar4 != 0)) {
     iVar6 = *(int *)(iVar6 + 0x9a8);
     uVar10 = FUN_00441610(0xffb000,0xffffff,iVar4);
-    uVar5 = FUN_00440500((void *)(GLOBAL_STATE + 0x13c8),(int)uVar10);
+    uVar5 = FUN_00440500((void *)(GLOBAL_STATE.fieldB),(int)uVar10);
     uVar11 = (ushort)uVar5;
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2c0),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2c0),
                  param_2 + ((int)*(short *)((int)*(int **)((int)this + 0x2c0) + 10) / 2) * -2,0,0,
                  param_3,uVar11);
     if (1 < iVar6) {
@@ -40254,10 +40267,10 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
       if (9 < iVar6) {
         param_3 = 9;
       }
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + param_3 * 4 + 0x254),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + param_3 * 4 + 0x254),
                    param_2 + (*(short *)(*(int *)((int)this + 0x2c0) + 8) + 2) * iVar3 * 2,0,0,iVar3
                    ,uVar11);
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2a0),
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2a0),
                    param_2 + ((*(short *)(*(int *)((int)this + 0x2c0) + 8) + 6) * iVar3 -
                              (int)*(short *)((int)*(int **)((int)this + 0x2a0) + 10)) * 2,0,0,iVar3,
                    uVar11);
@@ -40272,8 +40285,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
     }
     if (0x3c < *(int *)this % 0x78) {
       piVar2 = *(int **)((int)this + 700);
-      pvVar1 = (void *)(GLOBAL_STATE + 0x13c8);
-      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff0000);
+      pvVar1 = (void *)(GLOBAL_STATE.fieldB);
+      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff0000);
       FUN_00440fa0(pvVar1,piVar2,
                    param_2 + (iVar9 * iVar3 - (int)*(short *)((int)piVar2 + 10) / 2) * 2,0,0,iVar3,
                    (ushort)uVar7);
@@ -40288,8 +40301,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
     }
     if (0x3c < *(int *)this % 0x78) {
       piVar2 = *(int **)((int)this + 0x2b4);
-      pvVar1 = (void *)(GLOBAL_STATE + 0x13c8);
-      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff0000);
+      pvVar1 = (void *)(GLOBAL_STATE.fieldB);
+      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff0000);
       FUN_00440fa0(pvVar1,piVar2,
                    param_2 + (iVar9 * iVar3 - (int)*(short *)((int)piVar2 + 10) / 2) * 2,0,0,iVar3,
                    (ushort)uVar7);
@@ -40304,8 +40317,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
     }
     if (0x3c < *(int *)this % 0x78) {
       piVar2 = *(int **)((int)this + 0x2d0);
-      pvVar1 = (void *)(GLOBAL_STATE + 0x13c8);
-      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE + 0xc500),0xff0000);
+      pvVar1 = (void *)(GLOBAL_STATE.fieldB);
+      uVar7 = FUN_004435d0((void *)(GLOBAL_STATE.fieldR),0xff0000);
       FUN_00440fa0(pvVar1,piVar2,
                    param_2 + (iVar9 * iVar3 - (int)*(short *)((int)piVar2 + 10) / 2) * 2,0,0,iVar3,
                    (ushort)uVar7);
@@ -40319,8 +40332,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
       return;
     }
     uVar10 = FUN_00441610(0xffb000,0xffffff,iVar6);
-    uVar5 = FUN_00440500((void *)(GLOBAL_STATE + 0x13c8),(int)uVar10);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2c4),
+    uVar5 = FUN_00440500((void *)(GLOBAL_STATE.fieldB),(int)uVar10);
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2c4),
                  param_2 + (iVar9 * iVar3 -
                            (int)*(short *)((int)*(int **)((int)this + 0x2c4) + 10) / 2) * 2,0,0,
                  iVar3,(ushort)uVar5);
@@ -40333,8 +40346,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
       return;
     }
     uVar10 = FUN_00441610(0xffb000,0xffffff,iVar6);
-    uVar5 = FUN_00440500((void *)(GLOBAL_STATE + 0x13c8),(int)uVar10);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2c8),
+    uVar5 = FUN_00440500((void *)(GLOBAL_STATE.fieldB),(int)uVar10);
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2c8),
                  param_2 + (iVar9 * iVar3 -
                            (int)*(short *)((int)*(int **)((int)this + 0x2c8) + 10) / 2) * 2,0,0,
                  iVar3,(ushort)uVar5);
@@ -40347,8 +40360,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
       return;
     }
     uVar10 = FUN_00441610(0xffb000,0xffffff,iVar6);
-    uVar5 = FUN_00440500((void *)(GLOBAL_STATE + 0x13c8),(int)uVar10);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2cc),
+    uVar5 = FUN_00440500((void *)(GLOBAL_STATE.fieldB),(int)uVar10);
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2cc),
                  param_2 + (iVar9 * iVar3 -
                            (int)*(short *)((int)*(int **)((int)this + 0x2cc) + 10) / 2) * 2,0,0,
                  iVar3,(ushort)uVar5);
@@ -40359,8 +40372,8 @@ void __thiscall FUN_0043ec60(void *this,int param_1,int param_2,int param_3)
   if (((-1 < iVar6) && (iVar6 != 0)) &&
      (*(short *)(*(int *)((int)this + 0x2b8) + 8) + 2 + iVar9 < 0xdc)) {
     uVar10 = FUN_00441610(0xffb000,0xffffff,iVar6);
-    uVar5 = FUN_00440500((void *)(GLOBAL_STATE + 0x13c8),(int)uVar10);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2b8),
+    uVar5 = FUN_00440500((void *)(GLOBAL_STATE.fieldB),(int)uVar10);
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2b8),
                  param_2 + (iVar9 * iVar3 -
                            (int)*(short *)((int)*(int **)((int)this + 0x2b8) + 10) / 2) * 2,0,0,
                  iVar3,(ushort)uVar5);
@@ -40471,47 +40484,47 @@ void __thiscall FUN_0043f310(void *this,int param_1,int param_2,int param_3)
   }
   if (*(int *)((int)this + param_1 * 4 + 0x2f4) != 0) {
     if (*(int *)((int)this + param_1 * 4 + 0x304) != -1) {
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2dc),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2dc),
                    (short *)(param_2 + 4 + param_3 * 4),param_3,
                    *(int *)(*(int *)((int)this + 8) + 0x910 +
                            *(int *)((int)this + param_1 * 4 + 0x24) * 3000));
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d4),
                    (short *)(param_2 + 0x24 + param_3 * 4),param_3,
                    *(int *)((int)this + param_1 * 4 + 0x304));
     }
     if (*(int *)((int)this + param_1 * 4 + 0x314) != -1) {
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2dc),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2dc),
                    (short *)(param_2 + 0x38 + param_3 * 4),param_3,
                    *(int *)(*(int *)((int)this + 8) + 0x928 +
                            *(int *)((int)this + param_1 * 4 + 0x24) * 3000));
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d4),
                    (short *)(param_2 + 0x58 + param_3 * 4),param_3,
                    *(int *)((int)this + param_1 * 4 + 0x314));
     }
     if (*(int *)((int)this + param_1 * 4 + 0x324) != -1) {
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2dc),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2dc),
                    (short *)(param_2 + 0x6c + param_3 * 4),param_3,
                    *(int *)(*(int *)((int)this + 8) + 0x940 +
                            *(int *)((int)this + param_1 * 4 + 0x24) * 3000));
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d4),
                    (short *)(param_2 + 0x8c + param_3 * 4),param_3,
                    *(int *)((int)this + param_1 * 4 + 0x324));
     }
     if (*(int *)((int)this + param_1 * 4 + 0x334) != -1) {
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2e0),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2e0),
                    (short *)(param_2 + 0xb4 + param_3 * 4),param_3,
                    *(int *)(*(int *)((int)this + 8) + 0x958 +
                            *(int *)((int)this + param_1 * 4 + 0x24) * 3000));
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d4),
                    (short *)(param_2 + 0xd4 + param_3 * 4),param_3,
                    *(int *)((int)this + param_1 * 4 + 0x334));
     }
     if (*(int *)((int)this + param_1 * 4 + 0x344) != -1) {
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2e4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2e4),
                    (short *)(param_2 + 0xf0 + param_3 * 4),param_3,
                    *(int *)(*(int *)((int)this + 8) + 0x970 +
                            *(int *)((int)this + param_1 * 4 + 0x24) * 3000) + 2);
-      FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d4),
+      FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d4),
                    (short *)(param_2 + 0x110 + param_3 * 4),param_3,
                    *(int *)((int)this + param_1 * 4 + 0x344));
     }
@@ -40525,7 +40538,7 @@ void __thiscall FUN_0043f310(void *this,int param_1,int param_2,int param_3)
       iVar3 = (int)lVar5;
       psVar2 = (short *)(param_2 + (param_3 * 3 + 0xa2) * 2);
     }
-    FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x2d8),psVar2,param_3,iVar3);
+    FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x2d8),psVar2,param_3,iVar3);
     piVar1 = (int *)((int)this + param_1 * 4 + 0x2f4);
     *piVar1 = *piVar1 + -1;
   }
@@ -40555,9 +40568,9 @@ void __thiscall FUN_0043f830(void *this,int param_1,int param_2,int param_3)
   local_10 = 0;
   local_4 = 0;
   iVar2 = *(int *)((int)this + param_1 * 4 + 0x24) * 0x6c;
-  iVar1 = FUN_00440770((void *)(GLOBAL_STATE + 0x13c8),0,
+  iVar1 = FUN_00440770((void *)(GLOBAL_STATE.fieldB),0,
                        (byte *)(*(int *)((int)this + 0x10) + 0x58 + iVar2));
-  FUN_004411e0((void *)(GLOBAL_STATE + 0x13c8),0,0,iVar1 + 10,0x14,param_2 + ((iVar1 + 10) / 2) * -2
+  FUN_004411e0((void *)(GLOBAL_STATE.fieldB),0,0,iVar1 + 10,0x14,param_2 + ((iVar1 + 10) / 2) * -2
                ,param_3,0);
   local_1c = param_3;
   local_2c[0] = 0;
@@ -40569,7 +40582,7 @@ void __thiscall FUN_0043f830(void *this,int param_1,int param_2,int param_3)
   local_10 = 3;
   local_c = 0xffffff;
   local_2c[2] = iVar1;
-  FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),local_2c);
+  FUN_004407b0((void *)(GLOBAL_STATE.fieldB),local_2c);
   return;
 }
 
@@ -40589,29 +40602,29 @@ void __thiscall FUN_0043f930(void *this,int param_1,int param_2,int param_3)
   iVar1 = (param_3 / 100) / 0x3c;
   iVar3 = (int)*(short *)(*(int *)((int)this + 0x254) + 10);
   iVar4 = iVar3 * 5 + *(short *)(*(int *)((int)this + 0x29c) + 10) * 2;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),
                *(int **)((int)this + ((param_3 % 100) % 10) * 4 + 0x254),param_1 + iVar4 * 2,0,0,
                param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - iVar3;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),
                *(int **)((int)this + ((param_3 % 100) / 10) * 4 + 0x254),param_1 + iVar4 * 2,0,0,
                param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - *(short *)((int)*(int **)((int)this + 0x29c) + 10);
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x29c),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x29c),
                param_1 + (param_2 * 3 + iVar4) * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - iVar3;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + (iVar2 % 10) * 4 + 0x254),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + (iVar2 % 10) * 4 + 0x254),
                param_1 + iVar4 * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - iVar3;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + (iVar2 / 10) * 4 + 0x254),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + (iVar2 / 10) * 4 + 0x254),
                param_1 + iVar4 * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - *(short *)((int)*(int **)((int)this + 0x29c) + 10);
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x29c),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x29c),
                param_1 + (param_2 * 3 + iVar4) * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
   iVar4 = iVar4 - iVar3;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + (iVar1 % 10) * 4 + 0x254),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + (iVar1 % 10) * 4 + 0x254),
                param_1 + iVar4 * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + (iVar1 / 10) * 4 + 0x254),
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + (iVar1 / 10) * 4 + 0x254),
                param_1 + (iVar4 - iVar3) * 2,0,0,param_2,*(ushort *)((int)this + 0x18));
   return;
 }
@@ -40628,20 +40641,20 @@ void __thiscall FUN_0043fb80(void *this,int param_1,int param_2,int param_3)
   iVar2 = *(int *)(*(int *)((int)this + 8) + 0xaf4 + *(int *)((int)this + param_1 * 4 + 0x24) * 3000
                   );
   iVar3 = *(short *)((int)*(int **)((int)this + 0x2a8) + 10) + 2;
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2a8),param_2,0,0,param_3,
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2a8),param_2,0,0,param_3,
                *(ushort *)((int)this + 0x18));
   if (99 < iVar2) {
     piVar1 = (int *)((int)this + (iVar2 / 100) * 4 + 0x254);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
                  *(ushort *)((int)this + 0x18));
     iVar3 = iVar3 + *(short *)(*piVar1 + 10);
   }
   if (**(int **)((int)this + 0x34) == 9) {
     piVar1 = (int *)((int)this + ((iVar2 % 100) / 10) * 4 + 0x254);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
                  *(ushort *)((int)this + 0x18));
     iVar3 = iVar3 + -6 + (int)*(short *)(*piVar1 + 10);
-    FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x2a4),
+    FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x2a4),
                  param_2 + (iVar3 + param_3 * 0xe) * 2,0,0,param_3,*(ushort *)((int)this + 0x18));
     uVar4 = *(ushort *)((int)this + 0x18);
     iVar3 = param_2 + 0xe + iVar3 * 2;
@@ -40649,14 +40662,14 @@ void __thiscall FUN_0043fb80(void *this,int param_1,int param_2,int param_3)
   else {
     if (9 < iVar2) {
       piVar1 = (int *)((int)this + ((iVar2 % 100) / 10) * 4 + 0x254);
-      FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
+      FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),(int *)*piVar1,param_2 + iVar3 * 2,0,0,param_3,
                    *(ushort *)((int)this + 0x18));
       iVar3 = iVar3 + *(short *)(*piVar1 + 10);
     }
     uVar4 = *(ushort *)((int)this + 0x18);
     iVar3 = param_2 + iVar3 * 2;
   }
-  FUN_00440fa0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + (iVar2 % 10) * 4 + 0x254),iVar3
+  FUN_00440fa0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + (iVar2 % 10) * 4 + 0x254),iVar3
                ,0,0,param_3,uVar4);
   return;
 }
@@ -42119,10 +42132,10 @@ int __fastcall FUN_00441af0(int *param_1)
     piVar11 = (int *)((int)piVar11 + 1);
   }
   *(undefined1 *)((int)param_1 + 0x86) = 0xff;
-  this = (void *)(GLOBAL_STATE + 4);
-  uVar3 = FUN_0042c830(this,0x6d);
+  this = (void *)(GLOBAL_STATE.AssetManager);
+  uVar3 = FUN_0042c830_SetDatFilePointerToAsset(this,0x6d);
   if ((char)uVar3 != '\0') {
-    FUN_0042c8a0(this,local_6c,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(this,local_6c,0xffffffff,'\x01');
   }
   iVar6 = *param_1;
   puVar8 = local_6c;
@@ -42221,7 +42234,7 @@ int __thiscall FUN_00441d50(void *this,int param_1)
   undefined2 *puVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x69);
@@ -42432,11 +42445,11 @@ bool __thiscall FUN_004423a0(void *this,int param_1)
   }
   local_ca6 = 0xff;
   InitObjWithPlayerDataForId(&local_d2c,param_1);
-  FUN_0042bca0((void *)(GLOBAL_STATE + 0x27f0),0,local_d17);
+  FUN_0042bca0((void *)(GLOBAL_STATE.fieldI),0,local_d17);
   *(undefined4 **)((int)this + 0x5238) = local_d28;
   iVar4 = (*(code *)**(undefined4 **)((int)this + 0x3b6c))();
   if (iVar4 == 1) {
-    puVar1 = FUN_0042bc00((void *)(GLOBAL_STATE + 0x27f0),0);
+    puVar1 = FUN_0042bc00((void *)(GLOBAL_STATE.fieldI),0);
     puVar5 = local_d17;
     for (iVar2 = 0x1b; iVar2 != 0; iVar2 = iVar2 + -1) {
       *puVar5 = *puVar1;
@@ -43559,7 +43572,7 @@ int __thiscall FUN_004437a0(void *this,int param_1)
   int iVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x80);
@@ -43604,20 +43617,20 @@ char FUN_004438b0(void)
     iVar3 = *(int *)(*(int *)((int)this_00 + 0x16c8) + iVar4);
     if (iVar3 != -1) {
       InitObjWithPlayerDataForId(&local_c,iVar3);
-      FUN_004320f0((void *)(GLOBAL_STATE + 0x637c),(char *)local_8);
+      FUN_004320f0((void *)(GLOBAL_STATE.fieldJ),(char *)local_8);
     }
     iVar4 = iVar4 + 4;
   } while (iVar4 < 0x14);
-  iVar3 = FUN_00431340(GLOBAL_STATE + 0x637c);
+  iVar3 = FUN_00431340(GLOBAL_STATE.fieldJ);
   if (iVar3 == 2) {
     do {
-      uVar2 = FUN_00431e20((void *)(GLOBAL_STATE + 0x637c));
+      uVar2 = FUN_00431e20((void *)(GLOBAL_STATE.fieldJ));
       cVar1 = (char)uVar2;
       if ((cVar1 != '\0') || (*(int *)(GLOBAL_STATE + 0x6380) != 0)) break;
     } while (*(int *)(GLOBAL_STATE + 0x6384) == 0);
   }
   else {
-    this = (void *)(GLOBAL_STATE + 0x637c);
+    this = (void *)(GLOBAL_STATE.fieldJ);
     iVar3 = FUN_00428dc0(this_00,0x4e5);
     uVar2 = FUN_00431f10(this,iVar3);
     cVar1 = (char)uVar2;
@@ -43625,7 +43638,7 @@ char FUN_004438b0(void)
   if (cVar1 == '\0') {
     iVar3 = 0;
     do {
-      FUN_00432390((void *)(GLOBAL_STATE + 0x637c),iVar3);
+      FUN_00432390((void *)(GLOBAL_STATE.fieldJ),iVar3);
       iVar3 = iVar3 + 1;
     } while (iVar3 < 8);
     FUN_004466c0((undefined4 *)&stack0x00000d20);
@@ -43678,7 +43691,7 @@ uint FUN_00443a80(void)
     iVar1 = *(int *)(*(int *)(extraout_ECX + 0x16c8) + 4 + iVar4 * 4);
     if (iVar1 != -1) {
       InitObjWithPlayerDataForId(&stack0x00000074,iVar1);
-      FUN_004320f0((void *)(GLOBAL_STATE + 0x637c),&stack0x00000078);
+      FUN_004320f0((void *)(GLOBAL_STATE.fieldJ),&stack0x00000078);
     }
     if (iVar4 == 0) {
       FUN_00426cd0(0x86);
@@ -43686,11 +43699,11 @@ uint FUN_00443a80(void)
     }
     iVar4 = iVar4 + 1;
   } while (iVar4 < 4);
-  uVar2 = FUN_00431c80((void *)(GLOBAL_STATE + 0x637c),(char *)&local_c,8);
+  uVar2 = FUN_00431c80((void *)(GLOBAL_STATE.fieldJ),(char *)&local_c,8);
   if ((char)uVar2 == '\0') {
     iVar4 = 0;
     do {
-      FUN_00432390((void *)(GLOBAL_STATE + 0x637c),iVar4);
+      FUN_00432390((void *)(GLOBAL_STATE.fieldJ),iVar4);
       iVar4 = iVar4 + 1;
     } while (iVar4 < 8);
     FUN_004466c0((undefined4 *)&stack0x00000da0);
@@ -43729,7 +43742,7 @@ void FUN_00443c30(void)
   local_c = ExceptionList;
   ExceptionList = &local_c;
   FUN_00453910();
-  iVar1 = FUN_00431200(GLOBAL_STATE + 0x637c);
+  iVar1 = FUN_00431200(GLOBAL_STATE.fieldJ);
   if (iVar1 == -1) {
     FUN_004466c0(&local_c);
     local_c = &PTR_thunk_FUN_00427190_0045d278;
@@ -43751,9 +43764,9 @@ void FUN_00443c30(void)
     if (0 < iVar1) {
       do {
         if (7 < iVar3) break;
-        iVar2 = FUN_00431290((void *)(GLOBAL_STATE + 0x637c),iVar3);
+        iVar2 = FUN_00431290((void *)(GLOBAL_STATE.fieldJ),iVar3);
         if (iVar2 + *(int *)this[0x5b2] < 9) {
-          iVar2 = FUN_00431260((void *)(GLOBAL_STATE + 0x637c),iVar3);
+          iVar2 = FUN_00431260((void *)(GLOBAL_STATE.fieldJ),iVar3);
           *piVar5 = iVar2;
           iVar3 = iVar3 + 1;
           piVar5 = piVar5 + 1;
@@ -43779,7 +43792,7 @@ int __thiscall FUN_00443dd0(void *this,int param_1)
   int iVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0xd4);
@@ -43896,7 +43909,8 @@ void __fastcall FUN_00444210(int param_1)
 }
 
 
-undefined4 __thiscall FUN_00444250(void *this,undefined4 param_1,undefined4 param_2)
+// this = SoundManager?
+undefined4 __thiscall FUN_00444250_InitSoundManager(void *this,undefined4 window,undefined4 AssetManager)
 
 {
   undefined4 *puVar1;
@@ -43906,8 +43920,8 @@ undefined4 __thiscall FUN_00444250(void *this,undefined4 param_1,undefined4 para
   undefined4 uVar5;
   
   puVar1 = (undefined4 *)((int)this + 0x20);
-  *(undefined4 *)((int)this + 0xc) = param_1;
-  *(undefined4 *)((int)this + 0x10) = param_2;
+  *(undefined4 *)((int)this.Window) = window;
+  *(undefined4 *)((int)this.AssetManager) = AssetManager;
   puVar2 = (undefined4 *)((int)this + 0x14);
   *puVar1 = 0;
   *(undefined4 *)((int)this + 0x24) = 0;
@@ -43937,7 +43951,7 @@ undefined4 __thiscall FUN_00444250(void *this,undefined4 param_1,undefined4 para
       return CONCAT31((int3)((uint)iVar4 >> 8),1);
     }
   }
-  iVar4 = (**(code **)(*(int *)*puVar2 + 0x18))((int *)*puVar2,*(undefined4 *)((int)this + 0xc),3);
+  iVar4 = (**(code **)(*(int *)*puVar2 + 0x18))((int *)*puVar2,*(undefined4 *)((int)this.Window),3);
   *(int *)((int)this + 8) = iVar4;
   if (iVar4 != 0) {
     *(undefined4 *)((int)this + 4) = 4;
@@ -43958,7 +43972,7 @@ undefined4 __thiscall FUN_00444250(void *this,undefined4 param_1,undefined4 para
     piVar3 = *(int **)((int)this + 0x1c);
     *(undefined2 *)((int)this + 0x36) = 2;
     *(undefined2 *)((int)this + 0x34) = 1;
-    *(undefined4 *)((int)this + 0x38) = 0x5622;
+    *(undefined4 *)((int)this + 0x38) = 0x5622;   // Frequency = 22050 Hz
     *(undefined2 *)((int)this + 0x42) = 0x10;
     *(undefined2 *)((int)this + 0x40) = 4;
     *(undefined4 *)((int)this + 0x3c) = 0x15888;
@@ -43992,7 +44006,7 @@ undefined4 __thiscall FUN_00444250(void *this,undefined4 param_1,undefined4 para
   return CONCAT31((int3)((uint)uVar5 >> 8),1);
 }
 
-
+// this = GLOBAL_STATE.fieldP
 uint __thiscall FUN_00444400(void *this,int param_1)
 
 {
@@ -44019,7 +44033,7 @@ uint __thiscall FUN_00444400(void *this,int param_1)
       *(undefined4 *)((int)this + 8) = 0;
       return (uint)piVar2 & 0xffffff00;
     }
-    uVar3 = FUN_0042c830(*(void **)((int)this + 0x10),param_1);
+    uVar3 = FUN_0042c830_SetDatFilePointerToAsset(*(void **)((int)this + 0x10),param_1);
     if ((char)uVar3 == '\0') {
       *(undefined4 *)((int)this + 4) = 0;
       *(undefined4 *)((int)this + 8) = 0;
@@ -44096,7 +44110,7 @@ LAB_00444569:
     puVar5 = (undefined4 *)0x0;
   }
   else {
-    uVar2 = FUN_0042c8a0(*(void **)((int)this + 0x10),puVar5,0,'\x01');
+    uVar2 = FUN_0042c8a0_ReadFromDatFile(*(void **)((int)this + 0x10),puVar5,0,'\x01');
     if ((char)uVar2 == '\0') {
       uVar2 = (**(code **)(*piVar1 + 0x4c))(piVar1,puVar5,0,puVar6,&param_1);
       *(undefined4 *)((int)this + 4) = 0;
@@ -44104,7 +44118,7 @@ LAB_00444569:
       return uVar2 & 0xffffff00;
     }
     if ((puVar6 == (undefined4 *)0x0) ||
-       (uVar2 = FUN_0042c8a0(*(void **)((int)this + 0x10),puVar6,(WPARAM)&param_1,'\x01'),
+       (uVar2 = FUN_0042c8a0_ReadFromDatFile(*(void **)((int)this + 0x10),puVar6,(WPARAM)&param_1,'\x01'),
        (char)uVar2 != '\0')) {
       uVar2 = (**(code **)(*piVar1 + 0x4c))(piVar1,puVar5,0,puVar6,&param_1);
       *(uint *)((int)this + 8) = uVar2;
@@ -44536,7 +44550,7 @@ uint __thiscall FUN_00444d40(void *this,int *param_1)
       *(undefined4 *)((int)this + 4) = 0;
       return uVar1 & 0xffffff00;
     }
-    uVar1 = FUN_0042c830(*(void **)((int)this + 0x10),(int)param_1);
+    uVar1 = FUN_0042c830_SetDatFilePointerToAsset(*(void **)((int)this + 0x10),(int)param_1);
     if ((char)uVar1 == '\0') {
       *(undefined4 *)((int)this + 4) = 0;
       *(undefined4 *)((int)this + 8) = 0;
@@ -45362,7 +45376,7 @@ FUN_00445ab0(void *this,int param_1,int param_2,int param_3,int param_4,int para
   int iVar2;
   undefined2 *unaff_retaddr;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x7c);
@@ -45843,7 +45857,7 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
   undefined2 *puVar5;
   LPVOID pvVar6;
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   if (DAT_00476910 != (undefined2 *)0x0) {
@@ -45851,12 +45865,12 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
   }
   *(undefined1 *)((int)this + 0x16c0) = 1;
   DAT_00476910 = param_1;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x6e);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x6e);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,param_1,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,param_1,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476910,0x6318);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476910,0x6318);
   uVar2 = (int)param_1 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45869,13 +45883,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768fc = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x6f);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x6f);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768fc,0xa10);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768fc,0xa10);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45888,13 +45902,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476900 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x70);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x70);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476900,0xa10);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476900,0xa10);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45907,13 +45921,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476904 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x71);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x71);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476904,0xa10);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476904,0xa10);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45926,13 +45940,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476908 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x72);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x72);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_00476908,4000);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476908,4000);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45945,13 +45959,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_0047690c = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x73);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x73);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_0047690c,0x1275);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_0047690c,0x1275);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45964,13 +45978,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768f4 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x74);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x74);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768f4,0x1275);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768f4,0x1275);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -45983,13 +45997,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768f8 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x75);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x75);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768f8,0xe1);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768f8,0xe1);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -46002,13 +46016,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768ec = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x76);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x76);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768ec,0x120);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768ec,0x120);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -46021,13 +46035,13 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   puVar5 = (undefined2 *)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_004768f0 = puVar5;
-  uVar2 = FUN_0042c830(pvVar1,0x77);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x77);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,puVar5,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,puVar5,0xffffffff,'\x01');
   }
-  iVar3 = FUN_00441860((void *)(GLOBAL_STATE + 0x13c8),DAT_004768f0,0x188);
+  iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_004768f0,0x188);
   uVar2 = (int)puVar5 + iVar3;
   if ((uVar2 & 3) == 0) {
     iVar3 = 0;
@@ -46040,14 +46054,14 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   pvVar6 = (LPVOID)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476914 = pvVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x78);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x78);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar6,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar6,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x78);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x78);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46066,14 +46080,14 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = 4 - uVar4;
   }
   pvVar6 = (LPVOID)(uVar2 + iVar3);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
   DAT_00476918 = pvVar6;
-  uVar2 = FUN_0042c830(pvVar1,0x79);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x79);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar6,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar6,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x79);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x79);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46091,10 +46105,10 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     }
     iVar3 = 4 - uVar4;
   }
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcc);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcd);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xce);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xcf);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcc);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcd);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xce);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xcf);
   return (undefined2 *)(uVar2 + iVar3);
 }
 
@@ -46142,7 +46156,7 @@ void __thiscall FUN_00446ce0(void *this,undefined4 *param_1)
   local_9c = 0;
   local_90 = (CHAR *)0x0;
   local_84 = this;
-  cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_c4,&local_c0);
+  cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_c4,&local_c0);
   if (cVar2 != '\0') {
     local_bc = 0;
     if (param_1 == *(undefined4 **)((int)this + 0x169c)) {
@@ -46219,7 +46233,7 @@ void __thiscall FUN_00446ce0(void *this,undefined4 *param_1)
         iVar7 = *(short *)((int)puVar1 + 10) * local_c0 + (int)(short)puVar1[2];
         piVar3 = DAT_00476914;
       }
-      FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),piVar3,(short *)(local_c4 + iVar7 * 2),local_c0,
+      FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),piVar3,(short *)(local_c4 + iVar7 * 2),local_c0,
                    '\0');
     }
     if ((char *)*param_1 == (char *)0x0) {
@@ -46268,7 +46282,7 @@ void __thiscall FUN_00446ce0(void *this,undefined4 *param_1)
     local_9c = 3;
     local_a0 = *puVar1 >> 0xd & 1;
     local_98 = 0;
-    FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&local_b8);
+    FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&local_b8);
     if ((*(undefined4 **)((int)this + 0x16a0) == param_1) ||
        (((*(uint *)param_1[0xb] & 0x8000) != 0 && (local_bc == 2)))) {
       local_b8 = local_b8 + -1;
@@ -46283,7 +46297,7 @@ void __thiscall FUN_00446ce0(void *this,undefined4 *param_1)
       local_ac = local_ac + -2;
     }
     local_98 = param_1[3];
-    FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&local_b8);
+    FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&local_b8);
     if (*(char *)((int)param_1 + 0x19) != '\0') {
       puVar1 = (uint *)param_1[0xb];
       if ((*puVar1 & 0x8000) == 0) {
@@ -46292,11 +46306,11 @@ void __thiscall FUN_00446ce0(void *this,undefined4 *param_1)
       else {
         iVar7 = 0x20;
       }
-      FUN_004411e0((void *)(GLOBAL_STATE + 0x13c8),(int)(short)puVar1[2],
+      FUN_004411e0((void *)(GLOBAL_STATE.fieldB),(int)(short)puVar1[2],
                    (int)*(short *)((int)puVar1 + 10),(int)(short)puVar1[3],iVar7,local_c4,local_c0,0
                   );
     }
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
+    FUN_00442d80(GLOBAL_STATE.fieldR);
   }
   return;
 }
@@ -46393,26 +46407,26 @@ undefined4 __fastcall FUN_004487d0(void *param_1)
     return CONCAT31((int3)((uint)*(undefined4 *)((int)param_1 + 0x16b8) >> 8),1);
   }
   FUN_004282d0((int)param_1);
-  FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\x01');
+  FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\x01');
   FUN_00427de0((int)param_1);
-  FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xcf,1e+10,1e+10);
-  FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+  FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xcf,1e+10,1e+10);
+  FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
   local_8 = 0;
   iVar4 = 0;
   do {
     iVar1 = local_8;
     lVar5 = __ftol();
     iVar2 = (int)lVar5;
-    uVar3 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_c,&local_4);
+    uVar3 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_c,&local_4);
     if ((char)uVar3 == '\0') {
       return uVar3 & 0xffffff00;
     }
-    FUN_004411e0((void *)(GLOBAL_STATE + 0x13c8),iVar4,0x4b,iVar2 - iVar4,0x170,local_c,local_4,4);
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
-    FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\x01');
+    FUN_004411e0((void *)(GLOBAL_STATE.fieldB),iVar4,0x4b,iVar2 - iVar4,0x170,local_c,local_4,4);
+    FUN_00442d80(GLOBAL_STATE.fieldR);
+    FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\x01');
     FUN_00429730(param_1,iVar2 - *(int *)((int)param_1 + 0x16c4));
-    FUN_00442d50(GLOBAL_STATE + 0xc500);
-    uVar3 = FUN_00443260((void *)(GLOBAL_STATE + 0xc500),'\0');
+    FUN_00442d50(GLOBAL_STATE.fieldR);
+    uVar3 = FUN_00443260((void *)(GLOBAL_STATE.fieldR),'\0');
     local_8 = iVar1 + 1;
     iVar4 = iVar2;
   } while (local_8 < 0xb);
@@ -46522,7 +46536,7 @@ void FUN_004489d0(undefined4 *param_1)
   iVar8 = (int)*(short *)(iVar12 + 8);
   iVar6 = (int)*(short *)(iVar12 + 10);
   iVar12 = (int)*(short *)(iVar12 + 0xc);
-  iVar3 = FUN_00440770((void *)(GLOBAL_STATE + 0x13c8),0,local_80);
+  iVar3 = FUN_00440770((void *)(GLOBAL_STATE.fieldB),0,local_80);
   if (iVar12 + 2 < iVar3) {
     iVar12 = iVar3 + 5;
     iVar8 = iVar8 + (-5 - (iVar3 - *(short *)(param_1[0xb] + 0xc)) / 2);
@@ -46538,19 +46552,19 @@ void FUN_004489d0(undefined4 *param_1)
       (**(code **)(*local_84 + 0xb4))(param_1);
     }
     if (((*(uint *)param_1[0xb] & 0x1000) != 0) && ((*(uint *)param_1[0xb] & 0x100) != 0)) {
-      FUN_00443590((void *)(GLOBAL_STATE + 0xc500),iVar8,iVar6,iVar12 + iVar8,local_b4 + iVar6,0);
+      FUN_00443590((void *)(GLOBAL_STATE.fieldR),iVar8,iVar6,iVar12 + iVar8,local_b4 + iVar6,0);
     }
     if (((*(uint *)param_1[0xb] & 0x1000) == 0) && ((*(uint *)param_1[0xb] & 0x100) != 0)) {
-      cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_bc,&local_b8);
+      cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_bc,&local_b8);
       if (cVar2 == '\0') {
         return;
       }
-      FUN_004411e0((void *)(GLOBAL_STATE + 0x13c8),iVar8,iVar6,iVar12,local_b4,local_bc,local_b8,0);
-      FUN_00442d80(GLOBAL_STATE + 0xc500);
+      FUN_004411e0((void *)(GLOBAL_STATE.fieldB),iVar8,iVar6,iVar12,local_b4,local_bc,local_b8,0);
+      FUN_00442d80(GLOBAL_STATE.fieldR);
     }
   }
   if ((((*(uint *)param_1[0xb] & 0x1000) == 0) || ((*(uint *)param_1[0xb] & 0x100) != 0)) &&
-     (cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_bc,&local_b8), cVar2 != '\0')) {
+     (cVar2 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_bc,&local_b8), cVar2 != '\0')) {
     puVar1 = (uint *)param_1[0xb];
     iStack_a8 = iVar12 + iVar8;
     iStack_ac = *(short *)((int)puVar1 + 10) + 2;
@@ -46562,14 +46576,14 @@ void FUN_004489d0(undefined4 *param_1)
     local_98 = (uint)((*puVar1 & 0xc) != 0);
     local_90 = 0;
     iStack_b0 = iVar8;
-    FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&iStack_b0);
+    FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&iStack_b0);
     local_90 = param_1[3];
     iStack_b0 = iStack_b0 + -2;
     iStack_ac = iStack_ac + -2;
     iStack_a8 = iStack_a8 + -2;
     iStack_a4 = iStack_a4 + -2;
-    FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&iStack_b0);
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
+    FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&iStack_b0);
+    FUN_00442d80(GLOBAL_STATE.fieldR);
   }
   return;
 }
@@ -46601,7 +46615,7 @@ void __fastcall FUN_00448cb0(int param_1)
   int local_8;
   int local_4;
   
-  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE + 0xc500),&local_10,&local_8);
+  cVar1 = FUN_00442cb0((void *)(GLOBAL_STATE.fieldR),&local_10,&local_8);
   if (cVar1 != '\0') {
     local_c = *(int *)(param_1 + 0x16c4);
     if (local_c == 0) {
@@ -46649,7 +46663,7 @@ void __fastcall FUN_00448cb0(int param_1)
              *(undefined2 *)(iVar5 + iVar6 * 2 + DAT_00476910);
       } while (iVar3 < 0x88d8);
     }
-    FUN_00442d80(GLOBAL_STATE + 0xc500);
+    FUN_00442d80(GLOBAL_STATE.fieldR);
   }
   return;
 }
@@ -46668,12 +46682,12 @@ int __fastcall thunk_FUN_00427190(int *param_1)
   FUN_004293c0();
   DAT_004768ac = *(undefined4 *)(GLOBAL_STATE + 0xc858);
   DAT_004768b0 = *(undefined4 *)(GLOBAL_STATE + 0xc85c);
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return 2;
   }
   cVar1 = (**(code **)(*param_1 + 0x1c))();
   if (cVar1 != '\0') {
-    *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+    *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
     FUN_00429320(0);
     DAT_004768c8 = DAT_004768c8 + 1;
     FUN_004293f0(-1,-1);
@@ -46689,7 +46703,7 @@ int __fastcall thunk_FUN_00427190(int *param_1)
       FUN_004293a0();
       FUN_00426a10((int)param_1);
       (**(code **)(*param_1 + 0x60))();
-      *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+      *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
       (**(code **)(*param_1 + 0x10))(1);
       return param_1[2];
     }
@@ -46785,25 +46799,25 @@ undefined4 __fastcall FUN_004493a0(int *param_1)
   int iVar4;
   int *local_4;
   
-  FUN_0042a8e0((void *)(GLOBAL_STATE + 0x27f0));
+  FUN_0042a8e0((void *)(GLOBAL_STATE.fieldI));
   iVar4 = 0;
   if (0 < param_1[1]) {
     piVar3 = param_1 + 4;
     local_4 = piVar3;
     do {
-      if (*(int *)(GLOBAL_STATE + 0x63b0) == 0) {
+      if (*(int *)(GLOBAL_STATE.fieldM) == 0) {
         piVar3 = *(int **)(param_1[2] + iVar4 * 4);
       }
-      uVar1 = FUN_0042a910((void *)(GLOBAL_STATE + 0x27f0),iVar4);
+      uVar1 = FUN_0042a910((void *)(GLOBAL_STATE.fieldI),iVar4);
       *(char *)((int)param_1 + (int)piVar3 * 3 + 0x12) = (char)uVar1;
-      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar4,0);
+      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar4,0);
       *(char *)((int)param_1 + (int)piVar3 * 3 + 0x10) = (char)iVar2;
-      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar4,2);
+      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar4,2);
       *(char *)((int)param_1 + (int)piVar3 * 3 + 0x10) =
            *(char *)((int)param_1 + (int)piVar3 * 3 + 0x10) - (char)iVar2;
-      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar4,1);
+      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar4,1);
       *(char *)((int)param_1 + (int)piVar3 * 3 + 0x11) = (char)iVar2;
-      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE + 0x27f0),iVar4,3);
+      iVar2 = FUN_0042aa90((void *)(GLOBAL_STATE.fieldI),iVar4,3);
       *(char *)((int)param_1 + (int)piVar3 * 3 + 0x11) =
            *(char *)((int)param_1 + (int)piVar3 * 3 + 0x11) - (char)iVar2;
       if (*(char *)(GLOBAL_STATE + 0xd08c) != '\0') {
@@ -46902,18 +46916,18 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   int iStack_70;
   int aiStack_6c [27];
   
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   (**(code **)(*(int *)this + 0x24))(0x74);
   *(LPVOID *)((int)this + 0x1764) = unaff_retaddr;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7c);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7c);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,unaff_retaddr,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,unaff_retaddr,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7c);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7c);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46922,13 +46936,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)unaff_retaddr + iVar3);
   *(LPVOID *)((int)this + 0x1754) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x78);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x78);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x78);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x78);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46937,13 +46951,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1758) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x79);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x79);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x79);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x79);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46952,13 +46966,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x175c) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7a);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7a);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7a);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7a);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -46967,13 +46981,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1760) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7b);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7b);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x7b);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x7b);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47013,14 +47027,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   do {
     iVar3 = *piStack_74;
     *puVar5 = pvVar4;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar4);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 == '\0') {
       iVar3 = -1;
     }
@@ -47038,14 +47052,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   do {
     iVar3 = *piVar6;
     *piStack_74 = (int)pvVar4;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar4);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 == '\0') {
       iVar3 = -1;
     }
@@ -47063,14 +47077,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   do {
     iVar3 = *piVar6;
     *piStack_74 = (int)pvVar4;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
     }
     FUN_004415b0((int)pvVar4);
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 == '\0') {
       iVar3 = -1;
     }
@@ -47083,14 +47097,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iStack_70 = iStack_70 + -1;
   } while (iStack_70 != 0);
   *(LPVOID *)((int)this + 0x173c) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xba);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xba);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar4);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xba);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xba);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47099,14 +47113,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1744) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xbc);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xbc);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar4);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xbc);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xbc);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47115,14 +47129,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1740) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xbb);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xbb);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar4);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xbb);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xbb);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47131,13 +47145,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1748) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc1);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc1);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc1);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc1);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47146,14 +47160,14 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x174c) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc2);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc2);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
   FUN_004415b0((int)pvVar4);
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc2);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc2);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47162,13 +47176,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1750) = pvVar4;
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc3);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc3);
   if ((char)uVar2 != '\0') {
-    FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+    FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
   }
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0xc3);
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0xc3);
   if ((char)uVar2 == '\0') {
     iVar3 = -1;
   }
@@ -47182,13 +47196,13 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   do {
     iVar3 = *piVar6;
     *piStack_74 = (int)pvVar4;
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,pvVar4,0xffffffff,'\x01');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pvVar4,0xffffffff,'\x01');
     }
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,iVar3);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,iVar3);
     if ((char)uVar2 == '\0') {
       iVar3 = -1;
     }
@@ -47210,8 +47224,8 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
   *(undefined1 *)((int)this + 0x16ce) = 5;
   *(undefined1 *)((int)this + 0x16cf) = 1;
   *(undefined1 *)((int)this + 0x16d0) = 7;
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xd0);
-  FUN_00444400((void *)(GLOBAL_STATE + 0xb284),0xd1);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xd0);
+  FUN_00444400((void *)(GLOBAL_STATE.fieldP),0xd1);
   *(LPVOID *)((int)this + 0x1810) = param_1;
   return pvVar4;
 }
@@ -47228,7 +47242,7 @@ void __fastcall FUN_0044ac50(void *param_1)
         ((int)param_1 +
         *(int *)(*(int *)((int)param_1 + 0x1810) + 0xc + *(int *)((int)param_1 + 0x1814) * 0x6c) * 4
         + 0x171c);
-  *(undefined4 *)(GLOBAL_STATE + 0xc8f8) = 0xffffffff;
+  *(undefined4 *)(GLOBAL_STATE.fieldY) = 0xffffffff;
   FUN_00428d10(param_1,0x441,1);
   FUN_00428d10(param_1,0x443,0);
   *(undefined1 *)((int)param_1 + 0x16c0) = 1;
@@ -47356,7 +47370,7 @@ void FUN_0044b6c0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,unde
   local_94 = 3;
   local_98 = param_4;
   local_90 = 0;
-  FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&local_b0);
+  FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&local_b0);
   if (*(undefined4 **)(local_84 + 0x169c) == param_1) {
     local_b0 = local_b0 + -1;
     local_ac = local_ac + -1;
@@ -47371,7 +47385,7 @@ void FUN_0044b6c0(undefined4 *param_1,undefined4 param_2,undefined4 param_3,unde
     local_a8 = local_a8 + -2;
     local_a4 = local_a4 + -2;
   }
-  FUN_004407b0((void *)(GLOBAL_STATE + 0x13c8),&local_b0);
+  FUN_004407b0((void *)(GLOBAL_STATE.fieldB),&local_b0);
   return;
 }
 
@@ -47735,7 +47749,7 @@ joined_r0x0044cc13:
           if ((iVar10 != 0) && (iVar10 = (int)this + iVar9 + 0xc, iVar10 != 0)) {
             *(undefined1 *)(iVar10 + 0x18) = 1;
           }
-          FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd0,1e+10,1e+10);
+          FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd0,1e+10,1e+10);
           (**(code **)(*(int *)this + 0x10))(0);
           goto switchD_0044bf76_caseD_455;
         }
@@ -47792,7 +47806,7 @@ LAB_0044cc4d:
         *(int *)(*(int *)((int)this + 0x1810) + 0x20 + *(int *)((int)this + 0x1814) * 0x6c) =
              *(int *)(*(int *)((int)this + 0x1810) + 0x20 + *(int *)((int)this + 0x1814) * 0x6c) +
              -1;
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd1,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd1,1e+10,1e+10);
       }
       (**(code **)(*(int *)this + 0x10))(0);
       goto switchD_0044bf76_caseD_455;
@@ -47842,7 +47856,7 @@ LAB_0044cc4d:
         *(int *)(*(int *)((int)this + 0x1810) + 0x14 + *(int *)((int)this + 0x1814) * 0x6c) =
              *(int *)(*(int *)((int)this + 0x1810) + 0x14 + *(int *)((int)this + 0x1814) * 0x6c) +
              -1;
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd1,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd1,1e+10,1e+10);
       }
       (**(code **)(*(int *)this + 0x10))(0);
       goto switchD_0044bf76_caseD_455;
@@ -48060,7 +48074,7 @@ LAB_0044cd23:
           *(undefined4 *)(*(int *)((int)this + 0x1810) + *(int *)((int)this + 0x1814) * 0x6c + 0x44)
                = 0xffffffff;
         }
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd1,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd1,1e+10,1e+10);
         (**(code **)(*(int *)this + 0x10))(0);
       }
       goto switchD_0044bf76_caseD_455;
@@ -48133,7 +48147,7 @@ switchD_0044bf76_caseD_452:
 LAB_0044c4e8:
       (**(code **)(*(int *)this + 0x10))(0);
 LAB_0044cd46:
-      FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd1,1e+10,1e+10);
+      FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd1,1e+10,1e+10);
     }
   }
   else {
@@ -48171,7 +48185,7 @@ joined_r0x0044c832:
         if ((iVar10 != 0) && (iVar10 = (int)this + iVar12 + 0xc, iVar10 != 0)) {
           *(undefined1 *)(iVar10 + 0x18) = 1;
         }
-        FUN_00445170((void *)(GLOBAL_STATE + 0x17bc),0xd0,1e+10,1e+10);
+        FUN_00445170((void *)(GLOBAL_STATE.fieldF),0xd0,1e+10,1e+10);
         (**(code **)(*(int *)this + 0x10))(0);
         goto switchD_0044bf76_caseD_455;
       }
@@ -48182,7 +48196,7 @@ LAB_0044ca28:
     (**(code **)(*(int *)this + 0x10))(0);
   }
 switchD_0044bf76_caseD_455:
-  uVar6 = FUN_004455c0((void *)(GLOBAL_STATE + 0x17bc));
+  uVar6 = FUN_004455c0((void *)(GLOBAL_STATE.fieldF));
   return CONCAT31((int3)(uVar6 >> 8),1);
 }
 
@@ -48191,17 +48205,17 @@ void __thiscall
 FUN_0044cdb0(void *this,int param_1,int param_2,int param_3,short *param_4,int param_5)
 
 {
-  FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x1750),
+  FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x1750),
                (short *)((int)param_4 - (param_5 * 4 + 4)),param_5,'\0');
   if (param_1 == 0) {
-    FUN_0043fde0((void *)(GLOBAL_STATE + 0x13c8),*(int **)((int)this + 0x1748),param_4,param_5,'\0')
+    FUN_0043fde0((void *)(GLOBAL_STATE.fieldB),*(int **)((int)this + 0x1748),param_4,param_5,'\0')
     ;
   }
   else {
-    FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),param_1,param_4,param_5,param_2);
+    FUN_004415e0((void *)(GLOBAL_STATE.fieldB),param_1,param_4,param_5,param_2);
   }
   if (param_3 != -1) {
-    FUN_004415e0((void *)(GLOBAL_STATE + 0x13c8),*(int *)((int)this + 0x174c),
+    FUN_004415e0((void *)(GLOBAL_STATE.fieldB),*(int *)((int)this + 0x174c),
                  param_4 + param_5 * 0x32,param_5,param_3);
   }
   return;
@@ -49389,11 +49403,11 @@ FUN_0044ebf0(void *this,undefined2 *param_1,undefined4 param_2,undefined4 param_
   
   *(undefined4 *)((int)this + 0x16c8) = param_2;
   *(undefined4 *)((int)this + 0x16cc) = param_3;
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) == 0) {
-    if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) == 0) {
+    if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
       iVar2 = 0;
       do {
-        FUN_004334d0((void *)(GLOBAL_STATE + 0x637c),iVar2,9);
+        FUN_004334d0((void *)(GLOBAL_STATE.fieldJ),iVar2,9);
         iVar2 = iVar2 + 1;
       } while (iVar2 < 8);
     }
@@ -49420,12 +49434,12 @@ void __fastcall FUN_0044f2a0(int param_1)
   local_10 = 0;
   local_8 = 0;
   local_c = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_4,&local_14,&local_10,&local_8,&local_c);
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_4,&local_14,&local_10,&local_8,&local_c);
   iVar1 = *(int *)(param_1 + 0x16cc);
   local_14 = *(undefined4 *)(iVar1 + 0xc);
   local_10 = (*(int *)(iVar1 + 0x14) * 0x10 + *(int *)(iVar1 + 0x10)) * 0x10 +
              *(int *)(iVar1 + 0x1c);
-  FUN_00431b20((void *)(GLOBAL_STATE + 0x637c),local_4,local_14,local_10,local_8,local_c);
+  FUN_00431b20((void *)(GLOBAL_STATE.fieldJ),local_4,local_14,local_10,local_8,local_c);
   return;
 }
 
@@ -49455,7 +49469,7 @@ void __fastcall FUN_0044f340(int *param_1)
   local_2c = 0;
   local_20 = 0;
   local_24 = 0;
-  FUN_00431ba0((void *)(GLOBAL_STATE + 0x637c),-1,&local_1c,&local_28,&local_2c,&local_20,&local_24)
+  FUN_00431ba0((void *)(GLOBAL_STATE.fieldJ),-1,&local_1c,&local_28,&local_2c,&local_20,&local_24)
   ;
   *(undefined4 *)(param_1[0x5b3] + 0xc) = local_28;
   *(uint *)(param_1[0x5b3] + 0x1c) = local_2c & 0xf;
@@ -49517,8 +49531,8 @@ void __fastcall FUN_0044f620(int *param_1)
   int *piVar2;
   int iVar3;
   
-  if (*(int *)(GLOBAL_STATE + 0x63b0) != 0) {
-    cVar1 = FUN_00432fd0(GLOBAL_STATE + 0x637c);
+  if (*(int *)(GLOBAL_STATE.fieldM) != 0) {
+    cVar1 = FUN_00432fd0(GLOBAL_STATE.fieldJ);
     if (cVar1 != '\0') {
       cVar1 = '\x01';
       piVar2 = (int *)(GLOBAL_STATE + 0x63f8);
@@ -50432,7 +50446,7 @@ undefined4 FUN_00450640(void)
   local_18[0] = 0x12;
   local_18[3] = 0x12;
   local_18[5] = 0x12;
-  return local_18[*(int *)(GLOBAL_STATE + 0xd01c)];
+  return local_18[*(int *)(GLOBAL_STATE.Language)];
 }
 
 
@@ -50561,7 +50575,7 @@ undefined4 __cdecl FUN_00450680(int param_1)
   local_1e0[0x73] = 0x24f;
   local_1e0[0x74] = 0x250;
   local_1e0[0x75] = 0x251;
-  return local_1e0[param_1 + *(int *)(GLOBAL_STATE + 0xd01c) * 0x14];
+  return local_1e0[param_1 + *(int *)(GLOBAL_STATE.Language) * 0x14];
 }
 
 
@@ -50825,7 +50839,7 @@ int __cdecl FUN_00450eb0(int *param_1)
 }
 
 
-undefined4 FUN_00450fc0(void)
+undefined4 FUN_00450fc0_initalise_savedata_and_state(void)
 
 {
   void *this;
@@ -50834,7 +50848,7 @@ undefined4 FUN_00450fc0(void)
   undefined *saveDataBuffer;
   uint uVar3;
   undefined4 uVar4;
-  undefined4 *puVar5;
+  undefined4 *saveDataInMem;
   int iVar6;
   undefined4 *puVar7;
   int iVar8;
@@ -50844,55 +50858,27 @@ undefined4 FUN_00450fc0(void)
   DWORD saveFileSize;
   
   FUN_00453910();
-  FUN_00425890((int)&stack0x0000cc74);
+  FUN_00425890_set_globalstate_flags((int)&stack0x0000cc74);
   FUN_00435090((int)&stack0x00000000);
-  FUN_00426d20(0);
+  FUN_00426d20_set_language(0);
   globalStateBuffer = GetEmptyGlobalStatePtr();
   uVar3 = CreateWindowAndInitalizeState(&stack0x0000cc74,in_stack_00019d10,in_stack_00019d18,globalStateBuffer);
   if ((char)uVar3 != '\0') {
-    FUN_0042a7e0((void *)(GLOBAL_STATE + 0x27f0),100,0x11,10,0);
-    FUN_00431170(GLOBAL_STATE + 0x637c);
-    puVar5 = (undefined4 *)GetPointerToSaveData();
-    *puVar5 = 1;
-    puVar5[1] = 1;
-    *(undefined1 *)(puVar5 + 2) = 1;
-    *(undefined1 *)((int)puVar5 + 10) = 100;
-    *(undefined1 *)((int)puVar5 + 0xe) = 0xff;
-    *(undefined1 *)((int)puVar5 + 0xd) = 0xff;
-    *(undefined1 *)(puVar5 + 3) = 0xff;
-    *(undefined1 *)((int)puVar5 + 0xb) = 0xff;
-    *(undefined1 *)((int)puVar5 + 9) = 0;
-    FUN_004519c0(puVar5 + 4);
-    iVar8 = 8;
-    puVar7 = puVar5 + 0xcc;
-    do {
-      puVar9 = puVar7;
-      for (iVar6 = 0x34a; iVar6 != 0; iVar6 = iVar6 + -1) {
-        *puVar9 = 0;
-        puVar9 = puVar9 + 1;
-      }
-      *(undefined1 *)((int)puVar7 + 0x82) = 0xff;
-      iVar8 = iVar8 + -1;
-      puVar7 = puVar7 + 0x34a;
-    } while (iVar8 != 0);
-    saveFileSize = 0x6c74;
-    puVar5[0x1b1c] = 2;
-    saveDataBuffer = GetPointerToSaveData();
-    bVar1 = ReadSaveDataFromFile(saveDataBuffer,saveFileSize);
-    if ((bVar1) && (saveDataBuffer = GetPointerToSaveData(), *(int *)(saveDataBuffer + 0x6c70) != 2)) {
-      puVar5 = (undefined4 *)GetPointerToSaveData();
-      *puVar5 = 1;
-      puVar5[1] = 1;
-      *(undefined1 *)(puVar5 + 2) = 1;
-      *(undefined1 *)((int)puVar5 + 10) = 100;
-      *(undefined1 *)((int)puVar5 + 0xe) = 0xff;
-      *(undefined1 *)((int)puVar5 + 0xd) = 0xff;
-      *(undefined1 *)(puVar5 + 3) = 0xff;
-      *(undefined1 *)((int)puVar5 + 0xb) = 0xff;
-      *(undefined1 *)((int)puVar5 + 9) = 0;
-      FUN_004519c0(puVar5 + 4);
+    FUN_0042a7e0((void *)(GLOBAL_STATE.fieldI),100,0x11,10,0);
+    FUN_00431170(GLOBAL_STATE.fieldJ);
+      saveDataInMem = (undefined4 *)GetPointerToSaveData();
+      *saveDataInMem = 1;
+      saveDataInMem[1] = 1;
+      *(undefined1 *)(saveDataInMem + 2) = 1;
+      *(undefined1 *)((int)saveDataInMem + 10) = 100;   // volume
+      *(undefined1 *)((int)saveDataInMem + 0xe) = 0xff;
+      *(undefined1 *)((int)saveDataInMem + 0xd) = 0xff;
+      *(undefined1 *)(saveDataInMem + 3) = 0xff;
+      *(undefined1 *)((int)saveDataInMem + 0xb) = 0xff;
+      *(undefined1 *)((int)saveDataInMem + 9) = 0;
+      FUN_004519c0_initialise_timetrials_data(saveDataInMem + 4);
       iVar8 = 8;
-      puVar7 = puVar5 + 0xcc;
+      puVar7 = saveDataInMem + 0xcc;
       do {
         puVar9 = puVar7;
         for (iVar6 = 0x34a; iVar6 != 0; iVar6 = iVar6 + -1) {
@@ -50903,12 +50889,13 @@ undefined4 FUN_00450fc0(void)
         iVar8 = iVar8 + -1;
         puVar7 = puVar7 + 0x34a;
       } while (iVar8 != 0);
-      puVar5[0x1b1c] = 2;
+      saveDataInMem[0x1b1c] = 2;
     }
 
-    this = (void *)(GLOBAL_STATE + 0xb284);
+    this = (void *)(GLOBAL_STATE.fieldP);
     saveDataBuffer = GetPointerToSaveData();
     SetVolumeIfLessThan101(this,saveDataBuffer[10]);
+    // Set language id
     if (*(undefined1 **)(GLOBAL_STATE + 0xcde8) != (undefined1 *)0x0) {
       switch(**(undefined1 **)(GLOBAL_STATE + 0xcde8)) {
       case 0x30:
@@ -50937,10 +50924,10 @@ undefined4 FUN_00450fc0(void)
       }
     }
     saveDataBuffer = GetPointerToSaveData();
-    FUN_00426d20((int)(char)saveDataBuffer[9]);
-    FUN_0042a190((void *)(GLOBAL_STATE + 0x27f0),*(int *)(GLOBAL_STATE + 0xd01c));
+    FUN_00426d20_set_language((int)(char)saveDataBuffer[9]);
+    FUN_0042a190((void *)(GLOBAL_STATE.fieldI),*(int *)(GLOBAL_STATE.Language));
     FUN_00451270();
-    uVar4 = *(undefined4 *)(GLOBAL_STATE + 0xd01c);
+    uVar4 = *(undefined4 *)(GLOBAL_STATE.Language);
     saveDataBuffer = GetPointerToSaveData();
     saveFileSize = 0x6c74;
     saveDataBuffer[9] = (char)uVar4;
@@ -50996,9 +50983,9 @@ void FUN_00451270(void)
       puVar8 = puVar8 + 1;
     } while (iVar7 < (int)(iVar4 + (iVar4 >> 0x1f & 3U)) >> 2);
   }
-  FUN_0042e100();
-  pvVar1 = (void *)(GLOBAL_STATE + 4);
-  uVar2 = FUN_0042c830(pvVar1,0x8a);
+  FUN_0042e100_do_nothing();
+  pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+  uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x8a);
   if ((char)uVar2 == '\0') {
     uVar2 = 0xffffffff;
   }
@@ -51009,20 +50996,20 @@ void FUN_00451270(void)
   if ((puVar3 == (undefined4 *)0x0) || (pbVar5 == (byte *)0x0)) {
     uType = 0x10;
     lpCaption = s_MiniCarRacing_00465bfc;
-    hWnd = *(HWND *)(GLOBAL_STATE + 0xcb04);
+    hWnd = *(HWND *)(GLOBAL_STATE.Window);
     lpText = (LPCSTR)FUN_00426cd0(0x7d);
     MessageBoxA(hWnd,lpText,lpCaption,uType);
   }
   else {
-    FUN_00442810((void *)(GLOBAL_STATE + 0xc500),0x280,0x1e0);
-    FUN_0043fdc0((void *)(GLOBAL_STATE + 0x13c8),*(uint *)(GLOBAL_STATE + 0xc834),
+    FUN_00442810((void *)(GLOBAL_STATE.fieldR),0x280,0x1e0);
+    FUN_0043fdc0((void *)(GLOBAL_STATE.fieldB),*(uint *)(GLOBAL_STATE + 0xc834),
                  *(uint *)(GLOBAL_STATE + 0xc838),*(uint *)(GLOBAL_STATE + 0xc83c));
-    pvVar1 = (void *)(GLOBAL_STATE + 4);
-    uVar2 = FUN_0042c830(pvVar1,0x8a);
+    pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
+    uVar2 = FUN_0042c830_SetDatFilePointerToAsset(pvVar1,0x8a);
     if ((char)uVar2 != '\0') {
-      FUN_0042c8a0(pvVar1,pbVar5,0xffffffff,'\0');
+      FUN_0042c8a0_ReadFromDatFile(pvVar1,pbVar5,0xffffffff,'\0');
     }
-    FUN_00440af0((void *)(GLOBAL_STATE + 0x13c8),pbVar5,1);
+    FUN_00440af0((void *)(GLOBAL_STATE.fieldB),pbVar5,1);
     while( true ) {
       local_c = (void *)0x1;
       local_8 = (undefined1 *)0xffffffff;
@@ -51031,10 +51018,10 @@ void FUN_00451270(void)
       if (((*(char *)(GLOBAL_STATE + 0xcb7f) == '\0') &&
           (uVar6 = FUN_00451490(), (char)uVar6 == '\0')) ||
          (uVar2 = FUN_00418190(&stack0x00000014,puVar3,&local_c), (char)uVar2 == '\0')) break;
-      FUN_0042e100();
+      FUN_0042e100_do_nothing();
     }
-    FUN_0042e100();
-    FUN_0042e100();
+    FUN_0042e100_do_nothing();
+    FUN_0042e100_do_nothing();
     FUN_00453991(puVar3);
     FUN_00453991(pbVar5);
   }
@@ -51118,7 +51105,7 @@ uint FUN_00451490(void)
         return uVar3 & 0xffffff00;
       }
       if (iVar5 == 3) {
-        FUN_004459c0((void *)(GLOBAL_STATE + 0x17bc));
+        FUN_004459c0((void *)(GLOBAL_STATE.fieldF));
         FUN_00446750((int)&stack0x00007f24);
       }
     }
@@ -51181,7 +51168,7 @@ void __fastcall FUN_004518d0(undefined4 *param_1)
 }
 
 
-void __fastcall FUN_004519c0(undefined4 *param_1)
+void __fastcall FUN_004519c0_initialise_timetrials_data(undefined4 *param_1)
 
 {
   undefined4 *puVar1;
@@ -51270,7 +51257,7 @@ undefined2 * __thiscall FUN_00451ab0(void *this,undefined2 *param_1,int param_2)
   undefined4 *puVar4;
   
   *(int *)((int)this + 0x16c8) = param_2;
-  if ((*(byte *)(GLOBAL_STATE + 0xcb14) & 0xc) != 0) {
+  if ((*(byte *)(GLOBAL_STATE.fieldAA) & 0xc) != 0) {
     return param_1;
   }
   puVar1 = FUN_00446760(this,param_1);
@@ -52591,10 +52578,10 @@ void FUN_004541fa(void)
 }
 
 
-void __cdecl FUN_00454227(UINT param_1)
+void __cdecl FUN_00454227_exit(UINT param_1)
 
 {
-  FUN_00454249(param_1,0,0);
+  FUN_00454249_exit(param_1,0,0);
   return;
 }
 
@@ -52607,14 +52594,14 @@ void __cdecl FUN_00454227(UINT param_1)
 void __cdecl __exit(int _Code)
 
 {
-  FUN_00454249(_Code,1,0);
+  FUN_00454249_exit(_Code,1,0);
   return;
 }
 
 
 /* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
 
-void __cdecl FUN_00454249(UINT param_1,int param_2,int param_3)
+void __cdecl FUN_00454249_exit(UINT param_1,int param_2,int param_3)
 
 {
   HANDLE hProcess;
@@ -52925,8 +52912,8 @@ void entry(void)
   GetStartupInfoA(&local_60);
   FUN_00457442();
   GetModuleHandleA((LPCSTR)0x0);
-  UVar3 = FUN_00450fc0();
-  FUN_00454227(UVar3);
+  UVar3 = FUN_00450fc0_initalise_savedata_and_state();
+  FUN_00454227_exit(UVar3);
   FUN_004572be(local_18->ExceptionRecord->ExceptionCode,local_18);
   return;
 }
@@ -61470,7 +61457,7 @@ void Unwind_0045c49e(void)
 void Unwind_0045c4ac(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61478,7 +61465,7 @@ void Unwind_0045c4ac(void)
 void Unwind_0045c4ba(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61486,7 +61473,7 @@ void Unwind_0045c4ba(void)
 void Unwind_0045c4c8(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61636,7 +61623,7 @@ void Unwind_0045c5c7(void)
 void Unwind_0045c5d5(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61644,7 +61631,7 @@ void Unwind_0045c5d5(void)
 void Unwind_0045c5e3(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61652,7 +61639,7 @@ void Unwind_0045c5e3(void)
 void Unwind_0045c5f1(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61701,7 +61688,7 @@ void Unwind_0045c660(void)
 void Unwind_0045c66e(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61709,7 +61696,7 @@ void Unwind_0045c66e(void)
 void Unwind_0045c67c(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61717,7 +61704,7 @@ void Unwind_0045c67c(void)
 void Unwind_0045c68a(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61749,7 +61736,7 @@ void Unwind_0045c6c0(void)
 void Unwind_0045c6e0(void)
 
 {
-  thunk_FUN_0042e100();
+  thunk_FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61767,7 +61754,7 @@ void Unwind_0045c700(void)
 void Unwind_0045c70b(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61775,7 +61762,7 @@ void Unwind_0045c70b(void)
 void Unwind_0045c719(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61793,7 +61780,7 @@ void Unwind_0045c727(void)
 void Unwind_0045c735(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61801,7 +61788,7 @@ void Unwind_0045c735(void)
 void Unwind_0045c743(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61819,7 +61806,7 @@ void Unwind_0045c751(void)
 void Unwind_0045c75f(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61837,7 +61824,7 @@ void Unwind_0045c780(void)
 void Unwind_0045c78b(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61845,7 +61832,7 @@ void Unwind_0045c78b(void)
 void Unwind_0045c799(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61863,7 +61850,7 @@ void Unwind_0045c7a7(void)
 void Unwind_0045c7b5(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61871,7 +61858,7 @@ void Unwind_0045c7b5(void)
 void Unwind_0045c7c3(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -61889,7 +61876,7 @@ void Unwind_0045c7d1(void)
 void Unwind_0045c7df(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 
@@ -62288,7 +62275,7 @@ void Unwind_0045cba0(void)
 void Unwind_0045cbc0(void)
 
 {
-  FUN_0042e100();
+  FUN_0042e100_do_nothing();
   return;
 }
 

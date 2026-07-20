@@ -52,3 +52,10 @@ def extract_segment_to_file(datfile: io.BufferedReader, segment: DataSegmentInfo
 
 
 main()
+
+"""
+For the file types of each dat file, these are my suspisions:
+- 0-51 are the largest, and so are almost certainly the tracks.
+- 315 revealed itself to be a .wav file by leaving in the header. By comparing the binviz of 315 with other files, I suspect there are many audio files that just stripped the wav header.
+- So, 309 to 373 are the audio files I think. How do I test it?
+"""
