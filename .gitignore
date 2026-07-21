@@ -1,3 +1,6 @@
 vis/
 data/
 saves/
+AsphaltDuell/
+ghidra-decomp2/
+*test*

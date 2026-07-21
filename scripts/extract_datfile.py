@@ -1,10 +1,11 @@
 import io
+import os
 from dataclasses import dataclass
 
 
 def main():
-    path = "game/datfile.dat"
-    output_dir = "data"
+    path = "AsphaltDuell/datfile.dat"
+    output_dir = "AsphaltDuell/data"
 
     with open(path, "rb") as f:
         header = read_header(f)
@@ -28,13 +29,13 @@ class Header:
 
 
 def read_header(datfile: io.BufferedReader) -> Header:
-    datfile.seek(0, 0)
+    _ = datfile.seek(0, os.SEEK_SET)
     first_offset = int.from_bytes(datfile.read(4), byteorder='little')
     segment_count = first_offset // 8
 
-    data_segments = []
-    datfile.seek(0, 0)
-    for i in range(segment_count):
+    data_segments: list[DataSegmentInfo] = []
+    _ = datfile.seek(0, os.SEEK_SET)
+    for _ in range(segment_count):
         offset = int.from_bytes(datfile.read(4), byteorder='little')
         length = int.from_bytes(datfile.read(4), byteorder='little')
         segment = DataSegmentInfo(offset, length)
@@ -44,11 +45,11 @@ def read_header(datfile: io.BufferedReader) -> Header:
 
 
 def extract_segment_to_file(datfile: io.BufferedReader, segment: DataSegmentInfo, file: str):
-    datfile.seek(segment.offset, 0)
+    _ = datfile.seek(segment.offset, os.SEEK_SET)
     data = datfile.read(segment.length)
 
     with open(file, "wb") as target:
-        target.write(data)
+        _ = target.write(data)
 
 
 main()

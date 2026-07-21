@@ -1,6 +1,11 @@
 import pyghidra
-launcher = pyghidra.start()
+pyghidra.start()
 
+import ghidra
+from ghidra.app.util.headless import HeadlessAnalyzer
+from ghidra.program.flatapi import FlatProgramAPI
+from ghidra.base.project import GhidraProject
+from java.lang import String
 from ghidra.app.decompiler import DecompInterface
 
 with pyghidra.open_program("minicarracing.exe") as flat_api:
@@ -20,5 +25,5 @@ with pyghidra.open_program("minicarracing.exe") as flat_api:
         else:
             print("Func decomp timed out.", func)
 
-    with open("minicar-decomp-raw.c", 'w') as outfile:
+    with open("minicar-decomp.c", 'w') as outfile:
         outfile.write(decompilation)

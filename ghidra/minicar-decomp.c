@@ -419,7 +419,7 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
       iVar8 = -1;
     }
     else {
-      iVar8 = FUN_0042c9c0((int)pvVar1);
+      iVar8 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     uVar5 = (int)puVar10 + iVar8;
     if ((uVar5 & 3) == 0) {
@@ -447,7 +447,7 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
       iVar8 = -1;
     }
     else {
-      iVar8 = FUN_0042c9c0((int)pvVar1);
+      iVar8 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     uVar5 = (int)pvVar11 + iVar8;
     if ((uVar5 & 3) == 0) {
@@ -474,7 +474,7 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
       iVar8 = -1;
     }
     else {
-      iVar8 = FUN_0042c9c0((int)pvVar1);
+      iVar8 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     uVar5 = (int)pvVar11 + iVar8;
     if ((uVar5 & 3) == 0) {
@@ -501,7 +501,7 @@ undefined2 * __thiscall FUN_004017b0(void *this,undefined2 *param_1)
       iVar8 = -1;
     }
     else {
-      iVar8 = FUN_0042c9c0((int)pvVar1);
+      iVar8 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     uVar5 = (int)pvVar11 + iVar8;
     if ((uVar5 & 3) == 0) {
@@ -14689,7 +14689,7 @@ LAB_00418b0a:
   if (*(char *)((int)this + 0x3024) != '\0') {
     FUN_004466c0(&stack0x000000c0);
     in_stack_000000c0 = &PTR_thunk_FUN_00427190_0045dd4c;
-    FUN_00433ff0(&stack0x000000c0,*(undefined2 **)((int)this + 0x3030));
+    FUN_00433ff0_ReadVariousAssetsToParam1(&stack0x000000c0,*(undefined2 **)((int)this + 0x3030));
     (*(code *)in_stack_000000c0[9])();
     FUN_00428e70(&stack0x000000bc,0,0);
     iVar15 = (*(code *)*in_stack_000000bc)();
@@ -16949,7 +16949,7 @@ joined_r0x0041cdd7:
     }
     FUN_00440f50(piVar3);
 LAB_0041cd27:
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar3 + iVar5;
     if ((uVar4 & 3) != 0) {
       uVar7 = uVar4 & 0x80000003;
@@ -16970,7 +16970,7 @@ LAB_0041cd27:
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar3);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar3 + iVar5;
   if ((uVar4 & 3) == 0) {
 LAB_0041ce6e:
@@ -17130,7 +17130,7 @@ joined_r0x0041d374:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar3);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar3 + iVar5;
     if ((uVar4 & 3) != 0) {
       uVar7 = uVar4 & 0x80000003;
@@ -17146,7 +17146,7 @@ joined_r0x0041d374:
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar3,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar3);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar3 + iVar5;
   if ((uVar4 & 3) == 0) {
 LAB_0041d3c1:
@@ -17531,7 +17531,7 @@ uint __fastcall FUN_0041dde0(int param_1)
       if (*local_49c != 0xffffffff) {
         fVar6 = (float)FUN_0042c830_SetDatFilePointerToAsset((void *)(GLOBAL_STATE.AssetManager),*local_49c);
         if (SUB41(fVar6,0) == '\0') goto LAB_0041e5e0;
-        iVar4 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+        iVar4 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
         local_4a4 = (uint *)((int)local_4a4 + iVar4);
         fVar6 = local_4a0;
       }
@@ -17655,7 +17655,7 @@ uint __fastcall FUN_0041dde0(int param_1)
       iVar4 = (int)*(short *)(pfVar18 + 0x15);
       local_4a4 = local_4a4 + 1;
       FUN_0042c830_SetDatFilePointerToAsset((void *)(GLOBAL_STATE.AssetManager),uVar9);
-      iVar8 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+      iVar8 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
       piVar14 = (int *)(*(int *)(param_1 + 0x16cc) - iVar8);
       if (((uint)piVar14 & 3) != 0) {
         piVar14 = (int *)((int)piVar14 - ((uint)piVar14 & 3));
@@ -17678,7 +17678,7 @@ uint __fastcall FUN_0041dde0(int param_1)
 LAB_0041e5e0:
     return (uint)fVar6 & 0xffffff00;
   }
-  iVar4 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar4 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   psVar15 = (short *)(*(int *)(param_1 + 0x16cc) - iVar4);
   FUN_0042c8a0_ReadFromDatFile((void *)(GLOBAL_STATE.AssetManager),psVar15,0xffffffff,'\x01');
   FUN_00424de0((void *)(param_1 + 0x843c),psVar15);
@@ -17691,7 +17691,7 @@ LAB_0041e5e0:
       nNumberOfBytesToRead = 0xffffffff;
     }
     else {
-      nNumberOfBytesToRead = FUN_0042c9c0((int)pvVar1);
+      nNumberOfBytesToRead = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     local_498 = *(int **)(param_1 + 0x16c4);
     pvVar1 = (void *)(GLOBAL_STATE.AssetManager);
@@ -17844,7 +17844,7 @@ FUN_0041ed80(void *this,int *param_1,int param_2,undefined4 param_3,undefined4 p
   *(undefined4 *)((int)this + 0x44bc) = param_4;
   *(int **)((int)this + 0x16c0) = param_1;
   *(int *)((int)this + 0x16cc) = (int)param_1 + param_2 + -0x1000;
-  iVar1 = FUN_0043aa90((void *)((int)this + 0x4112c),param_1);
+  iVar1 = FUN_0043aa90_ReadManyAssets((void *)((int)this + 0x4112c),param_1);
   *(int *)((int)this + 0x16c0) = iVar1;
   FUN_00449320((void *)((int)this + 0x234d0),*(undefined4 *)((int)this + 0x44b8),(int)this + 0x41578
               );
@@ -24992,7 +24992,7 @@ int __thiscall FUN_00429840(void *this,int param_1,LPVOID param_2)
   if ((char)uVar2 == '\0') {
     return (int)param_2 + -1;
   }
-  iVar3 = FUN_0042c9c0((int)pvVar1);
+  iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   return iVar3 + (int)param_2;
 }
 
@@ -27806,7 +27806,7 @@ uint __thiscall FUN_0042c830_SetDatFilePointerToAsset(void *this,int assetId)
   }
   uVar1 = *(undefined4 *)((int)this + assetId * 4 + 0xa6c);
   *(undefined4 *)((int)this + 0x11c) = 0;
-  *(undefined4 *)((int)this + 0x118) = uVar1;
+  *(undefined4 *)((int)this + 0x118) = uVar1;  // Current Asset Length
   iVar3 = *(int *)((int)this + assetId * 4 + 0x124) - *(int *)((int)this + 0x120);
   DVar2 = SetFilePointer(*(HANDLE *)((int)this + 0x114),iVar3,(PLONG)0x0,1);
   if (DVar2 == 0xffffffff) {
@@ -27878,7 +27878,7 @@ uint __thiscall FUN_0042c8a0_ReadFromDatFile(void *this,LPVOID targetBuffer,WPAR
 }
 
 
-undefined4 __fastcall FUN_0042c9c0(int param_1)
+undefined4 __fastcall FUN_0042c9c0_GetCurrAssetLength(int param_1)
 
 {
   undefined4 uVar1;
@@ -28475,15 +28475,15 @@ void __thiscall FUN_0042d710(void *this,float param_1,int param_2,int param_3)
   return;
 }
 
-
-uint __thiscall FUN_0042dc50(void *this,int param_1,LPVOID param_2,WPARAM param_3,char param_4)
+// this = AssetManager
+uint __thiscall FUN_0042dc50_ReadAssetToBuffer(void *this,int assetId,LPVOID buffer,WPARAM num_bytes,char param_4)
 
 {
   uint uVar1;
   
-  uVar1 = FUN_0042c830_SetDatFilePointerToAsset(this,param_1);
+  uVar1 = FUN_0042c830_SetDatFilePointerToAsset(this,assetId);
   if ((char)uVar1 != '\0') {
-    uVar1 = FUN_0042c8a0_ReadFromDatFile(this,param_2,param_3,param_4);
+    uVar1 = FUN_0042c8a0_ReadFromDatFile(this,buffer,num_bytes,param_4);
     return uVar1;
   }
   return uVar1 & 0xffffff00;
@@ -28793,7 +28793,7 @@ LAB_0042e5f2:
       iVar9 = -1;
     }
     else {
-      iVar9 = FUN_0042c9c0((int)pvVar1);
+      iVar9 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     puVar4 = (undefined2 *)((int)puVar4 + iVar9);
     iVar12 = iVar12 + 1;
@@ -33342,7 +33342,7 @@ undefined4 __thiscall FUN_00433fc0(void *this,int param_1)
 }
 
 
-undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
+undefined2 * __thiscall FUN_00433ff0_ReadVariousAssetsToParam1(void *this,undefined2 *param_1)
 
 {
   void *pvVar1;
@@ -33379,7 +33379,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476900 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x70,puVar6,0xffffffff,'\0');
+    FUN_0042dc50_ReadAssetToBuffer((void *)(GLOBAL_STATE.AssetManager),0x70,puVar6,0xffffffff,'\0');
     iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_00476900,0xa10);
     uVar2 = (int)puVar6 + iVar3;
     if ((uVar2 & 3) == 0) {
@@ -33394,7 +33394,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476904 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x71,puVar6,0xffffffff,'\0');
+    FUN_0042dc50_ReadAssetToBuffer((void *)(GLOBAL_STATE.AssetManager),0x71,puVar6,0xffffffff,'\0');
     if (((uint)puVar6 & 3) == 0) {
       iVar3 = 0;
     }
@@ -33419,7 +33419,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_0047690c = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x73,puVar6,0xffffffff,'\0');
+    FUN_0042dc50_ReadAssetToBuffer((void *)(GLOBAL_STATE.AssetManager),0x73,puVar6,0xffffffff,'\0');
     iVar3 = FUN_00441860((void *)(GLOBAL_STATE.fieldB),DAT_0047690c,0x1275);
     uVar2 = (int)puVar6 + iVar3;
     if ((uVar2 & 3) == 0) {
@@ -33434,7 +33434,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     }
     puVar6 = (undefined2 *)(uVar2 + iVar3);
     DAT_00476908 = puVar6;
-    FUN_0042dc50((void *)(GLOBAL_STATE.AssetManager),0x72,puVar6,0xffffffff,'\0');
+    FUN_0042dc50_ReadAssetToBuffer((void *)(GLOBAL_STATE.AssetManager),0x72,puVar6,0xffffffff,'\0');
     if (((uint)puVar6 & 3) == 0) {
       iVar3 = 0;
     }
@@ -33472,7 +33472,7 @@ undefined2 * __thiscall FUN_00433ff0(void *this,undefined2 *param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   puVar6 = (undefined2 *)((int)param_1 + iVar3);
   if (((uint)puVar6 & 3) != 0) {
@@ -35084,7 +35084,7 @@ FUN_00436d60(void *this,uint param_1,int param_2,int param_3,int param_4,int par
     iVar4 = -1;
   }
   else {
-    iVar4 = FUN_0042c9c0((int)pvVar1);
+    iVar4 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar3 = FUN_00429840(this,0x95,(LPVOID)(iVar4 + (int)puVar2));
   if ((uVar3 & 3) != 0) {
@@ -37706,7 +37706,7 @@ void __thiscall FUN_0043a990(void *this,int param_1,uint param_2)
 }
 
 
-int __thiscall FUN_0043aa90(void *this,int *param_1)
+int __thiscall FUN_0043aa90_ReadManyAssets(void *this,int *param_1)
 
 {
   void *pvVar1;
@@ -37754,7 +37754,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     if (((char)uVar4 != '\0') &&
        (uVar4 = FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
       FUN_00440f50(piVar7);
-      iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+      iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
       piVar7 = (int *)((int)piVar7 + iVar5);
     }
     if (((uint)piVar7 & 3) == 0) {
@@ -37783,7 +37783,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     if (((char)uVar4 != '\0') &&
        (uVar4 = FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01'), (char)uVar4 != '\0')) {
       FUN_00440f50(piVar7);
-      iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+      iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
       piVar7 = (int *)((int)piVar7 + iVar5);
     }
     if (((uint)piVar7 & 3) == 0) {
@@ -37808,7 +37808,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar7,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar7);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar7 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37828,7 +37828,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37848,7 +37848,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -37874,7 +37874,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -37900,7 +37900,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -37926,7 +37926,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -37953,7 +37953,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -37980,7 +37980,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -38007,7 +38007,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -38034,7 +38034,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
     iVar5 = -1;
   }
   else {
-    iVar5 = FUN_0042c9c0((int)pvVar1);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar4 = (int)pvVar9 + iVar5;
   if ((uVar4 & 3) == 0) {
@@ -38057,7 +38057,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38077,7 +38077,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38097,7 +38097,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38117,7 +38117,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38137,7 +38137,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38157,7 +38157,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38177,7 +38177,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38197,7 +38197,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38217,7 +38217,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38237,7 +38237,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38257,7 +38257,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38277,7 +38277,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38297,7 +38297,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38317,7 +38317,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38343,7 +38343,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38363,7 +38363,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38383,7 +38383,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38403,7 +38403,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38423,7 +38423,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38443,7 +38443,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38463,7 +38463,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38483,7 +38483,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38503,7 +38503,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38523,7 +38523,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38543,7 +38543,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38563,7 +38563,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) goto LAB_0043cc29;
     uVar6 = uVar4 & 0x80000003;
@@ -38580,7 +38580,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38600,7 +38600,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38620,7 +38620,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38640,7 +38640,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38660,7 +38660,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38680,7 +38680,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38700,7 +38700,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38720,7 +38720,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38740,7 +38740,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38760,7 +38760,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38780,7 +38780,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38800,7 +38800,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38820,7 +38820,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38849,7 +38849,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38869,7 +38869,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38889,7 +38889,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38909,7 +38909,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38929,7 +38929,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38949,7 +38949,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38969,7 +38969,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -38989,7 +38989,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39009,7 +39009,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39029,7 +39029,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39049,7 +39049,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39075,7 +39075,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39095,7 +39095,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39115,7 +39115,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39135,7 +39135,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39155,7 +39155,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39175,7 +39175,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39195,7 +39195,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39215,7 +39215,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39235,7 +39235,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39255,7 +39255,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39275,7 +39275,7 @@ int __thiscall FUN_0043aa90(void *this,int *param_1)
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39297,7 +39297,7 @@ joined_r0x0043cc1e:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
 LAB_0043cc29:
@@ -39329,7 +39329,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39349,7 +39349,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39369,7 +39369,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39389,7 +39389,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39409,7 +39409,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39429,7 +39429,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39449,7 +39449,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39469,7 +39469,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39489,7 +39489,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39509,7 +39509,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39529,7 +39529,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39549,7 +39549,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39569,7 +39569,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39589,7 +39589,7 @@ LAB_0043cc2b:
       FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
     }
     FUN_00440f50(piVar8);
-    iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+    iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
     uVar4 = (int)piVar8 + iVar5;
     if ((uVar4 & 3) == 0) {
       iVar5 = 0;
@@ -39611,7 +39611,7 @@ LAB_0043cc2b:
     FUN_0042c8a0_ReadFromDatFile(pvVar1,piVar8,0xffffffff,'\x01');
   }
   FUN_00440f50(piVar8);
-  iVar5 = FUN_0042c9c0(GLOBAL_STATE.AssetManager);
+  iVar5 = FUN_0042c9c0_GetCurrAssetLength(GLOBAL_STATE.AssetManager);
   uVar4 = (int)piVar8 + iVar5;
   if ((uVar4 & 3) == 0) {
     iVar5 = 0;
@@ -41079,6 +41079,7 @@ uint __thiscall FUN_004404b0(void *this,undefined4 param_1,undefined4 param_2,un
 }
 
 
+// this = GLOBAL_STATE.fieldB
 undefined4 __thiscall FUN_00440500(void *this,undefined4 param_1)
 
 {
@@ -41883,6 +41884,7 @@ FUN_00441690(void *this,short *param_1,int param_2,int param_3,int param_4,int p
 }
 
 
+// *this = GLOBAL_STATE.fieldB
 int __thiscall FUN_00441860(void *this,undefined2 *param_1,int param_2)
 
 {
@@ -44041,7 +44043,7 @@ uint __thiscall FUN_00444400(void *this,int param_1)
     }
     *(undefined4 *)((int)this + 0x24) = 0x100e8;
     *(undefined4 *)((int)this + 0x20) = 0x14;
-    uVar4 = FUN_0042c9c0(*(int *)((int)this + 0x10));
+    uVar4 = FUN_0042c9c0_GetCurrAssetLength(*(int *)((int)this + 0x10));
     *(undefined4 *)((int)this + 0x28) = uVar4;
     *(undefined4 *)((int)this + 0x2c) = 0;
     *(int *)((int)this + 0x30) = (int)this + 0x46;
@@ -44556,7 +44558,7 @@ uint __thiscall FUN_00444d40(void *this,int *param_1)
       *(undefined4 *)((int)this + 8) = 0;
       return uVar1;
     }
-    uVar2 = FUN_0042c9c0(*(int *)((int)this + 0x10));
+    uVar2 = FUN_0042c9c0_GetCurrAssetLength(*(int *)((int)this + 0x10));
     in_EAX = FUN_00444550(this,param_1,uVar2);
     if ((char)in_EAX == '\0') {
       *(undefined4 *)((int)this + 4) = 0;
@@ -46066,7 +46068,7 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar2 = (int)pvVar6 + iVar3;
   if ((uVar2 & 3) == 0) {
@@ -46092,7 +46094,7 @@ undefined2 * __thiscall FUN_00446760(void *this,undefined2 *param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   uVar2 = (int)pvVar6 + iVar3;
   if ((uVar2 & 3) == 0) {
@@ -46932,7 +46934,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)unaff_retaddr + iVar3);
   *(LPVOID *)((int)this + 0x1754) = pvVar4;
@@ -46947,7 +46949,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1758) = pvVar4;
@@ -46962,7 +46964,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x175c) = pvVar4;
@@ -46977,7 +46979,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1760) = pvVar4;
@@ -46992,7 +46994,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   piStack_74 = aiStack_6c + 0x11;
   puVar5 = (undefined4 *)((int)this + 0x16d4);
@@ -47039,7 +47041,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
       iVar3 = -1;
     }
     else {
-      iVar3 = FUN_0042c9c0((int)pvVar1);
+      iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
     puVar5 = puVar5 + 1;
@@ -47064,7 +47066,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
       iVar3 = -1;
     }
     else {
-      iVar3 = FUN_0042c9c0((int)pvVar1);
+      iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
     piStack_74 = piStack_74 + 1;
@@ -47089,7 +47091,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
       iVar3 = -1;
     }
     else {
-      iVar3 = FUN_0042c9c0((int)pvVar1);
+      iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
     piStack_74 = piStack_74 + 1;
@@ -47109,7 +47111,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1744) = pvVar4;
@@ -47125,7 +47127,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1740) = pvVar4;
@@ -47141,7 +47143,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1748) = pvVar4;
@@ -47156,7 +47158,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x174c) = pvVar4;
@@ -47172,7 +47174,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   *(LPVOID *)((int)this + 0x1750) = pvVar4;
@@ -47187,7 +47189,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
     iVar3 = -1;
   }
   else {
-    iVar3 = FUN_0042c9c0((int)pvVar1);
+    iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
   piVar6 = aiStack_6c + 9;
@@ -47207,7 +47209,7 @@ LPVOID __thiscall FUN_00449640(void *this,LPVOID param_1)
       iVar3 = -1;
     }
     else {
-      iVar3 = FUN_0042c9c0((int)pvVar1);
+      iVar3 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
     }
     pvVar4 = (LPVOID)((int)pvVar4 + iVar3);
     piStack_74 = piStack_74 + 1;
@@ -50990,7 +50992,7 @@ void FUN_00451270(void)
     uVar2 = 0xffffffff;
   }
   else {
-    uVar2 = FUN_0042c9c0((int)pvVar1);
+    uVar2 = FUN_0042c9c0_GetCurrAssetLength((int)pvVar1);
   }
   pbVar5 = operator_new(uVar2);
   if ((puVar3 == (undefined4 *)0x0) || (pbVar5 == (byte *)0x0)) {

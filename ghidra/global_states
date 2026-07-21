@@ -1,0 +1,46 @@
+    279 (GLOBAL_STATE + 4) GLOBAL_STATE.fieldA  datfileInfo?
+    116 (GLOBAL_STATE + 0x13c8)     B
+      1 (GLOBAL_STATE + 0x1458)     C
+      1 (GLOBAL_STATE + 0x15b4)     D
+      2 (GLOBAL_STATE + 0x1698)     E
+     33 (GLOBAL_STATE + 0x17bc)     F
+      1 (GLOBAL_STATE + 0x17f4) G
+      1 (GLOBAL_STATE + 0x27dc) H
+     32 (GLOBAL_STATE + 0x27f0) I
+    113 (GLOBAL_STATE + 0x637c) J
+      1 (GLOBAL_STATE + 0x6380) K
+      1 (GLOBAL_STATE + 0x6384) L
+     29 (GLOBAL_STATE + 0x63b0) M
+      1 (GLOBAL_STATE + 0x63f8) N
+      7 (GLOBAL_STATE + 0xac14) O
+     82 (GLOBAL_STATE + 0xb284) P
+      1 (GLOBAL_STATE + 0xc0a0) Q
+     76 (GLOBAL_STATE + 0xc500) R
+      1 (GLOBAL_STATE + 0xc514) S
+      2 (GLOBAL_STATE + 0xc834) T
+      2 (GLOBAL_STATE + 0xc838) U
+      2 (GLOBAL_STATE + 0xc83c) V
+      5 (GLOBAL_STATE + 0xc858) W
+      5 (GLOBAL_STATE + 0xc85c) X
+     13 (GLOBAL_STATE + 0xc8f8) Y
+        (GLOBAL_STATE + 0xc904) CurrentDirectory
+     33 (GLOBAL_STATE + 0xcb04) Z   Window
+     26 (GLOBAL_STATE + 0xcb14) AA
+      1 (GLOBAL_STATE + 0xcb7f) AB
+      2 (GLOBAL_STATE + 0xcdb4) AC
+      2 (GLOBAL_STATE + 0xcde8) AD
+      9 (GLOBAL_STATE + 0xd01c) AE   Language
+      4 (GLOBAL_STATE + 0xd020) AF
+      2 (GLOBAL_STATE + 0xd024) AG
+      2 (GLOBAL_STATE + 0xd028) AH
+      2 (GLOBAL_STATE + 0xd02c) AI
+      2 (GLOBAL_STATE + 0xd030) AJ
+      1 (GLOBAL_STATE + 0xd034) AK
+      4 (GLOBAL_STATE + 0xd058) AL
+      1 (GLOBAL_STATE + 0xd081) AM
+      1 (GLOBAL_STATE + 0xd084) AN
+      3 (GLOBAL_STATE + 0xd088) AO
+      1 (GLOBAL_STATE + 0xd08c) AP
+      1 (GLOBAL_STATE + 0xd08d) AQ
+      1 (GLOBAL_STATE + 0xd090) AR
+      1 (GLOBAL_STATE + 0xd094) AS
